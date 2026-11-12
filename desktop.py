@@ -96,7 +96,7 @@ def main():
     def update_watch():
         while not stop.is_set():
             updater.start()
-            if stop.wait(4*60*60):break
+            if stop.wait(app_updates.CHECK_INTERVAL_SECONDS):break
     if getattr(sys,'frozen',False):threading.Thread(target=update_watch,daemon=True).start()
     window=None
     class Api:

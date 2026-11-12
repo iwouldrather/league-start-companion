@@ -54,6 +54,19 @@ class UpdateTests(unittest.TestCase):
             self.assertEqual(updater.snapshot()['status'],'error')
             self.assertFalse(updater.busy)
 
+    def test_ready_update_survives_later_network_failure(self):
+        content=b'MZverified installer'
+        def fetch(url,**kwargs):
+            if url==app_updates.LATEST_URL:return json.dumps(self.release(content)).encode()
+            kwargs['destination'].write_bytes(content)
+        with tempfile.TemporaryDirectory() as directory,patch.object(app_updates,'fetch',side_effect=fetch):
+            updater=app_updates.Updater(directory);updater.run()
+            ready=updater.snapshot()
+            with patch.object(app_updates,'fetch',side_effect=OSError('offline')):
+                updater.run()
+            self.assertEqual(updater.snapshot(),ready)
+            self.assertFalse(updater.busy)
+
     def test_download_transport_rejects_untrusted_urls_before_network(self):
         from github_http import fetch
         for url in ['http://github.com/a','https://github.com.evil.example/a','https://user:pass@github.com/a','https://github.com:444/a','https://localhost/setup.exe']:

@@ -13,6 +13,7 @@ from github_http import fetch
 
 LATEST_URL='https://api.github.com/repos/iwouldrather/league-start-companion/releases/latest'
 ASSET_NAME='LeagueStartCompanion-Setup.exe'
+CHECK_INTERVAL_SECONDS=30*60
 
 
 def version_tuple(value):
@@ -46,7 +47,7 @@ def verify_installer(path,update):
 class Updater:
     def __init__(self,data_dir):
         self.folder=Path(data_dir)/'updates';self.lock=threading.RLock();self.busy=False;self.update=None;self.path=None
-        self.state={'status':'idle','message':'Updates are checked automatically at startup and every four hours.'}
+        self.state={'status':'idle','message':'Updates are checked automatically at startup and every 30 minutes.'}
     def snapshot(self):
         with self.lock:return dict(self.state)
     def set_state(self,status,message,**extra):
@@ -59,6 +60,7 @@ class Updater:
         return self.snapshot()
     def run(self):
         partial=None
+        previous=self.snapshot()
         try:
             self.set_state('checking','Checking for updates…')
             update=release_update(json.loads(fetch(LATEST_URL)))
@@ -74,7 +76,9 @@ class Updater:
             self.update=update;self.path=path
             self.set_state('ready','Version '+update['version']+' is ready. Restart when it suits you.',version=update['version'])
         except Exception:
-            self.set_state('error','Could not check or verify the update. Check your connection and try again.')
+            if previous['status']=='ready':
+                with self.lock:self.state=previous
+            else:self.set_state('error','Could not check or verify the update. Check your connection and try again.')
         finally:
             if partial:
                 try:partial.unlink(missing_ok=True)

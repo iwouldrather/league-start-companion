@@ -95,6 +95,13 @@ body[data-design=board] .concepttreeimage{background:#070d14}
 .gemcost{color:var(--gold)!important}.prep .buywhere .gemcost,.prep .buywhere .mulinghint{display:block;margin:3px 0 0}.mulinghint{color:#92c8ed!important}.mulingdetails{padding:13px;border-left:3px solid #92c8ed;margin-top:15px;background:#92c8ed08}
  #restartAppUpdate[hidden]{display:none!important}#appUpdateStatus{color:var(--gold);min-height:1.4em}#updateReadyBanner{border-color:var(--gold);color:var(--gold)}
 
+/* Persistent update status lives away from the app menus and character controls. */
+#updateIndicator{position:fixed;bottom:12px;left:8px;z-index:18;display:flex;align-items:flex-start;gap:8px;width:162px;padding:10px 9px;text-align:left;font-size:12px;line-height:1.4;background:#17212d;border:1px solid #34465e;color:#b2c5d7;box-shadow:0 3px 14px #0003}
+#updateIndicator small{display:block;font-size:10px;color:#8fa5b9;margin-top:3px}.updatedot{width:6px;height:6px;margin-top:5px;flex:none;border-radius:50%;background:#92c8ed}
+#updateIndicator[data-status=ready]{border-color:var(--gold);color:var(--gold)}#updateIndicator[data-status=ready] .updatedot{background:var(--gold)}#updateIndicator[data-status=error] .updatedot{background:#eea494}
+body:has(#updateIndicator) .sidebar{padding-bottom:96px}
+@media(max-width:760px){#updateIndicator{bottom:8px;left:8px;width:158px}}
+
 .poetheme{--line:#46483f;--gold:#d6b779;--panel:#17212d;--panel2:#202e3d;background-image:linear-gradient(#101723f4,#101723f4),var(--poe-texture)}
 .poetheme .topbar{border-bottom:1px solid #806e47;box-shadow:0 1px 10px #0008}.classportrait{transform:none;border:1px solid #bb9a5d;border-radius:50%;width:40px!important;height:40px!important;overflow:hidden;box-shadow:0 0 0 3px #262821,0 0 15px #000}.classportrait img{width:100%;height:100%;object-fit:cover}
 .poetheme h1,.poetheme h2,.poetheme .prepgroup h3,.ascendancypanel h3{font-family:Georgia,'Times New Roman',serif;font-weight:500;letter-spacing:0}.poetheme .tab[aria-selected=true]{background:linear-gradient(110deg,#d2bd86,#ab9663);color:#141b24!important;box-shadow:inset 0 0 0 1px #f1d79555}.poetheme .prep{background-image:linear-gradient(#121d2bf7,#121d2bf7),var(--poe-texture)}
@@ -642,12 +649,13 @@ document.addEventListener('click',e=>{if(e.target.closest('[data-open-library]')
 
 window.addEventListener('pywebviewready',()=>{
  const button=document.createElement('button');button.innerHTML=uiIcon('settings');button.id='appSettings';button.className='iconbutton';button.setAttribute('aria-label','App settings');button.title='App settings';document.querySelector('.topactions').append(button);
- button.addEventListener('click',async()=>{const settings=await window.pywebview.api.settings();record('App settings',`<div class="appsettings"><h3>Updates · Version ${esc(settings.version)}</h3><p>Updates download automatically in the background. You choose when to restart and install.</p><div class="settingsactions"><button id="checkAppUpdates">Check for updates</button><button id="restartAppUpdate" hidden>Restart to update</button></div><p id="appUpdateStatus" role="status"></p><p class="importnotes">Checks run at startup and every four hours. Downloads are verified before installation. Saved builds and progress are kept.</p><h3>Path of Exile game log</h3><p class="importnotes">${esc(settings.logPath)}</p><button id="chooseGameLog">Choose Client.txt…</button><h3>Local saves</h3><p class="importnotes">${esc(settings.dataDir)}</p><div class="settingsactions"><button id="importExistingSaves">Import saves from an existing companion folder…</button><button id="openAppData">Open save folder</button></div><p id="desktopStatus" role="status"></p><p>Imports copy saved builds and progress without replacing existing files. The original folder is left untouched.</p></div>`);});
+ button.addEventListener('click',async()=>{const settings=await window.pywebview.api.settings();record('App settings',`<div class="appsettings"><h3>Updates · Version ${esc(settings.version)}</h3><p>Updates download automatically in the background. You choose when to restart and install.</p><div class="settingsactions"><button id="checkAppUpdates">Check for updates</button><button id="restartAppUpdate" hidden>Restart to update</button></div><p id="appUpdateStatus" role="status"></p><p class="importnotes">Checks run at startup and every 30 minutes. Downloads are verified before installation. Saved builds and progress are kept.</p><h3>Path of Exile game log</h3><p class="importnotes">${esc(settings.logPath)}</p><button id="chooseGameLog">Choose Client.txt…</button><h3>Local saves</h3><p class="importnotes">${esc(settings.dataDir)}</p><div class="settingsactions"><button id="importExistingSaves">Import saves from an existing companion folder…</button><button id="openAppData">Open save folder</button></div><p id="desktopStatus" role="status"></p><p>Imports copy saved builds and progress without replacing existing files. The original folder is left untouched.</p></div>`);});
 });
 document.addEventListener('click',async e=>{
- const button=e.target.closest('#chooseGameLog,#importExistingSaves,#openAppData,#checkAppUpdates,#restartAppUpdate,#updateReadyBanner');if(!button)return;
+ const button=e.target.closest('#chooseGameLog,#importExistingSaves,#openAppData,#checkAppUpdates,#restartAppUpdate,#updateReadyBanner,#updateIndicator');if(!button)return;
  button.disabled=true;
  try{
+  if(button.id==='updateIndicator'){$('appSettings').click();return;}
   if(button.id==='restartAppUpdate'||button.id==='updateReadyBanner')await window.pywebview.api.restart_to_update();
   if(button.id==='chooseGameLog'){const settings=await window.pywebview.api.choose_game_log();$('desktopStatus').textContent='Reading '+settings.logPath;}
   if(button.id==='importExistingSaves'){const result=await window.pywebview.api.import_existing_saves();$('desktopStatus').textContent=`Copied ${result.copied} save files. Reopen the build library to choose a guide.`;if(!D.sets.length)refreshLibraryHome();}
@@ -663,11 +671,14 @@ window.addEventListener('pywebviewready',()=>{
    const state=await window.pywebview.api.update_status();
    const status=$('appUpdateStatus');if(status)status.textContent=state.message;
    const restart=$('restartAppUpdate');if(restart)restart.hidden=state.status!=='ready';
-   let banner=$('updateReadyBanner');
-   if(state.status==='ready'){
-    if(!banner){banner=document.createElement('button');banner.id='updateReadyBanner';document.querySelector('.topactions').prepend(banner);}
-    banner.textContent='Update '+state.version+' ready · Restart';
-   }else if(banner)banner.remove();
+   let indicator=$('updateIndicator');
+   if(!indicator){indicator=document.createElement('button');indicator.id='updateIndicator';document.body.append(indicator);}
+   const labels={idle:'Auto updates on',checking:'Checking for updates',current:'Up to date',downloading:'Downloading update',ready:'Update ready',error:'Update check failed'};
+   indicator.dataset.status=state.status;
+   indicator.innerHTML='<span class="updatedot" aria-hidden="true"></span><span>'+esc(labels[state.status]||'Auto updates on')+'<small>'+esc(state.status==='ready'?'Version '+state.version+' · Open updates':state.status==='error'?'Click to retry in settings':'Checks every 30 minutes')+'</small></span>';
+   indicator.title=state.message;
+   indicator.setAttribute('aria-label',(labels[state.status]||'Auto updates on')+'. '+state.message+' Open update settings.');
+
   }catch(error){ /* Native bridge may be closing during restart. */ }
  }
  refreshUpdateStatus();setInterval(refreshUpdateStatus,2000);

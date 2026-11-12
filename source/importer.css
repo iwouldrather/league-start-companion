@@ -10,3 +10,10 @@
 
 .gemcost{color:var(--gold)!important}.prep .buywhere .gemcost,.prep .buywhere .mulinghint{display:block;margin:3px 0 0}.mulinghint{color:#92c8ed!important}.mulingdetails{padding:13px;border-left:3px solid #92c8ed;margin-top:15px;background:#92c8ed08}
  #restartAppUpdate[hidden]{display:none!important}#appUpdateStatus{color:var(--gold);min-height:1.4em}#updateReadyBanner{border-color:var(--gold);color:var(--gold)}
+
+/* Persistent update status lives away from the app menus and character controls. */
+#updateIndicator{position:fixed;bottom:12px;left:8px;z-index:18;display:flex;align-items:flex-start;gap:8px;width:162px;padding:10px 9px;text-align:left;font-size:12px;line-height:1.4;background:#17212d;border:1px solid #34465e;color:#b2c5d7;box-shadow:0 3px 14px #0003}
+#updateIndicator small{display:block;font-size:10px;color:#8fa5b9;margin-top:3px}.updatedot{width:6px;height:6px;margin-top:5px;flex:none;border-radius:50%;background:#92c8ed}
+#updateIndicator[data-status=ready]{border-color:var(--gold);color:var(--gold)}#updateIndicator[data-status=ready] .updatedot{background:var(--gold)}#updateIndicator[data-status=error] .updatedot{background:#eea494}
+body:has(#updateIndicator) .sidebar{padding-bottom:96px}
+@media(max-width:760px){#updateIndicator{bottom:8px;left:8px;width:158px}}
