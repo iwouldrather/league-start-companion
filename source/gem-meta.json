@@ -1,0 +1,387 @@
+{
+  "Steelskin": {
+    "skillId": "QuickGuard",
+    "minLevel": 4,
+    "color": 1,
+    "isSupport": false,
+    "itemGranted": false
+  },
+  "Faster Attacks": {
+    "skillId": "SupportFasterAttacks",
+    "minLevel": 8,
+    "color": 2,
+    "isSupport": true,
+    "itemGranted": false
+  },
+  "Leap Slam": {
+    "skillId": "LeapSlam",
+    "minLevel": 10,
+    "color": 1,
+    "isSupport": false,
+    "itemGranted": false
+  },
+  "Spectral Throw": {
+    "skillId": "SpectralThrow",
+    "minLevel": 1,
+    "color": 2,
+    "isSupport": false,
+    "itemGranted": false
+  },
+  "Volley": {
+    "skillId": "SupportVolley",
+    "minLevel": 4,
+    "color": 2,
+    "isSupport": true,
+    "itemGranted": false
+  },
+  "Chance to Bleed": {
+    "skillId": "SupportChanceToBleed",
+    "minLevel": 1,
+    "color": 1,
+    "isSupport": true,
+    "itemGranted": false
+  },
+  "Blood and Sand": {
+    "skillId": "BloodAndSand",
+    "minLevel": 4,
+    "color": 1,
+    "isSupport": false,
+    "itemGranted": false
+  },
+  "Precision": {
+    "skillId": "Precision",
+    "minLevel": 10,
+    "color": 2,
+    "isSupport": false,
+    "itemGranted": false
+  },
+  "Clarity": {
+    "skillId": "Clarity",
+    "minLevel": 10,
+    "color": 3,
+    "isSupport": false,
+    "itemGranted": false
+  },
+  "Static Strike": {
+    "skillId": "StaticStrike",
+    "minLevel": 12,
+    "color": 1,
+    "isSupport": false,
+    "itemGranted": false
+  },
+  "Ancestral Call": {
+    "skillId": "SupportAncestralCall",
+    "minLevel": 4,
+    "color": 1,
+    "isSupport": true,
+    "itemGranted": false
+  },
+  "Ruthless": {
+    "skillId": "SupportRuthless",
+    "minLevel": 1,
+    "color": 1,
+    "isSupport": true,
+    "itemGranted": false
+  },
+  "Poacher's Mark": {
+    "skillId": "PoachersMark",
+    "minLevel": 16,
+    "color": 2,
+    "isSupport": false,
+    "itemGranted": false
+  },
+  "Lifetap": {
+    "skillId": "SupportLifetap",
+    "minLevel": 8,
+    "color": 1,
+    "isSupport": true,
+    "itemGranted": false
+  },
+  "Blood Rage": {
+    "skillId": "BloodRage",
+    "minLevel": 16,
+    "color": 2,
+    "isSupport": false,
+    "itemGranted": false
+  },
+  "Purity of Elements": {
+    "skillId": "PurityOfElements",
+    "minLevel": 24,
+    "color": 3,
+    "isSupport": false,
+    "itemGranted": false
+  },
+  "Intimidating Cry": {
+    "skillId": "IntimidatingCry",
+    "minLevel": 10,
+    "color": 1,
+    "isSupport": false,
+    "itemGranted": false
+  },
+  "General's Cry": {
+    "skillId": "GeneralsCry",
+    "minLevel": 24,
+    "color": 1,
+    "isSupport": false,
+    "itemGranted": false
+  },
+  "Sunder": {
+    "skillId": "Sunder",
+    "minLevel": 12,
+    "color": 1,
+    "isSupport": false,
+    "itemGranted": false
+  },
+  "Autoexertion": {
+    "skillId": "Autoexertion",
+    "minLevel": 24,
+    "color": 1,
+    "isSupport": false,
+    "itemGranted": false
+  },
+  "Automation": {
+    "skillId": "Automation",
+    "minLevel": 24,
+    "color": 3,
+    "isSupport": false,
+    "itemGranted": false
+  },
+  "Cyclone": {
+    "skillId": "Cyclone",
+    "minLevel": 28,
+    "color": 2,
+    "isSupport": false,
+    "itemGranted": false
+  },
+  "Fortify": {
+    "skillId": "SupportFortify",
+    "minLevel": 31,
+    "color": 1,
+    "isSupport": true,
+    "itemGranted": false
+  },
+  "Infused Channelling": {
+    "skillId": "SupportInfusedChannelling",
+    "minLevel": 4,
+    "color": 3,
+    "isSupport": true,
+    "itemGranted": false
+  },
+  "Desecrate": {
+    "skillId": "Desecrate",
+    "minLevel": 16,
+    "color": 2,
+    "isSupport": false,
+    "itemGranted": false
+  },
+  "Pulverise": {
+    "skillId": "SupportPulverise",
+    "minLevel": 31,
+    "color": 1,
+    "isSupport": true,
+    "itemGranted": false
+  },
+  "Shockwave": {
+    "skillId": "SupportShockwave",
+    "minLevel": 18,
+    "color": 1,
+    "isSupport": true,
+    "itemGranted": false
+  },
+  "Mark On Hit": {
+    "skillId": "SupportMarkOnHit",
+    "minLevel": 38,
+    "color": 2,
+    "isSupport": true,
+    "itemGranted": false
+  },
+  "Summon Greater Harbinger of Brutality": {
+    "skillId": "SummonHarbingerOfBrutalityUber",
+    "minLevel": 1,
+    "color": 4,
+    "isSupport": false,
+    "itemGranted": true
+  },
+  "Melee Physical Damage": {
+    "skillId": "SupportMeleePhysicalDamage",
+    "minLevel": 18,
+    "color": 1,
+    "isSupport": true,
+    "itemGranted": false
+  },
+  "Assassin's Mark": {
+    "skillId": "AssassinsMark",
+    "minLevel": 16,
+    "color": 3,
+    "isSupport": false,
+    "itemGranted": false
+  },
+  "Ground Slam of Earthshaking": {
+    "skillId": "GroundSlamAltX",
+    "minLevel": 1,
+    "color": 1,
+    "isSupport": false,
+    "itemGranted": false
+  },
+  "Brutality": {
+    "skillId": "SupportBrutality",
+    "minLevel": 38,
+    "color": 1,
+    "isSupport": true,
+    "itemGranted": false
+  },
+  "Cyclone of Tumult": {
+    "skillId": "CycloneAltX",
+    "minLevel": 28,
+    "color": 2,
+    "isSupport": false,
+    "itemGranted": false
+  },
+  "Void Shockwave": {
+    "skillId": "SupportVoidShockwave",
+    "minLevel": 72,
+    "color": 1,
+    "isSupport": true,
+    "itemGranted": false
+  },
+  "Frostblink": {
+    "skillId": "Frostblink",
+    "minLevel": 4,
+    "color": 3,
+    "isSupport": false,
+    "itemGranted": false
+  },
+  "Flesh and Stone": {
+    "skillId": "FleshAndStone",
+    "minLevel": 16,
+    "color": 1,
+    "isSupport": false,
+    "itemGranted": false
+  },
+  "Pride": {
+    "skillId": "Pride",
+    "minLevel": 24,
+    "color": 1,
+    "isSupport": false,
+    "itemGranted": false
+  },
+  "Enlighten": {
+    "skillId": "SupportEnlighten",
+    "minLevel": 1,
+    "color": 3,
+    "isSupport": true,
+    "itemGranted": false
+  },
+  "Herald of Purity": {
+    "skillId": "HeraldOfPurity",
+    "minLevel": 16,
+    "color": 1,
+    "isSupport": false,
+    "itemGranted": false
+  },
+  "Volatility": {
+    "skillId": "SupportVolatility",
+    "minLevel": 18,
+    "color": 1,
+    "isSupport": true,
+    "itemGranted": false
+  },
+  "Concentrated Effect": {
+    "skillId": "SupportConcentratedEffect",
+    "minLevel": 18,
+    "color": 3,
+    "isSupport": true,
+    "itemGranted": false
+  },
+  "More Duration": {
+    "skillId": "SupportMoreDuration",
+    "minLevel": 31,
+    "color": 1,
+    "isSupport": true,
+    "itemGranted": false
+  },
+  "Empower": {
+    "skillId": "SupportEmpower",
+    "minLevel": 1,
+    "color": 1,
+    "isSupport": true,
+    "itemGranted": false
+  },
+  "Enhance": {
+    "skillId": "SupportEnhance",
+    "minLevel": 1,
+    "color": 2,
+    "isSupport": true,
+    "itemGranted": false
+  },
+  "On Kill Monster Explosion": {
+    "skillId": "EnemyExplode",
+    "minLevel": 1,
+    "color": 4,
+    "isSupport": false,
+    "itemGranted": true
+  },
+  "Vulnerability": {
+    "skillId": "Vulnerability",
+    "minLevel": 24,
+    "color": 1,
+    "isSupport": false,
+    "itemGranted": false
+  },
+  "Power Charge On Critical": {
+    "skillId": "SupportPowerChargeOnCritical",
+    "minLevel": 18,
+    "color": 3,
+    "isSupport": true,
+    "itemGranted": false
+  },
+  "Unholy Trinity": {
+    "skillId": "SupportUnholyTrinity",
+    "minLevel": 72,
+    "color": 2,
+    "isSupport": true,
+    "itemGranted": false
+  },
+  "Cast when Damage Taken": {
+    "skillId": "SupportCastWhenDamageTaken",
+    "minLevel": 38,
+    "color": 1,
+    "isSupport": true,
+    "itemGranted": false
+  },
+  "Eclipse": {
+    "skillId": "SupportEclipse",
+    "minLevel": 72,
+    "color": 4,
+    "isSupport": true,
+    "itemGranted": false
+  },
+  "Tempest Shield": {
+    "skillId": "TempestShield",
+    "minLevel": 16,
+    "color": 3,
+    "isSupport": false,
+    "itemGranted": false
+  },
+  "Arctic Armour": {
+    "skillId": "ArcticArmour",
+    "minLevel": 16,
+    "color": 2,
+    "isSupport": false,
+    "itemGranted": false
+  },
+  "Discipline": {
+    "skillId": "Discipline",
+    "minLevel": 24,
+    "color": 3,
+    "isSupport": false,
+    "itemGranted": false
+  },
+  "Forbidden Rite": {
+    "skillId": "ForbiddenRite",
+    "minLevel": 16,
+    "color": 3,
+    "isSupport": false,
+    "itemGranted": false
+  }
+}

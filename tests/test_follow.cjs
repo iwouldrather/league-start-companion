@@ -1,0 +1,18 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const vm=require('node:vm');
+const source=fs.readFileSync(path.join(__dirname,'../source/live-guide.js'),'utf8');
+const fn=source.split('\n').find(line=>line.startsWith('function shouldResumeFollowing('));
+const ctx=vm.createContext({});vm.runInContext(fn,ctx);
+assert.equal(vm.runInContext('shouldResumeFollowing(2,1,0,false,true)',ctx),true);
+assert.equal(vm.runInContext('shouldResumeFollowing(1,1,0,false,true)',ctx),false);
+assert.equal(vm.runInContext('shouldResumeFollowing(2,1,0,false,false)',ctx),false);
+assert.equal(vm.runInContext('shouldResumeFollowing(2,null,1,false,true)',ctx),true);
+assert.equal(vm.runInContext('shouldResumeFollowing(1,2,0,false,true)',ctx),false);
+console.log('Follow mode: 5 cases passed.');
+const suggested=source.split('\n').find(line=>line.startsWith('function suggestedStage('));
+const empty=vm.createContext({D:{sets:[]}});vm.runInContext(suggested,empty);
+assert.equal(vm.runInContext('suggestedStage(46)',empty),null);
+empty.D.sets=[{startLevel:1},{startLevel:33},{startLevel:50}];
+assert.equal(vm.runInContext('suggestedStage(46)',empty),1);

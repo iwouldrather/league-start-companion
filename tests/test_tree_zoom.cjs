@@ -1,0 +1,18 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const vm=require('node:vm');
+const path=require('node:path');
+const source=fs.readFileSync(path.join(__dirname,'../source/tree-ui.js'),'utf8');
+const fn=source.slice(source.indexOf('function zoomTreeBox('),source.indexOf('const treeViewports='));
+const context=vm.createContext({});vm.runInContext(fn,context);
+const origin={x:-100,y:-200,width:1000,height:800},anchor={x:300,y:200};
+const run=(box,delta)=>JSON.parse(vm.runInContext(`JSON.stringify(zoomTreeBox(${JSON.stringify(box)},${JSON.stringify(origin)},${JSON.stringify(anchor)},${delta}))`,context));
+const box=run(origin,-300);
+assert.ok(box.width<origin.width);
+assert.ok(Math.abs((anchor.x-box.x)/box.width-(anchor.x-origin.x)/origin.width)<1e-10);
+assert.ok(Math.abs((anchor.y-box.y)/box.height-(anchor.y-origin.y)/origin.height)<1e-10);
+let current=box;for(let i=0;i<100;i++)current=run(current,-600);
+assert.equal(current.width,origin.width/8);
+for(let i=0;i<100;i++)current=run(current,600);
+assert.deepEqual(current,origin);
+console.log('Tree zoom: cursor anchor, limits and zoom-out reset passed.');

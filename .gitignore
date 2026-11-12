@@ -1,0 +1,11 @@
+slayer-purchases.json
+slayer-purchases.tmp
+__pycache__/
+*.py[cod]
+.venv/
+*.log
+.guide-build.tmp
+builds/
+.cache/
+build/
+dist/

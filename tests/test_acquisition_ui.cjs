@@ -1,0 +1,11 @@
+const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
+const source=fs.readFileSync(path.join(__dirname,'../source/importer.js'),'utf8');
+const context=vm.createContext({D:{build:{className:'Marauder'},sets:[{startLevel:1,groups:[{gems:[{nameSpec:'Momentum'}]}]}],acquisitionOptions:{Momentum:[{vendor:'Siosa',cost:{amount:1,currency:'Scroll of Wisdom'}}]}},esc:String});
+vm.runInContext(source.slice(source.indexOf('function formatGemCost(')),context);
+assert.equal(vm.runInContext('earlyMomentum()',context),true);
+assert.match(vm.runInContext('acquisitionExtras("Momentum",{vendor:"Siosa"})',context),/1 × Scroll of Wisdom/);
+assert.match(vm.runInContext('acquisitionExtras("Momentum",{vendor:"Siosa"})',context),/mule a Ranger/);
+context.D.build.className='Ranger';assert.equal(vm.runInContext('earlyMomentum()',context),false);
+context.D.build.className='Marauder';context.D.sets[0].startLevel=12;assert.equal(vm.runInContext('earlyMomentum()',context),false);
+assert.equal(vm.runInContext('formatGemCost(null)',context),'Cost not verified');
+console.log('Acquisition UI: prices, early Momentum and class conditions passed.');

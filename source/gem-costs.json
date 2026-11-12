@@ -1,0 +1,2787 @@
+{
+  "checkedAt": "2026-11-12T10:51:14.7073070Z",
+  "gems": {
+    "Trap": {
+      "name": "Trap",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Trap_Support",
+      "checkedAt": "2026-11-12T10:47:59.0270403Z"
+    },
+    "Sacrifice": {
+      "name": "Sacrifice",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Sacrifice_Support",
+      "checkedAt": "2026-11-12T10:47:49.5025915Z"
+    },
+    "Combustion": {
+      "name": "Combustion",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Combustion_Support",
+      "checkedAt": "2026-11-12T10:47:11.306343Z"
+    },
+    "Bladefall": {
+      "name": "Bladefall",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Bladefall",
+      "checkedAt": "2026-11-12T10:47:05.4627791Z"
+    },
+    "Excommunicate": {
+      "name": "Excommunicate",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Excommunicate_Support",
+      "checkedAt": "2026-11-12T10:47:21.6556308Z"
+    },
+    "Freezing Pulse": {
+      "name": "Freezing Pulse",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Freezing_Pulse",
+      "checkedAt": "2026-11-12T10:47:26.3903369Z"
+    },
+    "Intimidating Cry": {
+      "name": "Intimidating Cry",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Intimidating_Cry",
+      "checkedAt": "2026-11-12T10:47:34.6631568Z"
+    },
+    "Purity of Ice": {
+      "name": "Purity of Ice",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Purity_of_Ice",
+      "checkedAt": "2026-11-12T10:47:47.518989Z"
+    },
+    "Elemental Army": {
+      "name": "Elemental Army",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Elemental_Army_Support",
+      "checkedAt": "2026-11-12T10:47:18.462272Z"
+    },
+    "Poisonous Concoction": {
+      "name": "Poisonous Concoction",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Poisonous_Concoction",
+      "checkedAt": "2026-11-12T10:47:45.3759354Z"
+    },
+    "Lightning Spire Trap": {
+      "name": "Lightning Spire Trap",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Lightning_Spire_Trap",
+      "checkedAt": "2026-11-12T10:47:38.4284023Z"
+    },
+    "Elemental Hit": {
+      "name": "Elemental Hit",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Elemental_Hit",
+      "checkedAt": "2026-11-12T10:47:19.0523794Z"
+    },
+    "Puncture": {
+      "name": "Puncture",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Puncture",
+      "checkedAt": "2026-11-12T10:47:46.7466981Z"
+    },
+    "Holy Strike": {
+      "name": "Holy Strike",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Holy_Strike",
+      "checkedAt": "2026-11-12T10:47:30.9469876Z"
+    },
+    "Raise Zombie": {
+      "name": "Raise Zombie",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Raise_Zombie",
+      "checkedAt": "2026-11-12T10:47:48.5779208Z"
+    },
+    "War Banner": {
+      "name": "War Banner",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/War_Banner",
+      "checkedAt": "2026-11-12T10:48:01.9777666Z"
+    },
+    "Blasphemy": {
+      "name": "Blasphemy",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Blasphemy_Support",
+      "checkedAt": "2026-11-12T10:47:05.4650085Z"
+    },
+    "Icicle Mine": {
+      "name": "Icicle Mine",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Icicle_Mine",
+      "checkedAt": "2026-11-12T10:47:32.3053266Z"
+    },
+    "Elemental Proliferation": {
+      "name": "Elemental Proliferation",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Elemental_Proliferation_Support",
+      "checkedAt": "2026-11-12T10:47:19.5921655Z"
+    },
+    "Scourge Arrow": {
+      "name": "Scourge Arrow",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Scourge_Arrow",
+      "checkedAt": "2026-11-12T10:47:50.0765415Z"
+    },
+    "Summon Skeletons": {
+      "name": "Summon Skeletons",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Summon_Skeletons",
+      "checkedAt": "2026-11-12T10:47:56.7397762Z"
+    },
+    "Hypothermia": {
+      "name": "Hypothermia",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Hypothermia_Support",
+      "checkedAt": "2026-11-12T10:47:31.7057627Z"
+    },
+    "Flame Wall": {
+      "name": "Flame Wall",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Flame_Wall",
+      "checkedAt": "2026-11-12T10:47:24.5641341Z"
+    },
+    "Hallow": {
+      "name": "Hallow",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Hallow_Support",
+      "checkedAt": "2026-11-12T10:47:29.0825639Z"
+    },
+    "Burning Arrow": {
+      "name": "Burning Arrow",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Burning_Arrow",
+      "checkedAt": "2026-11-12T10:47:08.109953Z"
+    },
+    "Spirit Offering": {
+      "name": "Spirit Offering",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Spirit_Offering",
+      "checkedAt": "2026-11-12T10:47:54.3275473Z"
+    },
+    "Blast Rain": {
+      "name": "Blast Rain",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Blast_Rain",
+      "checkedAt": "2026-11-12T10:47:05.664369Z"
+    },
+    "Reap": {
+      "name": "Reap",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Reap",
+      "checkedAt": "2026-11-12T10:47:48.7035728Z"
+    },
+    "Exsanguinate": {
+      "name": "Exsanguinate",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Exsanguinate",
+      "checkedAt": "2026-11-12T10:47:22.853672Z"
+    },
+    "Poacher's Mark": {
+      "name": "Poacher's Mark",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Poachers_Mark",
+      "checkedAt": "2026-11-12T10:47:45.2033442Z"
+    },
+    "General's Cry": {
+      "name": "General's Cry",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Generals_Cry",
+      "checkedAt": "2026-11-12T10:47:27.9552954Z"
+    },
+    "Frost Wall": {
+      "name": "Frost Wall",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Frost_Wall",
+      "checkedAt": "2026-11-12T10:47:27.2524033Z"
+    },
+    "Void Manipulation": {
+      "name": "Void Manipulation",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Void_Manipulation_Support",
+      "checkedAt": "2026-11-12T10:48:00.8035513Z"
+    },
+    "Orb of Storms": {
+      "name": "Orb of Storms",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Orb_of_Storms",
+      "checkedAt": "2026-11-12T10:47:43.4563658Z"
+    },
+    "Rage": {
+      "name": "Rage",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Rage_Support",
+      "checkedAt": "2026-11-12T10:47:47.9764196Z"
+    },
+    "Kinetic Blast": {
+      "name": "Kinetic Blast",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Kinetic_Blast",
+      "checkedAt": "2026-11-12T10:47:35.2286668Z"
+    },
+    "Urgent Orders": {
+      "name": "Urgent Orders",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Urgent_Orders_Support",
+      "checkedAt": "2026-11-12T10:47:59.3924866Z"
+    },
+    "Enfeeble": {
+      "name": "Enfeeble",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Enfeeble",
+      "checkedAt": "2026-11-12T10:47:20.7377167Z"
+    },
+    "Rage Vortex": {
+      "name": "Rage Vortex",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Rage_Vortex",
+      "checkedAt": "2026-11-12T10:47:48.1140694Z"
+    },
+    "Ice Crash": {
+      "name": "Ice Crash",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Ice_Crash",
+      "checkedAt": "2026-11-12T10:47:31.5448602Z"
+    },
+    "Somatic Shell": {
+      "name": "Somatic Shell",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Somatic_Shell",
+      "checkedAt": "2026-11-12T10:47:53.0472794Z"
+    },
+    "Flesh Offering": {
+      "name": "Flesh Offering",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Flesh_Offering",
+      "checkedAt": "2026-11-12T10:47:25.1961212Z"
+    },
+    "Herald of Thunder": {
+      "name": "Herald of Thunder",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Herald_of_Thunder",
+      "checkedAt": "2026-11-12T10:47:30.2415616Z"
+    },
+    "Flameblast": {
+      "name": "Flameblast",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Flameblast",
+      "checkedAt": "2026-11-12T10:47:24.6125725Z"
+    },
+    "Blazing Salvo": {
+      "name": "Blazing Salvo",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Blazing_Salvo",
+      "checkedAt": "2026-11-12T10:47:06.0699965Z"
+    },
+    "Sacred Wisps": {
+      "name": "Sacred Wisps",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Sacred_Wisps_Support",
+      "checkedAt": "2026-11-12T10:47:49.6272665Z"
+    },
+    "Brand Recall": {
+      "name": "Brand Recall",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Brand_Recall",
+      "checkedAt": "2026-11-12T10:47:08.0837894Z"
+    },
+    "Purity of Fire": {
+      "name": "Purity of Fire",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Purity_of_Fire",
+      "checkedAt": "2026-11-12T10:47:47.3308651Z"
+    },
+    "Vitality": {
+      "name": "Vitality",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Vitality",
+      "checkedAt": "2026-11-12T10:48:00.56428Z"
+    },
+    "Living Lightning": {
+      "name": "Living Lightning",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Living_Lightning_Support",
+      "checkedAt": "2026-11-12T10:47:39.8757832Z"
+    },
+    "Ancestral Call": {
+      "name": "Ancestral Call",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Ancestral_Call_Support",
+      "checkedAt": "2026-11-12T10:47:00.3287509Z"
+    },
+    "Vulnerability": {
+      "name": "Vulnerability",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Vulnerability",
+      "checkedAt": "2026-11-12T10:48:01.7699573Z"
+    },
+    "Holy Sweep": {
+      "name": "Holy Sweep",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Holy_Sweep",
+      "checkedAt": "2026-11-12T10:47:31.3826179Z"
+    },
+    "Spectral Helix": {
+      "name": "Spectral Helix",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Spectral_Helix",
+      "checkedAt": "2026-11-12T10:47:53.5222913Z"
+    },
+    "Frostbite": {
+      "name": "Frostbite",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Frostbite",
+      "checkedAt": "2026-11-12T10:47:27.3220997Z"
+    },
+    "Arcane Cloak": {
+      "name": "Arcane Cloak",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Arcane_Cloak",
+      "checkedAt": "2026-11-12T10:47:00.9867367Z"
+    },
+    "Life Leech": {
+      "name": "Life Leech",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Life_Leech_Support",
+      "checkedAt": "2026-11-12T10:47:37.2470242Z"
+    },
+    "Controlled Destruction": {
+      "name": "Controlled Destruction",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Controlled_Destruction_Support",
+      "checkedAt": "2026-11-12T10:47:12.4435012Z"
+    },
+    "Frost Bomb": {
+      "name": "Frost Bomb",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Frost_Bomb",
+      "checkedAt": "2026-11-12T10:47:26.975095Z"
+    },
+    "Lightning Tendrils": {
+      "name": "Lightning Tendrils",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Lightning_Tendrils",
+      "checkedAt": "2026-11-12T10:47:38.9956678Z"
+    },
+    "Voltaxic Burst": {
+      "name": "Voltaxic Burst",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Voltaxic_Burst",
+      "checkedAt": "2026-11-12T10:48:01.4021148Z"
+    },
+    "Grace": {
+      "name": "Grace",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Grace",
+      "checkedAt": "2026-11-12T10:47:28.5520689Z"
+    },
+    "Zealotry": {
+      "name": "Zealotry",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Zealotry",
+      "checkedAt": "2026-11-12T10:48:03.7694523Z"
+    },
+    "Advanced Traps": {
+      "name": "Advanced Traps",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Advanced_Traps_Support",
+      "checkedAt": "2026-11-12T10:46:59.9709299Z"
+    },
+    "Ballista Totem": {
+      "name": "Ballista Totem",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Ballista_Totem_Support",
+      "checkedAt": "2026-11-12T10:47:03.103851Z"
+    },
+    "Fresh Meat": {
+      "name": "Fresh Meat",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Fresh_Meat_Support",
+      "checkedAt": "2026-11-12T10:47:26.7219923Z"
+    },
+    "Glacial Cascade": {
+      "name": "Glacial Cascade",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Glacial_Cascade",
+      "checkedAt": "2026-11-12T10:47:28.4458932Z"
+    },
+    "Desecrate": {
+      "name": "Desecrate",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Desecrate",
+      "checkedAt": "2026-11-12T10:47:15.240505Z"
+    },
+    "Life Gain on Hit": {
+      "name": "Life Gain on Hit",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Life_Gain_on_Hit_Support",
+      "checkedAt": "2026-11-12T10:47:36.9837824Z"
+    },
+    "Malevolence": {
+      "name": "Malevolence",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Malevolence",
+      "checkedAt": "2026-11-12T10:47:40.216701Z"
+    },
+    "Bloodthirst": {
+      "name": "Bloodthirst",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Bloodthirst_Support",
+      "checkedAt": "2026-11-12T10:47:07.5015376Z"
+    },
+    "Faster Casting": {
+      "name": "Faster Casting",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Faster_Casting_Support",
+      "checkedAt": "2026-11-12T10:47:23.1713679Z"
+    },
+    "Wrath": {
+      "name": "Wrath",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Wrath",
+      "checkedAt": "2026-11-12T10:48:03.2587238Z"
+    },
+    "Alchemist's Mark": {
+      "name": "Alchemist's Mark",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Alchemists_Mark",
+      "checkedAt": "2026-11-12T10:46:59.7430563Z"
+    },
+    "Flicker Strike": {
+      "name": "Flicker Strike",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Flicker_Strike",
+      "checkedAt": "2026-11-12T10:47:25.5400398Z"
+    },
+    "Arrogance": {
+      "name": "Arrogance",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Arrogance_Support",
+      "checkedAt": "2026-11-12T10:47:02.2522063Z"
+    },
+    "Additional Accuracy": {
+      "name": "Additional Accuracy",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Additional_Accuracy_Support",
+      "checkedAt": "2026-11-12T10:46:59.728477Z"
+    },
+    "High-Impact Mine": {
+      "name": "High-Impact Mine",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/High-Impact_Mine_Support",
+      "checkedAt": "2026-11-12T10:47:30.9010548Z"
+    },
+    "Multiple Projectiles": {
+      "name": "Multiple Projectiles",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Multiple_Projectiles_Support",
+      "checkedAt": "2026-11-12T10:47:42.9182288Z"
+    },
+    "Essence Drain": {
+      "name": "Essence Drain",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Essence_Drain",
+      "checkedAt": "2026-11-12T10:47:21.0648253Z"
+    },
+    "Melee Splash": {
+      "name": "Melee Splash",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Melee_Splash_Support",
+      "checkedAt": "2026-11-12T10:47:41.1417684Z"
+    },
+    "Stormblast Mine": {
+      "name": "Stormblast Mine",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Stormblast_Mine",
+      "checkedAt": "2026-11-12T10:47:55.9977263Z"
+    },
+    "Prismatic Burst": {
+      "name": "Prismatic Burst",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Prismatic_Burst_Support",
+      "checkedAt": "2026-11-12T10:47:46.2924799Z"
+    },
+    "Lightning Strike": {
+      "name": "Lightning Strike",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Lightning_Strike",
+      "checkedAt": "2026-11-12T10:47:38.4249511Z"
+    },
+    "Blade Flurry": {
+      "name": "Blade Flurry",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Blade_Flurry",
+      "checkedAt": "2026-11-12T10:47:04.3325926Z"
+    },
+    "Ice Trap": {
+      "name": "Ice Trap",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Ice_Trap",
+      "checkedAt": "2026-11-12T10:47:32.3553061Z"
+    },
+    "Stun": {
+      "name": "Stun",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Stun_Support",
+      "checkedAt": "2026-11-12T10:47:56.3748271Z"
+    },
+    "Ground Slam": {
+      "name": "Ground Slam",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Ground_Slam",
+      "checkedAt": "2026-11-12T10:47:28.874648Z"
+    },
+    "Concentrated Effect": {
+      "name": "Concentrated Effect",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Concentrated_Effect_Support",
+      "checkedAt": "2026-11-12T10:47:11.4075821Z"
+    },
+    "Ice Nova": {
+      "name": "Ice Nova",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Ice_Nova",
+      "checkedAt": "2026-11-12T10:47:31.972506Z"
+    },
+    "Culling Strike": {
+      "name": "Culling Strike",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Culling_Strike_Support",
+      "checkedAt": "2026-11-12T10:47:14.0374134Z"
+    },
+    "Molten Shell": {
+      "name": "Molten Shell",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Molten_Shell",
+      "checkedAt": "2026-11-12T10:47:42.3257093Z"
+    },
+    "Ruthless": {
+      "name": "Ruthless",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Ruthless_Support",
+      "checkedAt": "2026-11-12T10:47:49.4268048Z"
+    },
+    "Cleave": {
+      "name": "Cleave",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Cleave",
+      "checkedAt": "2026-11-12T10:47:09.9747103Z"
+    },
+    "Dominating Blow": {
+      "name": "Dominating Blow",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Dominating_Blow",
+      "checkedAt": "2026-11-12T10:47:16.7475589Z"
+    },
+    "Artillery Ballista": {
+      "name": "Artillery Ballista",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Artillery_Ballista",
+      "checkedAt": "2026-11-12T10:47:02.1382646Z"
+    },
+    "Boneshatter": {
+      "name": "Boneshatter",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Boneshatter",
+      "checkedAt": "2026-11-12T10:47:08.0441272Z"
+    },
+    "Herald of Ice": {
+      "name": "Herald of Ice",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Herald_of_Ice",
+      "checkedAt": "2026-11-12T10:47:30.0667713Z"
+    },
+    "Lancing Steel": {
+      "name": "Lancing Steel",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Lancing_Steel",
+      "checkedAt": "2026-11-12T10:47:36.4183584Z"
+    },
+    "Added Cold Damage": {
+      "name": "Added Cold Damage",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Added_Cold_Damage_Support",
+      "checkedAt": "2026-11-12T10:46:58.8731995Z"
+    },
+    "Vigilant Strike": {
+      "name": "Vigilant Strike",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Vigilant_Strike",
+      "checkedAt": "2026-11-12T10:47:59.9437939Z"
+    },
+    "Sunder": {
+      "name": "Sunder",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Sunder",
+      "checkedAt": "2026-11-12T10:47:57.179924Z"
+    },
+    "Sniper's Mark": {
+      "name": "Sniper's Mark",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Snipers_Mark",
+      "checkedAt": "2026-11-12T10:47:52.9264829Z"
+    },
+    "Contagion": {
+      "name": "Contagion",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Contagion",
+      "checkedAt": "2026-11-12T10:47:11.8810171Z"
+    },
+    "Added Lightning Damage": {
+      "name": "Added Lightning Damage",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Added_Lightning_Damage_Support",
+      "checkedAt": "2026-11-12T10:46:59.7616009Z"
+    },
+    "Bloodlust": {
+      "name": "Bloodlust",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Bloodlust_Support",
+      "checkedAt": "2026-11-12T10:47:07.4479882Z"
+    },
+    "Blood and Sand": {
+      "name": "Blood and Sand",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Blood_and_Sand",
+      "checkedAt": "2026-11-12T10:47:07.0229848Z"
+    },
+    "Crushing Fist": {
+      "name": "Crushing Fist",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Crushing_Fist",
+      "checkedAt": "2026-11-12T10:47:13.6735635Z"
+    },
+    "Soulrend": {
+      "name": "Soulrend",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Soulrend",
+      "checkedAt": "2026-11-12T10:47:53.1489527Z"
+    },
+    "Blade Trap": {
+      "name": "Blade Trap",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Blade_Trap",
+      "checkedAt": "2026-11-12T10:47:04.7411363Z"
+    },
+    "Minion Damage": {
+      "name": "Minion Damage",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Minion_Damage_Support",
+      "checkedAt": "2026-11-12T10:47:41.4535744Z"
+    },
+    "Conductivity": {
+      "name": "Conductivity",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Conductivity",
+      "checkedAt": "2026-11-12T10:47:11.2922289Z"
+    },
+    "Hatred": {
+      "name": "Hatred",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Hatred",
+      "checkedAt": "2026-11-12T10:47:29.4734738Z"
+    },
+    "Volcanic Fissure": {
+      "name": "Volcanic Fissure",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Volcanic_Fissure",
+      "checkedAt": "2026-11-12T10:48:01.1695362Z"
+    },
+    "Controlled Blaze": {
+      "name": "Controlled Blaze",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Controlled_Blaze_Support",
+      "checkedAt": "2026-11-12T10:47:11.7407557Z"
+    },
+    "Blade Vortex": {
+      "name": "Blade Vortex",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Blade_Vortex",
+      "checkedAt": "2026-11-12T10:47:04.874489Z"
+    },
+    "Animate Guardian": {
+      "name": "Animate Guardian",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Animate_Guardian",
+      "checkedAt": "2026-11-12T10:47:00.5692997Z"
+    },
+    "Seismic Trap": {
+      "name": "Seismic Trap",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Seismic_Trap",
+      "checkedAt": "2026-11-12T10:47:50.778474Z"
+    },
+    "Unearth": {
+      "name": "Unearth",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Unearth",
+      "checkedAt": "2026-11-12T10:47:59.6119717Z"
+    },
+    "Spectral Shield Throw": {
+      "name": "Spectral Shield Throw",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Spectral_Shield_Throw",
+      "checkedAt": "2026-11-12T10:47:53.6316811Z"
+    },
+    "Earthshatter": {
+      "name": "Earthshatter",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Earthshatter",
+      "checkedAt": "2026-11-12T10:47:17.8971757Z"
+    },
+    "Punishment": {
+      "name": "Punishment",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Punishment",
+      "checkedAt": "2026-11-12T10:47:46.9176451Z"
+    },
+    "Spell Totem": {
+      "name": "Spell Totem",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Spell_Totem_Support",
+      "checkedAt": "2026-11-12T10:47:54.3505502Z"
+    },
+    "Frost Blades": {
+      "name": "Frost Blades",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Frost_Blades",
+      "checkedAt": "2026-11-12T10:47:26.7564893Z"
+    },
+    "Blade Blast": {
+      "name": "Blade Blast",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Blade_Blast",
+      "checkedAt": "2026-11-12T10:47:04.2726133Z"
+    },
+    "Purity of Elements": {
+      "name": "Purity of Elements",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Purity_of_Elements",
+      "checkedAt": "2026-11-12T10:47:46.9343118Z"
+    },
+    "Holy Hammers": {
+      "name": "Holy Hammers",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Holy_Hammers",
+      "checkedAt": "2026-11-12T10:47:30.8443812Z"
+    },
+    "Dual Strike": {
+      "name": "Dual Strike",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Dual_Strike",
+      "checkedAt": "2026-11-12T10:47:17.3003073Z"
+    },
+    "Glacial Hammer": {
+      "name": "Glacial Hammer",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Glacial_Hammer",
+      "checkedAt": "2026-11-12T10:47:28.481415Z"
+    },
+    "Explosive Concoction": {
+      "name": "Explosive Concoction",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Explosive_Concoction",
+      "checkedAt": "2026-11-12T10:47:22.2427903Z"
+    },
+    "Blind": {
+      "name": "Blind",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Blind_Support",
+      "checkedAt": "2026-11-12T10:47:06.9034355Z"
+    },
+    "Damage on Full Life": {
+      "name": "Damage on Full Life",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Damage_on_Full_Life_Support",
+      "checkedAt": "2026-11-12T10:47:14.6450592Z"
+    },
+    "Raise Spectre": {
+      "name": "Raise Spectre",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Raise_Spectre",
+      "checkedAt": "2026-11-12T10:47:48.4997557Z"
+    },
+    "Added Fire Damage": {
+      "name": "Added Fire Damage",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Added_Fire_Damage_Support",
+      "checkedAt": "2026-11-12T10:46:59.3820004Z"
+    },
+    "Chain Hook": {
+      "name": "Chain Hook",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Chain_Hook",
+      "checkedAt": "2026-11-12T10:47:08.6828479Z"
+    },
+    "Trap and Mine Damage": {
+      "name": "Trap and Mine Damage",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Trap_and_Mine_Damage_Support",
+      "checkedAt": "2026-11-12T10:47:59.0606135Z"
+    },
+    "Locus Mine": {
+      "name": "Locus Mine",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Locus_Mine_Support",
+      "checkedAt": "2026-11-12T10:47:39.6318883Z"
+    },
+    "Faster Attacks": {
+      "name": "Faster Attacks",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Faster_Attacks_Support",
+      "checkedAt": "2026-11-12T10:47:22.8682475Z"
+    },
+    "Flamewood": {
+      "name": "Flamewood",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Flamewood_Support",
+      "checkedAt": "2026-11-12T10:47:24.9456885Z"
+    },
+    "Arcane Surge": {
+      "name": "Arcane Surge",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Arcane_Surge_Support",
+      "checkedAt": "2026-11-12T10:47:01.1692403Z"
+    },
+    "Pulverise": {
+      "name": "Pulverise",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Pulverise_Support",
+      "checkedAt": "2026-11-12T10:47:46.3309663Z"
+    },
+    "Exemplar": {
+      "name": "Exemplar",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Exemplar_Support",
+      "checkedAt": "2026-11-12T10:47:21.9535656Z"
+    },
+    "Summon Phantasm": {
+      "name": "Summon Phantasm",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Summon_Phantasm_Support",
+      "checkedAt": "2026-11-12T10:47:56.1181055Z"
+    },
+    "Critical Strike Affliction": {
+      "name": "Critical Strike Affliction",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Critical_Strike_Affliction_Support",
+      "checkedAt": "2026-11-12T10:47:13.6488481Z"
+    },
+    "Scorching Ray": {
+      "name": "Scorching Ray",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Scorching_Ray",
+      "checkedAt": "2026-11-12T10:47:50.0076336Z"
+    },
+    "Expert Retaliation": {
+      "name": "Expert Retaliation",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Expert_Retaliation_Support",
+      "checkedAt": "2026-11-12T10:47:21.7417024Z"
+    },
+    "Feeding Frenzy": {
+      "name": "Feeding Frenzy",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Feeding_Frenzy_Support",
+      "checkedAt": "2026-11-12T10:47:23.4380431Z"
+    },
+    "Tornado Shot": {
+      "name": "Tornado Shot",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Tornado_Shot",
+      "checkedAt": "2026-11-12T10:47:58.46297Z"
+    },
+    "Arrow Nova": {
+      "name": "Arrow Nova",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Arrow_Nova_Support",
+      "checkedAt": "2026-11-12T10:47:01.9241793Z"
+    },
+    "Swift Assembly": {
+      "name": "Swift Assembly",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Swift_Assembly_Support",
+      "checkedAt": "2026-11-12T10:47:57.3266928Z"
+    },
+    "Dash": {
+      "name": "Dash",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Dash",
+      "checkedAt": "2026-11-12T10:47:14.5660268Z"
+    },
+    "Explosive Trap": {
+      "name": "Explosive Trap",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Explosive_Trap",
+      "checkedAt": "2026-11-12T10:47:22.3310118Z"
+    },
+    "Rejuvenation Totem": {
+      "name": "Rejuvenation Totem",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Rejuvenation_Totem",
+      "checkedAt": "2026-11-12T10:47:48.8189224Z"
+    },
+    "Blight": {
+      "name": "Blight",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Blight",
+      "checkedAt": "2026-11-12T10:47:06.8726319Z"
+    },
+    "Chance to Bleed": {
+      "name": "Chance to Bleed",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Chance_to_Bleed_Support",
+      "checkedAt": "2026-11-12T10:47:08.9350291Z"
+    },
+    "Guardian's Blessing": {
+      "name": "Guardian's Blessing",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Guardians_Blessing_Support",
+      "checkedAt": "2026-11-12T10:47:29.0335252Z"
+    },
+    "Infused Channelling": {
+      "name": "Infused Channelling",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Infused_Channelling_Support",
+      "checkedAt": "2026-11-12T10:47:34.0821178Z"
+    },
+    "Firestorm": {
+      "name": "Firestorm",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Firestorm",
+      "checkedAt": "2026-11-12T10:47:24.0148089Z"
+    },
+    "Arc": {
+      "name": "Arc",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Arc",
+      "checkedAt": "2026-11-12T10:47:00.9358896Z"
+    },
+    "Shattering Steel": {
+      "name": "Shattering Steel",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Shattering_Steel",
+      "checkedAt": "2026-11-12T10:47:50.8175294Z"
+    },
+    "Herald of Agony": {
+      "name": "Herald of Agony",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Herald_of_Agony",
+      "checkedAt": "2026-11-12T10:47:29.6576029Z"
+    },
+    "Bladestorm": {
+      "name": "Bladestorm",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Bladestorm",
+      "checkedAt": "2026-11-12T10:47:05.0845651Z"
+    },
+    "Behead": {
+      "name": "Behead",
+      "amount": 1,
+      "currency": "Orb of Alchemy",
+      "source": "https://poedb.tw/us/Behead_Support",
+      "checkedAt": "2026-11-12T10:47:04.1439147Z"
+    },
+    "Stormbind": {
+      "name": "Stormbind",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Stormbind",
+      "checkedAt": "2026-11-12T10:47:55.5262613Z"
+    },
+    "Meat Shield": {
+      "name": "Meat Shield",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Meat_Shield_Support",
+      "checkedAt": "2026-11-12T10:47:41.2723776Z"
+    },
+    "Seismic Cry": {
+      "name": "Seismic Cry",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Seismic_Cry",
+      "checkedAt": "2026-11-12T10:47:50.646799Z"
+    },
+    "Mirage Archer": {
+      "name": "Mirage Archer",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Mirage_Archer_Support",
+      "checkedAt": "2026-11-12T10:47:41.8511561Z"
+    },
+    "Despair": {
+      "name": "Despair",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Despair",
+      "checkedAt": "2026-11-12T10:47:15.4454213Z"
+    },
+    "Vortex": {
+      "name": "Vortex",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Vortex",
+      "checkedAt": "2026-11-12T10:48:01.7282173Z"
+    },
+    "Whirling Blades": {
+      "name": "Whirling Blades",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Whirling_Blades",
+      "checkedAt": "2026-11-12T10:48:02.3570377Z"
+    },
+    "Shield Crush": {
+      "name": "Shield Crush",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Shield_Crush",
+      "checkedAt": "2026-11-12T10:47:50.9843771Z"
+    },
+    "Elemental Weakness": {
+      "name": "Elemental Weakness",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Elemental_Weakness",
+      "checkedAt": "2026-11-12T10:47:19.6255796Z"
+    },
+    "Corrupting Cry": {
+      "name": "Corrupting Cry",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Corrupting_Cry_Support",
+      "checkedAt": "2026-11-12T10:47:12.2278869Z"
+    },
+    "Summon Holy Relic": {
+      "name": "Summon Holy Relic",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Summon_Holy_Relic",
+      "checkedAt": "2026-11-12T10:47:56.1216326Z"
+    },
+    "Cremation": {
+      "name": "Cremation",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Cremation",
+      "checkedAt": "2026-11-12T10:47:13.072442Z"
+    },
+    "Herald of Purity": {
+      "name": "Herald of Purity",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Herald_of_Purity",
+      "checkedAt": "2026-11-12T10:47:30.2232258Z"
+    },
+    "Blastchain Mine": {
+      "name": "Blastchain Mine",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Blastchain_Mine_Support",
+      "checkedAt": "2026-11-12T10:47:06.3086001Z"
+    },
+    "Sadism": {
+      "name": "Sadism",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Sadism_Support",
+      "checkedAt": "2026-11-12T10:47:50.1753566Z"
+    },
+    "Ancestral Cry": {
+      "name": "Ancestral Cry",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Ancestral_Cry",
+      "checkedAt": "2026-11-12T10:47:00.3334979Z"
+    },
+    "Cobra Lash": {
+      "name": "Cobra Lash",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Cobra_Lash",
+      "checkedAt": "2026-11-12T10:47:10.4489927Z"
+    },
+    "Storm Burst": {
+      "name": "Storm Burst",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Storm_Burst",
+      "checkedAt": "2026-11-12T10:47:55.391012Z"
+    },
+    "Knockback": {
+      "name": "Knockback",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Knockback_Support",
+      "checkedAt": "2026-11-12T10:47:36.352272Z"
+    },
+    "Smoke Mine": {
+      "name": "Smoke Mine",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Smoke_Mine",
+      "checkedAt": "2026-11-12T10:47:52.5505283Z"
+    },
+    "Thunderstorm": {
+      "name": "Thunderstorm",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Thunderstorm",
+      "checkedAt": "2026-11-12T10:47:58.6135405Z"
+    },
+    "Wall of Force": {
+      "name": "Wall of Force",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Wall_of_Force",
+      "checkedAt": "2026-11-12T10:48:01.7699575Z"
+    },
+    "Purity of Lightning": {
+      "name": "Purity of Lightning",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Purity_of_Lightning",
+      "checkedAt": "2026-11-12T10:47:47.5332626Z"
+    },
+    "Eye of Winter": {
+      "name": "Eye of Winter",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Eye_of_Winter",
+      "checkedAt": "2026-11-12T10:47:22.7650025Z"
+    },
+    "Unbound Ailments": {
+      "name": "Unbound Ailments",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Unbound_Ailments_Support",
+      "checkedAt": "2026-11-12T10:47:59.4558617Z"
+    },
+    "Cold to Fire": {
+      "name": "Cold to Fire",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Cold_to_Fire_Support",
+      "checkedAt": "2026-11-12T10:47:10.9751634Z"
+    },
+    "Forbidden Rite": {
+      "name": "Forbidden Rite",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Forbidden_Rite",
+      "checkedAt": "2026-11-12T10:47:26.0696577Z"
+    },
+    "Toxic Rain": {
+      "name": "Toxic Rain",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Toxic_Rain",
+      "checkedAt": "2026-11-12T10:47:58.5380213Z"
+    },
+    "Automation": {
+      "name": "Automation",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Automation",
+      "checkedAt": "2026-11-12T10:47:02.5977416Z"
+    },
+    "Infernal Blow": {
+      "name": "Infernal Blow",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Infernal_Blow",
+      "checkedAt": "2026-11-12T10:47:33.4894627Z"
+    },
+    "Slower Projectiles": {
+      "name": "Slower Projectiles",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Slower_Projectiles_Support",
+      "checkedAt": "2026-11-12T10:47:52.4464506Z"
+    },
+    "Frostbolt": {
+      "name": "Frostbolt",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Frostbolt",
+      "checkedAt": "2026-11-12T10:47:27.5481287Z"
+    },
+    "Righteous Fire": {
+      "name": "Righteous Fire",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Righteous_Fire",
+      "checkedAt": "2026-11-12T10:47:49.1607514Z"
+    },
+    "Generosity": {
+      "name": "Generosity",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Generosity_Support",
+      "checkedAt": "2026-11-12T10:47:27.8880431Z"
+    },
+    "Multiple Traps": {
+      "name": "Multiple Traps",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Multiple_Traps_Support",
+      "checkedAt": "2026-11-12T10:47:43.0483418Z"
+    },
+    "Hexblast": {
+      "name": "Hexblast",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Hexblast",
+      "checkedAt": "2026-11-12T10:47:30.348197Z"
+    },
+    "Pride": {
+      "name": "Pride",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Pride",
+      "checkedAt": "2026-11-12T10:47:46.1446051Z"
+    },
+    "Nightblade": {
+      "name": "Nightblade",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Nightblade_Support",
+      "checkedAt": "2026-11-12T10:47:43.5681059Z"
+    },
+    "Perforate": {
+      "name": "Perforate",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Perforate",
+      "checkedAt": "2026-11-12T10:47:44.047944Z"
+    },
+    "Fire Penetration": {
+      "name": "Fire Penetration",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Fire_Penetration_Support",
+      "checkedAt": "2026-11-12T10:47:23.7478008Z"
+    },
+    "Spectral Throw": {
+      "name": "Spectral Throw",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Spectral_Throw",
+      "checkedAt": "2026-11-12T10:47:53.7490549Z"
+    },
+    "Dread Banner": {
+      "name": "Dread Banner",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Dread_Banner",
+      "checkedAt": "2026-11-12T10:47:17.2869515Z"
+    },
+    "Impending Doom": {
+      "name": "Impending Doom",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Impending_Doom_Support",
+      "checkedAt": "2026-11-12T10:47:32.8764417Z"
+    },
+    "Split Arrow": {
+      "name": "Split Arrow",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Split_Arrow",
+      "checkedAt": "2026-11-12T10:47:54.3505713Z"
+    },
+    "Maim": {
+      "name": "Maim",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Maim_Support",
+      "checkedAt": "2026-11-12T10:47:39.9505949Z"
+    },
+    "Lightning Warp": {
+      "name": "Lightning Warp",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Lightning_Warp",
+      "checkedAt": "2026-11-12T10:47:39.11775Z"
+    },
+    "Crackling Lance": {
+      "name": "Crackling Lance",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Crackling_Lance",
+      "checkedAt": "2026-11-12T10:47:12.9174844Z"
+    },
+    "Consecrated Path": {
+      "name": "Consecrated Path",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Consecrated_Path",
+      "checkedAt": "2026-11-12T10:47:11.9032201Z"
+    },
+    "Heavy Strike": {
+      "name": "Heavy Strike",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Heavy_Strike",
+      "checkedAt": "2026-11-12T10:47:29.6211293Z"
+    },
+    "Lightning Trap": {
+      "name": "Lightning Trap",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Lightning_Trap",
+      "checkedAt": "2026-11-12T10:47:39.028002Z"
+    },
+    "Mana Leech": {
+      "name": "Mana Leech",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Mana_Leech_Support",
+      "checkedAt": "2026-11-12T10:47:40.7001838Z"
+    },
+    "Blessed Call": {
+      "name": "Blessed Call",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Blessed_Call_Support",
+      "checkedAt": "2026-11-12T10:47:05.9948668Z"
+    },
+    "Swift Affliction": {
+      "name": "Swift Affliction",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Swift_Affliction_Support",
+      "checkedAt": "2026-11-12T10:47:57.6056682Z"
+    },
+    "Divine Retribution": {
+      "name": "Divine Retribution",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Divine_Retribution",
+      "checkedAt": "2026-11-12T10:47:16.6932318Z"
+    },
+    "Shockwave Totem": {
+      "name": "Shockwave Totem",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Shockwave_Totem",
+      "checkedAt": "2026-11-12T10:47:51.761985Z"
+    },
+    "Leap Slam": {
+      "name": "Leap Slam",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Leap_Slam",
+      "checkedAt": "2026-11-12T10:51:10.9477756Z"
+    },
+    "Fork": {
+      "name": "Fork",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Fork_Support",
+      "checkedAt": "2026-11-12T10:47:26.1157757Z"
+    },
+    "Determination": {
+      "name": "Determination",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Determination",
+      "checkedAt": "2026-11-12T10:47:15.5065791Z"
+    },
+    "Pyroclast Mine": {
+      "name": "Pyroclast Mine",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Pyroclast_Mine",
+      "checkedAt": "2026-11-12T10:47:47.904857Z"
+    },
+    "Discharge": {
+      "name": "Discharge",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Discharge",
+      "checkedAt": "2026-11-12T10:47:16.1120549Z"
+    },
+    "Purifying Flame": {
+      "name": "Purifying Flame",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Purifying_Flame",
+      "checkedAt": "2026-11-12T10:47:47.4035145Z"
+    },
+    "Lacerate": {
+      "name": "Lacerate",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Lacerate",
+      "checkedAt": "2026-11-12T10:47:36.1908903Z"
+    },
+    "Minion Life": {
+      "name": "Minion Life",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Minion_Life_Support",
+      "checkedAt": "2026-11-12T10:47:41.7240161Z"
+    },
+    "Penance Brand": {
+      "name": "Penance Brand",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Penance_Brand",
+      "checkedAt": "2026-11-12T10:47:43.6506325Z"
+    },
+    "Power Charge On Critical": {
+      "name": "Power Charge On Critical",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Power_Charge_On_Critical_Support",
+      "checkedAt": "2026-11-12T10:47:45.6844651Z"
+    },
+    "Cold Penetration": {
+      "name": "Cold Penetration",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Cold_Penetration_Support",
+      "checkedAt": "2026-11-12T10:47:10.7079633Z"
+    },
+    "Divine Blast": {
+      "name": "Divine Blast",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Divine_Blast",
+      "checkedAt": "2026-11-12T10:47:16.6412148Z"
+    },
+    "Earthquake": {
+      "name": "Earthquake",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Earthquake",
+      "checkedAt": "2026-11-12T10:47:17.8593354Z"
+    },
+    "Pierce": {
+      "name": "Pierce",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Pierce_Support",
+      "checkedAt": "2026-11-12T10:47:44.6421466Z"
+    },
+    "Frenzy": {
+      "name": "Frenzy",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Frenzy",
+      "checkedAt": "2026-11-12T10:47:26.6469377Z"
+    },
+    "Temporal Chains": {
+      "name": "Temporal Chains",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Temporal_Chains",
+      "checkedAt": "2026-11-12T10:47:58.1803086Z"
+    },
+    "Ball Lightning": {
+      "name": "Ball Lightning",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Ball_Lightning",
+      "checkedAt": "2026-11-12T10:47:03.092892Z"
+    },
+    "Added Chaos Damage": {
+      "name": "Added Chaos Damage",
+      "amount": 1,
+      "currency": "Orb of Alchemy",
+      "source": "https://poedb.tw/us/Added_Chaos_Damage_Support",
+      "checkedAt": "2026-11-12T10:46:59.4018967Z"
+    },
+    "Cruelty": {
+      "name": "Cruelty",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Cruelty_Support",
+      "checkedAt": "2026-11-12T10:47:13.7830409Z"
+    },
+    "Earthbreaker": {
+      "name": "Earthbreaker",
+      "source": "https://poedb.tw/us/Earthbreaker_Support",
+      "error": "Price unavailable"
+    },
+    "Petrified Blood": {
+      "name": "Petrified Blood",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Petrified_Blood",
+      "checkedAt": "2026-11-12T10:47:44.2211811Z"
+    },
+    "Windburst": {
+      "name": "Windburst",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Windburst_Support",
+      "checkedAt": "2026-11-12T10:48:03.1783997Z"
+    },
+    "Conflagration": {
+      "name": "Conflagration",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Conflagration",
+      "checkedAt": "2026-11-12T10:47:11.5724032Z"
+    },
+    "Trinity": {
+      "name": "Trinity",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Trinity_Support",
+      "checkedAt": "2026-11-12T10:47:59.4036902Z"
+    },
+    "Spark": {
+      "name": "Spark",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Spark",
+      "checkedAt": "2026-11-12T10:47:53.1539435Z"
+    },
+    "Searing Bond": {
+      "name": "Searing Bond",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Searing_Bond",
+      "checkedAt": "2026-11-12T10:47:50.2111202Z"
+    },
+    "Charged Mines": {
+      "name": "Charged Mines",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Charged_Mines_Support",
+      "checkedAt": "2026-11-12T10:47:09.2592833Z"
+    },
+    "Devour": {
+      "name": "Devour",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Devour_Support",
+      "checkedAt": "2026-11-12T10:47:16.1389852Z"
+    },
+    "Siphoning Trap": {
+      "name": "Siphoning Trap",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Siphoning_Trap",
+      "checkedAt": "2026-11-12T10:47:52.3438166Z"
+    },
+    "More Duration": {
+      "name": "More Duration",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/More_Duration_Support",
+      "checkedAt": "2026-11-12T10:47:42.8749908Z"
+    },
+    "Manabond": {
+      "name": "Manabond",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Manabond",
+      "checkedAt": "2026-11-12T10:47:40.8182557Z"
+    },
+    "Warlord's Mark": {
+      "name": "Warlord's Mark",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Warlords_Mark",
+      "checkedAt": "2026-11-12T10:48:02.3102823Z"
+    },
+    "Reave": {
+      "name": "Reave",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Reave",
+      "checkedAt": "2026-11-12T10:47:49.0517333Z"
+    },
+    "Bone Offering": {
+      "name": "Bone Offering",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Bone_Offering",
+      "checkedAt": "2026-11-12T10:47:07.6112681Z"
+    },
+    "Detonate Dead": {
+      "name": "Detonate Dead",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Detonate_Dead",
+      "checkedAt": "2026-11-12T10:47:15.506579Z"
+    },
+    "Wave of Conviction": {
+      "name": "Wave of Conviction",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Wave_of_Conviction",
+      "checkedAt": "2026-11-12T10:48:02.3460246Z"
+    },
+    "Convocation": {
+      "name": "Convocation",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Convocation",
+      "checkedAt": "2026-11-12T10:47:12.4758508Z"
+    },
+    "Bodyswap": {
+      "name": "Bodyswap",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Bodyswap",
+      "checkedAt": "2026-11-12T10:47:07.491626Z"
+    },
+    "Eviscerate": {
+      "name": "Eviscerate",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Eviscerate",
+      "checkedAt": "2026-11-12T10:47:21.4179019Z"
+    },
+    "Faster Projectiles": {
+      "name": "Faster Projectiles",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Faster_Projectiles_Support",
+      "checkedAt": "2026-11-12T10:47:23.3672255Z"
+    },
+    "Glacial Shield Swipe": {
+      "name": "Glacial Shield Swipe",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Glacial_Shield_Swipe",
+      "checkedAt": "2026-11-12T10:47:28.2746311Z"
+    },
+    "Withering Step": {
+      "name": "Withering Step",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Withering_Step",
+      "checkedAt": "2026-11-12T10:48:03.4921702Z"
+    },
+    "Steelskin": {
+      "name": "Steelskin",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Steelskin",
+      "checkedAt": "2026-11-12T10:47:54.9270099Z"
+    },
+    "Frostblink": {
+      "name": "Frostblink",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Frostblink",
+      "checkedAt": "2026-11-12T10:47:27.3709518Z"
+    },
+    "Volley": {
+      "name": "Volley",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Volley_Support",
+      "checkedAt": "2026-11-12T10:48:01.1906304Z"
+    },
+    "Overcharge": {
+      "name": "Overcharge",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Overcharge_Support",
+      "checkedAt": "2026-11-12T10:47:43.7605047Z"
+    },
+    "Pestilent Strike": {
+      "name": "Pestilent Strike",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Pestilent_Strike",
+      "checkedAt": "2026-11-12T10:47:44.1726694Z"
+    },
+    "Storm Brand": {
+      "name": "Storm Brand",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Storm_Brand",
+      "checkedAt": "2026-11-12T10:47:54.9270316Z"
+    },
+    "Momentum": {
+      "name": "Momentum",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Momentum_Support",
+      "checkedAt": "2026-11-12T10:47:42.7285643Z"
+    },
+    "Static Strike": {
+      "name": "Static Strike",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Static_Strike",
+      "checkedAt": "2026-11-12T10:47:54.9228717Z"
+    },
+    "Burning Damage": {
+      "name": "Burning Damage",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Burning_Damage_Support",
+      "checkedAt": "2026-11-12T10:47:08.517467Z"
+    },
+    "Shock Nova": {
+      "name": "Shock Nova",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Shock_Nova",
+      "checkedAt": "2026-11-12T10:47:51.3994507Z"
+    },
+    "Lightning Penetration": {
+      "name": "Lightning Penetration",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Lightning_Penetration_Support",
+      "checkedAt": "2026-11-12T10:47:38.5320045Z"
+    },
+    "Manaforged Arrows": {
+      "name": "Manaforged Arrows",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Manaforged_Arrows_Support",
+      "checkedAt": "2026-11-12T10:47:40.8745432Z"
+    },
+    "Focused Channelling": {
+      "name": "Focused Channelling",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Focused_Channelling_Support",
+      "checkedAt": "2026-11-12T10:47:25.788874Z"
+    },
+    "Inspiration": {
+      "name": "Inspiration",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Inspiration_Support",
+      "checkedAt": "2026-11-12T10:47:34.3208493Z"
+    },
+    "Kinetic Fusillade": {
+      "name": "Kinetic Fusillade",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Kinetic_Fusillade",
+      "checkedAt": "2026-11-12T10:47:35.5933474Z"
+    },
+    "Fortify": {
+      "name": "Fortify",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Fortify_Support",
+      "checkedAt": "2026-11-12T10:47:26.1593409Z"
+    },
+    "Flame Surge": {
+      "name": "Flame Surge",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Flame_Surge",
+      "checkedAt": "2026-11-12T10:47:24.3711235Z"
+    },
+    "Chance to Poison": {
+      "name": "Chance to Poison",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Chance_to_Poison_Support",
+      "checkedAt": "2026-11-12T10:47:09.5356232Z"
+    },
+    "Point Blank": {
+      "name": "Point Blank",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Point_Blank_Support",
+      "checkedAt": "2026-11-12T10:47:44.9779857Z"
+    },
+    "Shield of Light": {
+      "name": "Shield of Light",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Shield_of_Light",
+      "checkedAt": "2026-11-12T10:47:51.3699136Z"
+    },
+    "Predator": {
+      "name": "Predator",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Predator_Support",
+      "checkedAt": "2026-11-12T10:47:45.9702325Z"
+    },
+    "Clarity": {
+      "name": "Clarity",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Clarity",
+      "checkedAt": "2026-11-12T10:47:09.8603343Z"
+    },
+    "Innervate": {
+      "name": "Innervate",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Innervate_Support",
+      "checkedAt": "2026-11-12T10:47:34.4096934Z"
+    },
+    "Elemental Damage with Attacks": {
+      "name": "Elemental Damage with Attacks",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Elemental_Damage_with_Attacks_Support",
+      "checkedAt": "2026-11-12T10:47:18.7408684Z"
+    },
+    "Herald of Ash": {
+      "name": "Herald of Ash",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Herald_of_Ash",
+      "checkedAt": "2026-11-12T10:47:29.7587562Z"
+    },
+    "Minion Speed": {
+      "name": "Minion Speed",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Minion_Speed_Support",
+      "checkedAt": "2026-11-12T10:47:41.8850077Z"
+    },
+    "Corrupting Fever": {
+      "name": "Corrupting Fever",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Corrupting_Fever",
+      "checkedAt": "2026-11-12T10:47:12.8063413Z"
+    },
+    "Pinpoint": {
+      "name": "Pinpoint",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Pinpoint_Support",
+      "checkedAt": "2026-11-12T10:47:44.7741546Z"
+    },
+    "Lifetap": {
+      "name": "Lifetap",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Lifetap_Support",
+      "checkedAt": "2026-11-12T10:47:37.8400609Z"
+    },
+    "Ice Bite": {
+      "name": "Ice Bite",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Ice_Bite_Support",
+      "checkedAt": "2026-11-12T10:47:31.7605673Z"
+    },
+    "Rain of Arrows": {
+      "name": "Rain of Arrows",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Rain_of_Arrows",
+      "checkedAt": "2026-11-12T10:47:48.1222521Z"
+    },
+    "Smite": {
+      "name": "Smite",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Smite",
+      "checkedAt": "2026-11-12T10:47:52.5749596Z"
+    },
+    "Tempest Shield": {
+      "name": "Tempest Shield",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Tempest_Shield",
+      "checkedAt": "2026-11-12T10:47:57.9346235Z"
+    },
+    "Flesh and Stone": {
+      "name": "Flesh and Stone",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Flesh_and_Stone",
+      "checkedAt": "2026-11-12T10:47:25.5493521Z"
+    },
+    "Fireball": {
+      "name": "Fireball",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Fireball",
+      "checkedAt": "2026-11-12T10:47:23.9719495Z"
+    },
+    "Less Duration": {
+      "name": "Less Duration",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Less_Duration_Support",
+      "checkedAt": "2026-11-12T10:47:37.0580897Z"
+    },
+    "Chance to Flee": {
+      "name": "Chance to Flee",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Chance_to_Flee_Support",
+      "checkedAt": "2026-11-12T10:47:09.3792646Z"
+    },
+    "Swiftbrand": {
+      "name": "Swiftbrand",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Swiftbrand_Support",
+      "checkedAt": "2026-11-12T10:47:57.2958739Z"
+    },
+    "Efficacy": {
+      "name": "Efficacy",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Efficacy_Support",
+      "checkedAt": "2026-11-12T10:47:18.1662239Z"
+    },
+    "Ice Spear": {
+      "name": "Ice Spear",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Ice_Spear",
+      "checkedAt": "2026-11-12T10:47:32.2767794Z"
+    },
+    "Galvanic Field": {
+      "name": "Galvanic Field",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Galvanic_Field",
+      "checkedAt": "2026-11-12T10:47:27.9391435Z"
+    },
+    "Elemental Focus": {
+      "name": "Elemental Focus",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Elemental_Focus_Support",
+      "checkedAt": "2026-11-12T10:47:19.0477304Z"
+    },
+    "Iron Will": {
+      "name": "Iron Will",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Iron_Will_Support",
+      "checkedAt": "2026-11-12T10:47:34.9878907Z"
+    },
+    "Close Combat": {
+      "name": "Close Combat",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Close_Combat_Support",
+      "checkedAt": "2026-11-12T10:47:10.1267288Z"
+    },
+    "Absolution": {
+      "name": "Absolution",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Absolution",
+      "checkedAt": "2026-11-12T10:46:59.1091527Z"
+    },
+    "Molten Strike": {
+      "name": "Molten Strike",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Molten_Strike",
+      "checkedAt": "2026-11-12T10:47:42.4609132Z"
+    },
+    "Melee Physical Damage": {
+      "name": "Melee Physical Damage",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Melee_Physical_Damage_Support",
+      "checkedAt": "2026-11-12T10:47:41.2823576Z"
+    },
+    "Ethereal Knives": {
+      "name": "Ethereal Knives",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Ethereal_Knives",
+      "checkedAt": "2026-11-12T10:47:21.3462233Z"
+    },
+    "Creeping Frost": {
+      "name": "Creeping Frost",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Creeping_Frost",
+      "checkedAt": "2026-11-12T10:47:13.1526107Z"
+    },
+    "Shield Charge": {
+      "name": "Shield Charge",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Shield_Charge",
+      "checkedAt": "2026-11-12T10:47:51.1885458Z"
+    },
+    "Ensnaring Arrow": {
+      "name": "Ensnaring Arrow",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Ensnaring_Arrow",
+      "checkedAt": "2026-11-12T10:47:20.819156Z"
+    },
+    "Wither": {
+      "name": "Wither",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Wither",
+      "checkedAt": "2026-11-12T10:48:03.1844516Z"
+    },
+    "Ice Shot": {
+      "name": "Ice Shot",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Ice_Shot",
+      "checkedAt": "2026-11-12T10:47:32.132112Z"
+    },
+    "Charged Dash": {
+      "name": "Charged Dash",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Charged_Dash",
+      "checkedAt": "2026-11-12T10:47:09.2678728Z"
+    },
+    "Spellslinger": {
+      "name": "Spellslinger",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Spellslinger",
+      "checkedAt": "2026-11-12T10:47:54.2246762Z"
+    },
+    "Arctic Armour": {
+      "name": "Arctic Armour",
+      "source": "https://poedb.tw/us/Arctic_Armour",
+      "error": "Price unavailable"
+    },
+    "Lightning Conduit": {
+      "name": "Lightning Conduit",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Lightning_Conduit",
+      "checkedAt": "2026-11-12T10:47:37.8161161Z"
+    },
+    "Galvanic Arrow": {
+      "name": "Galvanic Arrow",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Galvanic_Arrow",
+      "checkedAt": "2026-11-12T10:47:27.8585505Z"
+    },
+    "Storm Call": {
+      "name": "Storm Call",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Storm_Call",
+      "checkedAt": "2026-11-12T10:47:55.5185833Z"
+    },
+    "Caustic Arrow": {
+      "name": "Caustic Arrow",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Caustic_Arrow",
+      "checkedAt": "2026-11-12T10:47:08.6401292Z"
+    },
+    "Winter Orb": {
+      "name": "Winter Orb",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Winter_Orb",
+      "checkedAt": "2026-11-12T10:48:02.9113231Z"
+    },
+    "Haste": {
+      "name": "Haste",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Haste",
+      "checkedAt": "2026-11-12T10:47:29.1629789Z"
+    },
+    "Increased Critical Strikes": {
+      "name": "Increased Critical Strikes",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Increased_Critical_Strikes_Support",
+      "checkedAt": "2026-11-12T10:47:33.7359705Z"
+    },
+    "Viper Strike": {
+      "name": "Viper Strike",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Viper_Strike",
+      "checkedAt": "2026-11-12T10:48:00.5445735Z"
+    },
+    "Discipline": {
+      "name": "Discipline",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Discipline",
+      "checkedAt": "2026-11-12T10:47:16.1207248Z"
+    },
+    "Bear Trap": {
+      "name": "Bear Trap",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Bear_Trap",
+      "checkedAt": "2026-11-12T10:47:03.7404557Z"
+    },
+    "Spell Cascade": {
+      "name": "Spell Cascade",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Spell_Cascade_Support",
+      "checkedAt": "2026-11-12T10:47:53.741576Z"
+    },
+    "Assassin's Mark": {
+      "name": "Assassin's Mark",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Assassins_Mark",
+      "checkedAt": "2026-11-12T10:47:02.520385Z"
+    },
+    "Wild Strike": {
+      "name": "Wild Strike",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Wild_Strike",
+      "checkedAt": "2026-11-12T10:48:02.5910969Z"
+    },
+    "Vicious Projectiles": {
+      "name": "Vicious Projectiles",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Vicious_Projectiles_Support",
+      "checkedAt": "2026-11-12T10:48:00.0475552Z"
+    },
+    "Battlemage's Cry": {
+      "name": "Battlemage's Cry",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Battlemages_Cry",
+      "checkedAt": "2026-11-12T10:47:03.6903801Z"
+    },
+    "Divine Ire": {
+      "name": "Divine Ire",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Divine_Ire",
+      "checkedAt": "2026-11-12T10:47:16.6970716Z"
+    },
+    "Plague Bearer": {
+      "name": "Plague Bearer",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Plague_Bearer",
+      "checkedAt": "2026-11-12T10:47:44.7946742Z"
+    },
+    "Charged Traps": {
+      "name": "Charged Traps",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Charged_Traps_Support",
+      "checkedAt": "2026-11-12T10:47:09.8385032Z"
+    },
+    "Animate Weapon": {
+      "name": "Animate Weapon",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Animate_Weapon",
+      "checkedAt": "2026-11-12T10:47:00.9358604Z"
+    },
+    "Infernal Legion": {
+      "name": "Infernal Legion",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Infernal_Legion_Support",
+      "checkedAt": "2026-11-12T10:47:33.8046007Z"
+    },
+    "Decoy Totem": {
+      "name": "Decoy Totem",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Decoy_Totem",
+      "checkedAt": "2026-11-12T10:47:14.8484469Z"
+    },
+    "Item Rarity": {
+      "name": "Item Rarity",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Item_Rarity_Support",
+      "checkedAt": "2026-11-12T10:47:35.2831717Z"
+    },
+    "Enduring Cry": {
+      "name": "Enduring Cry",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Enduring_Cry",
+      "checkedAt": "2026-11-12T10:47:20.1582314Z"
+    },
+    "Swordstorm": {
+      "name": "Swordstorm",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Swordstorm",
+      "checkedAt": "2026-11-12T10:47:57.7627415Z"
+    },
+    "Shrapnel Ballista": {
+      "name": "Shrapnel Ballista",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Shrapnel_Ballista",
+      "checkedAt": "2026-11-12T10:47:51.9613494Z"
+    },
+    "Lightning Arrow": {
+      "name": "Lightning Arrow",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Lightning_Arrow",
+      "checkedAt": "2026-11-12T10:47:37.6441959Z"
+    },
+    "Holy Flame Totem": {
+      "name": "Holy Flame Totem",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Holy_Flame_Totem",
+      "checkedAt": "2026-11-12T10:47:30.8083419Z"
+    },
+    "Venom Gyre": {
+      "name": "Venom Gyre",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Venom_Gyre",
+      "checkedAt": "2026-11-12T10:47:59.9777031Z"
+    },
+    "Mana-Infused Staff": {
+      "name": "Mana-Infused Staff",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Mana-Infused_Staff",
+      "checkedAt": "2026-11-12T10:47:40.5178811Z"
+    },
+    "Bane": {
+      "name": "Bane",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Bane",
+      "checkedAt": "2026-11-12T10:47:02.9467928Z"
+    },
+    "Cyclone": {
+      "name": "Cyclone",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Cyclone",
+      "checkedAt": "2026-11-12T10:47:14.2595383Z"
+    },
+    "Barrage": {
+      "name": "Barrage",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Barrage",
+      "checkedAt": "2026-11-12T10:47:03.5444454Z"
+    },
+    "Power Siphon": {
+      "name": "Power Siphon",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Power_Siphon",
+      "checkedAt": "2026-11-12T10:47:45.5622868Z"
+    },
+    "Defiance Banner": {
+      "name": "Defiance Banner",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Defiance_Banner",
+      "checkedAt": "2026-11-12T10:47:14.9012975Z"
+    },
+    "Incinerate": {
+      "name": "Incinerate",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Incinerate",
+      "checkedAt": "2026-11-12T10:47:32.9012381Z"
+    },
+    "Flammability": {
+      "name": "Flammability",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Flammability",
+      "checkedAt": "2026-11-12T10:47:25.1413799Z"
+    },
+    "Explosive Arrow": {
+      "name": "Explosive Arrow",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Explosive_Arrow",
+      "checkedAt": "2026-11-12T10:47:22.1486545Z"
+    },
+    "Storm Rain": {
+      "name": "Storm Rain",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Storm_Rain",
+      "checkedAt": "2026-11-12T10:47:55.5224521Z"
+    },
+    "Autoexertion": {
+      "name": "Autoexertion",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Autoexertion",
+      "checkedAt": "2026-11-12T10:47:02.4830334Z"
+    },
+    "Siege Ballista": {
+      "name": "Siege Ballista",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Siege_Ballista",
+      "checkedAt": "2026-11-12T10:47:51.9744218Z"
+    },
+    "Summon Raging Spirit": {
+      "name": "Summon Raging Spirit",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Summon_Raging_Spirit",
+      "checkedAt": "2026-11-12T10:47:56.5912057Z"
+    },
+    "Deadly Ailments": {
+      "name": "Deadly Ailments",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Deadly_Ailments_Support",
+      "checkedAt": "2026-11-12T10:47:14.9012695Z"
+    },
+    "Vengeful Cry": {
+      "name": "Vengeful Cry",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Vengeful_Cry",
+      "checkedAt": "2026-11-12T10:47:59.9719111Z"
+    },
+    "Splitting Steel": {
+      "name": "Splitting Steel",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Splitting_Steel",
+      "checkedAt": "2026-11-12T10:47:54.806549Z"
+    },
+    "Second Wind": {
+      "name": "Second Wind",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Second_Wind_Support",
+      "checkedAt": "2026-11-12T10:47:50.5928085Z"
+    },
+    "Kinetic Instability": {
+      "name": "Kinetic Instability",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Kinetic_Instability_Support",
+      "checkedAt": "2026-11-12T10:47:35.8036206Z"
+    },
+    "Precision": {
+      "name": "Precision",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Precision",
+      "checkedAt": "2026-11-12T10:47:46.3309664Z"
+    },
+    "Physical to Lightning": {
+      "name": "Physical to Lightning",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Physical_to_Lightning_Support",
+      "checkedAt": "2026-11-12T10:47:44.6112448Z"
+    },
+    "Intensify": {
+      "name": "Intensify",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Intensify_Support",
+      "checkedAt": "2026-11-12T10:47:34.3845721Z"
+    },
+    "Flame Dash": {
+      "name": "Flame Dash",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Flame_Dash",
+      "checkedAt": "2026-11-12T10:47:24.3362589Z"
+    },
+    "Volatile Dead": {
+      "name": "Volatile Dead",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Volatile_Dead",
+      "checkedAt": "2026-11-12T10:48:00.6182663Z"
+    },
+    "Kinetic Rain": {
+      "name": "Kinetic Rain",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Kinetic_Rain",
+      "checkedAt": "2026-11-12T10:47:35.8751151Z"
+    },
+    "Infernal Cry": {
+      "name": "Infernal Cry",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Infernal_Cry",
+      "checkedAt": "2026-11-12T10:47:33.5651438Z"
+    },
+    "Endurance Charge on Melee Stun": {
+      "name": "Endurance Charge on Melee Stun",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Endurance_Charge_on_Melee_Stun_Support",
+      "checkedAt": "2026-11-12T10:47:19.6342361Z"
+    },
+    "Energy Blade": {
+      "name": "Energy Blade",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Energy_Blade",
+      "checkedAt": "2026-11-12T10:47:20.2063364Z"
+    },
+    "Focused Ballista": {
+      "name": "Focused Ballista",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Focused_Ballista_Support",
+      "checkedAt": "2026-11-12T10:47:25.4678608Z"
+    },
+    "Devouring Totem": {
+      "name": "Devouring Totem",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Devouring_Totem",
+      "checkedAt": "2026-11-12T10:47:16.043256Z"
+    },
+    "Mirror Arrow": {
+      "name": "Mirror Arrow",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Mirror_Arrow",
+      "checkedAt": "2026-11-12T10:47:42.0341004Z"
+    },
+    "Cold Snap": {
+      "name": "Cold Snap",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Cold_Snap",
+      "checkedAt": "2026-11-12T10:47:10.5534449Z"
+    },
+    "Impale": {
+      "name": "Impale",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Impale_Support",
+      "checkedAt": "2026-11-12T10:47:32.9518242Z"
+    },
+    "Iron Grip": {
+      "name": "Iron Grip",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Iron_Grip_Support",
+      "checkedAt": "2026-11-12T10:47:34.9064274Z"
+    },
+    "Energy Leech": {
+      "name": "Energy Leech",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Energy_Leech_Support",
+      "checkedAt": "2026-11-12T10:47:20.4861305Z"
+    },
+    "Volatility": {
+      "name": "Volatility",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Volatility_Support",
+      "checkedAt": "2026-11-12T10:48:01.1428549Z"
+    },
+    "Wintertide Brand": {
+      "name": "Wintertide Brand",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Wintertide_Brand",
+      "checkedAt": "2026-11-12T10:48:02.9252543Z"
+    },
+    "Flamethrower Trap": {
+      "name": "Flamethrower Trap",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Flamethrower_Trap",
+      "checkedAt": "2026-11-12T10:47:24.9456747Z"
+    },
+    "Archmage": {
+      "name": "Archmage",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Archmage_Support",
+      "checkedAt": "2026-11-12T10:47:01.5431345Z"
+    },
+    "Kinetic Bolt": {
+      "name": "Kinetic Bolt",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Kinetic_Bolt",
+      "checkedAt": "2026-11-12T10:47:35.5022422Z"
+    },
+    "Shockwave": {
+      "name": "Shockwave",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Shockwave_Support",
+      "checkedAt": "2026-11-12T10:47:51.8454941Z"
+    },
+    "Increased Critical Damage": {
+      "name": "Increased Critical Damage",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Increased_Critical_Damage_Support",
+      "checkedAt": "2026-11-12T10:47:33.2051014Z"
+    },
+    "Blink Arrow": {
+      "name": "Blink Arrow",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Blink_Arrow",
+      "checkedAt": "2026-11-12T10:47:06.6827294Z"
+    },
+    "Blood Rage": {
+      "name": "Blood Rage",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Blood_Rage",
+      "checkedAt": "2026-11-12T10:47:06.9034354Z"
+    },
+    "Double Strike": {
+      "name": "Double Strike",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Double_Strike",
+      "checkedAt": "2026-11-12T10:47:17.2543262Z"
+    },
+    "Cursed Ground": {
+      "name": "Cursed Ground",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Cursed_Ground_Support",
+      "checkedAt": "2026-11-12T10:47:13.9738132Z"
+    },
+    "Tectonic Slam": {
+      "name": "Tectonic Slam",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Tectonic_Slam",
+      "checkedAt": "2026-11-12T10:47:57.867713Z"
+    },
+    "Rolling Magma": {
+      "name": "Rolling Magma",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Rolling_Magma",
+      "checkedAt": "2026-11-12T10:47:49.3024348Z"
+    },
+    "Summon Reaper": {
+      "name": "Summon Reaper",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Summon_Reaper",
+      "checkedAt": "2026-11-12T10:47:56.6959112Z"
+    },
+    "Summon Skitterbots": {
+      "name": "Summon Skitterbots",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Summon_Skitterbots",
+      "checkedAt": "2026-11-12T10:47:56.9707653Z"
+    },
+    "Rallying Cry": {
+      "name": "Rallying Cry",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Rallying_Cry",
+      "checkedAt": "2026-11-12T10:47:48.4396612Z"
+    },
+    "Conversion Trap": {
+      "name": "Conversion Trap",
+      "amount": 1,
+      "currency": "Scroll of Wisdom",
+      "source": "https://poedb.tw/us/Conversion_Trap",
+      "checkedAt": "2026-11-12T10:47:12.3134396Z"
+    },
+    "Anger": {
+      "name": "Anger",
+      "amount": 1,
+      "currency": "Orb of Alteration",
+      "source": "https://poedb.tw/us/Anger",
+      "checkedAt": "2026-11-12T10:47:00.3711728Z"
+    },
+    "Armageddon Brand": {
+      "name": "Armageddon Brand",
+      "amount": 1,
+      "currency": "Orb of Chance",
+      "source": "https://poedb.tw/us/Armageddon_Brand",
+      "checkedAt": "2026-11-12T10:47:01.3382792Z"
+    },
+    "Fire Trap": {
+      "name": "Fire Trap",
+      "amount": 1,
+      "currency": "Orb of Transmutation",
+      "source": "https://poedb.tw/us/Fire_Trap",
+      "checkedAt": "2026-11-12T10:47:23.7584383Z"
+    }
+  }
+}

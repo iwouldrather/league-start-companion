@@ -1,0 +1,12 @@
+const fs=require('node:fs'),vm=require('node:vm'),path=require('node:path'),assert=require('node:assert/strict');
+const source=fs.readFileSync(path.join(__dirname,'../source/tree-ui.js'),'utf8');
+const fn=source.slice(source.indexOf('function passiveCheckpointIndex('),source.indexOf('function treePanel('));
+const sets=[{key:'start',startLevel:1},{key:'lab',startLevel:33},{key:'maps',startLevel:71}];
+const context=vm.createContext({D:{sets},current:1,treeCheckpointChoice:'follow'});vm.runInContext(fn,context);
+assert.equal(vm.runInContext('passiveCheckpointSetup().key',context),'lab');
+context.treeCheckpointChoice='maps';assert.equal(vm.runInContext('passiveCheckpointSetup().key',context),'maps');
+context.current=0;assert.equal(vm.runInContext('passiveCheckpointSetup().key',context),'maps','Manual tree preview survives guide/live milestone changes.');
+context.treeCheckpointChoice='follow';assert.equal(vm.runInContext('passiveCheckpointSetup().key',context),'start');
+context.treeCheckpointChoice='removed-checkpoint';assert.equal(vm.runInContext('passiveCheckpointSetup().key',context),'start','Stale saved selections safely follow the guide.');
+context.current=99;assert.equal(vm.runInContext('passiveCheckpointSetup().key',context),'maps');
+console.log('Tree navigation: independent selection, follow and stale-state recovery passed.');

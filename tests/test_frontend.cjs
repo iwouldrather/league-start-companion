@@ -1,0 +1,12 @@
+const fs=require('node:fs');
+const path=require('node:path');
+const vm=require('node:vm');
+const assert=require('node:assert/strict');
+const html=fs.readFileSync(path.join(__dirname,'../slayer-leveling-guide.html'),'utf8');
+const script=html.match(/<\/script><script>([\s\S]*?)<\/script><\/body>/);
+if(!script)throw Error('Generated app script is missing.');
+new vm.Script(script[1],{filename:'generated-guide.js'});
+const data=JSON.parse(html.match(/<script id="guideData" type="application\/json">([\s\S]*?)<\/script>/)[1]);
+assert.equal(data.sets.length,0,'The generated shell must not bundle a default build.');
+assert.equal(data.names.length,0);
+console.log('Generated guide JavaScript: syntax check passed.');

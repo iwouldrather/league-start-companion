@@ -1,0 +1,19 @@
+#liveStatus{max-width:min(1050px,57vw);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#bce0fb;border-color:#53748c;background:#1a2c40;font-size:14px}
+.liveupcoming{box-shadow:inset 3px 0 #e6c68e;background:#e6c68e0b!important}
+.livefacts{padding:12px 18px;border:1px solid var(--line);border-radius:10px;background:var(--panel2)}
+#recordBody h3{margin-top:24px}.livefacts .muted{font-size:14px;line-height:1.6}
+@media(max-width:1500px){#liveStatus{max-width:46vw;font-size:12px}}
+.ownedrow{display:flex;align-items:center;border-top:1px solid var(--line)}
+.ownedrow>.buytablerow{flex:1;min-width:0;border-top:0}
+.ownedrow:has(>.liveupcoming){box-shadow:inset 3px 0 #e6c68e;background:#e6c68e0b}
+.ownedrow>.liveupcoming{box-shadow:none;background:transparent!important}
+.ownedrow>input{width:18px;height:18px;flex:none;margin:0 0 0 9px;accent-color:#92c8ed;cursor:pointer}
+.ownedrow.isowned .buyname{color:#a6b5c6}.ownedrow.isowned .buywhere{opacity:.6}
+.ownedrow.isowned{background:#92c8ed08}.purchaseprofile{display:flex;align-items:end;gap:10px;flex-wrap:wrap}
+.purchaseprofile label{display:flex;flex-direction:column;gap:8px}.purchaseprofile input{padding:9px;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:6px;font:inherit}
+#myGems{white-space:nowrap;font-size:13px}#purchaseSaveStatus{color:#92c8ed}
+#liveStatus{max-width:min(950px,49vw)}
+#resumeLive{font-size:13px;border-color:var(--gold);color:var(--gold);white-space:nowrap}#resumeLive[hidden]{display:none}
+
+/* Keep gem-row hover quiet and consistent across the checkbox and details button. */
+.buytablerow:hover{background:#92c8ed0a}.ownedrow:hover,.ownedrow:focus-within{background:#92c8ed0a}.ownedrow>.buytablerow:hover{background:transparent}
