@@ -46,6 +46,16 @@ class GemCoverageTests(unittest.TestCase):
         self.assertEqual(route('Phase Run','Ranger')[:2],[4,'Petarus and Vanja'])
         self.assertEqual(route('Holy Flame Totem','Templar')[:2],[1,'Nessa'])
 
+    def test_faster_attacks_uses_act_one_vendor_for_every_class(self):
+        meta=pob.gem_catalog()['Faster Attacks']
+        for cls in acquisition.CLASSES:
+            primary,options,_=acquisition.resolve('Faster Attacks',meta,cls)
+            self.assertEqual(primary[:4],[1,'Nessa','The Caged Brute','vendor'])
+            self.assertFalse(any(r['vendor']=='Yeena' for r in options))
+        routes=acquisition.snapshot()['gems']['Faster Attacks']['routes']
+        fixed=acquisition.corrected_routes('Faster Attacks',routes)
+        self.assertEqual(acquisition.corrected_routes('Faster Attacks',fixed),fixed)
+
     def test_special_gems_and_effects_are_not_campaign_purchases(self):
         catalog=pob.gem_catalog()
         for name,kind in [('Cyclone of Tumult','transfigured'),('Heavy Strike of Trarthus','trarthus'),('Vaal Fireball','vaal'),('Awakened Added Fire Damage','awakened'),('Empower','drop'),('Portal','special')]:

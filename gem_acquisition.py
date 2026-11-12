@@ -27,7 +27,16 @@ def cost_snapshot():
 
 def gem_costs():return cost_snapshot().get('gems',{})
 
-def data_version():return snapshot().get('checkedAt','unversioned')+'|prices:'+cost_snapshot().get('checkedAt','unverified')+'|2'
+def data_version():return snapshot().get('checkedAt','unversioned')+'|prices:'+cost_snapshot().get('checkedAt','unverified')+'|3'
+
+
+def corrected_routes(name,routes):
+    # The per-gem PoEDB table still lists the pre-3.21 vendor. Official 3.29
+    # notes make the Act 1 purchase universal; retain this on snapshot refresh.
+    if name!='Faster Attacks':return routes
+    return [r for r in routes if r['kind']!='vendor']+[
+        {'act':1,'quest':'The Caged Brute','vendor':'Nessa','kind':'vendor',
+         'classes':list(CLASSES),'source':'https://www.pathofexile.com/forum/view-thread/3985332'}]
 
 
 def order(route):
@@ -54,7 +63,7 @@ def resolve(name,meta,class_name):
         return [0,'Boss drops / trade','Awakened support; no campaign vendor','awakened',source],[],''
     if meta.get('exceptional'):
         return [0,'Special drops / trade','Exceptional gem; no campaign vendor','drop',source],[],''
-    routes=record.get('routes',[])
+    routes=corrected_routes(name,record.get('routes',[]))
     options=[dict(r) for r in routes if class_name in r['classes']]
     vendors=[r for r in routes if r['kind'] in ('vendor','reward','starter')]
     if vendors:

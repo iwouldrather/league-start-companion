@@ -15,6 +15,7 @@ from urllib.request import Request, urlopen
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 import pob_import as pob
+from gem_acquisition import corrected_routes
 
 CLASSES = ['Marauder','Witch','Scion','Ranger','Duelist','Shadow','Templar']
 QUEST_VENDOR={
@@ -132,6 +133,8 @@ def main():
             record['routes'].extend(matrix[name])
             record['status']='verified'
             record['matrixSource']='https://poedb.tw/us/Quest'
+    for name,record in records.items():
+        record['routes']=corrected_routes(name,record['routes'])
     snapshot={'source':'https://poedb.tw/us/Quest','checkedAt':checked,'classes':CLASSES,'gems':dict(sorted(records.items()))}
     (ROOT/'source/gem-acquisition.json').write_text(json.dumps(snapshot,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
     (ROOT/'source/gem-registry.json').write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n',encoding='utf8')

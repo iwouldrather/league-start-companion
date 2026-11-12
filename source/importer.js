@@ -20,10 +20,9 @@ document.addEventListener('click',async e=>{
   const n=gemButton.dataset.recordGem,body=$('recordBody');
   if(body&&$('recordDialog').open){
    const extra=document.createElement('section');extra.className='acquisition-alternatives';
-   const note=D.acquisitionNotes?.[n],options=D.acquisitionOptions?.[n]||[];
+   const note=D.acquisitionNotes?.[n];
    const mule=n==='Momentum'&&earlyMomentum()?'<section class="mulingdetails"><h3>Optional: mule a Ranger</h3><p>Create a Ranger in the same league and mode, take Momentum from the Twilight Strand starting chest, defeat Hillock, then put the gem in the shared stash in Lioneye’s Watch. Collect it on your main character. This is a free alternative to buying it later; it requires shared stash access.</p></section>':'';
-   const alternatives=options.map(r=>`<p><b>Act ${r.act} · ${esc(r.vendor)}</b> · ${esc(r.quest)}${r.kind==='reward'?' · free quest reward':r.kind==='starter'?' · starting area':''}${r.vendor==='Siosa'?`<br><strong class="gemcost">${esc(formatGemCost(r.cost))}</strong>`:''}${r.note?`<br><small>${esc(r.note)}</small>`:''}</p>`).join('');
-   extra.innerHTML=(note?`<p class="importwarnings">${esc(note)}</p>`:'')+(options.length?'<h3>Other ways to obtain this gem</h3>'+alternatives:'');
+   extra.innerHTML=note?`<p class="importwarnings">${esc(note)}</p>`:'';
    extra.innerHTML+=mule;body.append(extra);
   }
  }
