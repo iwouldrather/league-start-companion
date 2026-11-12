@@ -66,6 +66,22 @@ class TreeViewTests(unittest.TestCase):
         self.assertIn('treeAsset0',text);self.assertIn('ascAsset0',asc_text)
         self.assertIn('#ef8c80',text);self.assertIn('#86d5ff',text)
 
+    def test_all_class_origins_are_labelled_and_included_even_without_allocated_start(self):
+        names=['Scion','Marauder','Ranger','Witch','Duelist','Templar','Shadow']
+        tree=dict(TREE,classes=[{'name':name} for name in names],
+                  groups={str(i+1):{'x':i*2000,'y':0} for i in range(8)},
+                  nodes={str(i+1):{'classStartIndex':i,'group':i+1,'orbit':0,'orbitIndex':0,'name':name,'out':[]} for i,name in enumerate(names)})
+        tree['nodes']['8']={'group':8,'orbit':0,'orbitIndex':0,'name':'Allocated','out':[]}
+        with patch.object(t,'sprite',return_value=None),patch.object(t,'local_art',return_value=None):
+            for name in names:
+                for diff in (False,True):
+                    image,details,delta=t.svg_view(tree,'3_29',{'8'},set(),diff=diff,class_name=name)
+                    text=base64.b64decode(image.split(',')[1]).decode()
+                    self.assertIn(name+' start',text)
+                    self.assertEqual(text.count('begin allocating here'),1)
+                    self.assertEqual(delta['added'],1)
+                    ET.fromstring(text)
+
     def test_changes_keeps_distant_previously_allocated_nodes_visible(self):
         tree=dict(TREE,groups={'1':{'x':0,'y':0},'2':{'x':5000,'y':100}})
         with patch.object(t,'sprite',return_value=None),patch.object(t,'local_art',return_value=None):

@@ -8,7 +8,7 @@ from pathlib import Path
 import re
 from urllib.parse import urlsplit
 
-VIEW_VERSION=6
+VIEW_VERSION=7
 
 
 def selected(spec):
@@ -123,14 +123,17 @@ def path_between(a,b,nodes,coords):
     return f'M{x:.1f} {y:.1f} L{ox:.1f} {oy:.1f}'
 
 
-def svg_view(tree,version,now,before,ascendancy='',diff=False,mini=False):
+def svg_view(tree,version,now,before,ascendancy='',diff=False,mini=False,class_name=''):
     nodes=tree['nodes'];coords=positions(tree)
     eligible={n for n in coords if (nodes[n].get('ascendancyName')==ascendancy if mini else not nodes[n].get('ascendancyName'))}
+    class_index=next((i for i,c in enumerate(tree.get('classes',[])) if c.get('name')==class_name),None)
+    starts={n for n in eligible if 'classStartIndex' in nodes[n] and (nodes[n]['classStartIndex']==class_index if class_index is not None else n in now)} if not mini else set()
     fresh=(now-before)&eligible;removed=(before-now)&eligible
     # Changes must retain the whole route back through the earlier allocation.
     focus=eligible if mini else (((now|before) if diff else now)&eligible)
     if not focus:focus={n for n in eligible if 'classStartIndex' in nodes[n]}
     if not focus:focus=set(list(eligible)[:1])
+    focus=focus|starts
     points=[coords[n] for n in focus] or [(0,0,0,0)]
     pad=170 if mini else 380
     left=min(p[0] for p in points)-pad;top=min(p[1] for p in points)-pad
@@ -177,6 +180,16 @@ def svg_view(tree,version,now,before,ascendancy='',diff=False,mini=False):
         ring=f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{size*.77:.1f}" fill="none" stroke="{color}" stroke-width="{2.8*scale:.1f}"/>' if (diff and state in ('new','removed')) else ''
         opacity='1' if active or state=='removed' else '.65'
         icons.append(f'<g data-node="{nid}" role="button" tabindex="0" aria-label="{html.escape(node.get("name",nid),quote=True)}" opacity="{opacity}"><title>{title}</title>{glyph}{ring}</g>')
+        if nid in starts:
+            # Draw above the allocation so the origin stays recognisable in both modes.
+            base=class_name or node.get('name','Class').title()
+            portrait=local_art('center'+base.lower()+'.png')
+            radius=45*scale
+            marker=f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{radius+6*scale:.1f}" fill="#101723" stroke="#f4d38f" stroke-width="{3*scale:.1f}"/>'
+            marker+=art(portrait,x,y,radius*1.8) if portrait else f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{radius*.6:.1f}" fill="#e5bd79"/>'
+            label=html.escape(base+' start')
+            marker+=f'<rect x="{x-150*scale:.1f}" y="{y+60*scale:.1f}" width="{300*scale:.1f}" height="{54*scale:.1f}" rx="{5*scale:.1f}" fill="#101723" stroke="#e5bd79" stroke-width="{scale:.1f}"/><text x="{x:.1f}" y="{y+98*scale:.1f}" text-anchor="middle" fill="#ffe3a2" font-size="{36*scale:.1f}" font-weight="700" font-family="Segoe UI,Arial,sans-serif">{label}</text>'
+            labels.append(f'<g data-tree-start="true" data-node="{nid}" role="button" tabindex="0" aria-label="{label}"><title>{label} · begin allocating here</title>{marker}</g>')
         if notable and active and not mini:
             labels.append(f'<text x="{x+20*scale:.1f}" y="{y-15*scale:.1f}" fill="{color}" font-size="{13*scale:.1f}" font-family="Georgia,serif" paint-order="stroke" stroke="#0c1015" stroke-width="{3*scale:.1f}">{html.escape(node.get("name",nid))}</text>')
     background=local_art('Classes'+ascendancy+'.png') if mini and ascendancy else None
@@ -198,8 +211,8 @@ def enrich(data):
         except (OSError,ValueError,IndexError):before_spec=None;continue
         now=selected(spec);compatible=before_spec and before_spec['version']==spec['version']
         before=selected(before_spec) if compatible else set()
-        full,details,delta=svg_view(tree,spec['version'],now,before,asc)
-        changes,delta_details,delta=svg_view(tree,spec['version'],now,before,asc,True)
+        full,details,delta=svg_view(tree,spec['version'],now,before,asc,class_name=data.get('build',{}).get('className',''))
+        changes,delta_details,delta=svg_view(tree,spec['version'],now,before,asc,True,class_name=data.get('build',{}).get('className',''))
         mini,asc_details,asc_delta=svg_view(tree,spec['version'],now,before,asc,True,True) if asc else ('',{}, {})
         combined=details|delta_details|asc_details
         for nid,eid in re.findall(r'\{(\d+),(\d+)\}',spec.get('masteries','')):
