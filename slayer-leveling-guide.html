@@ -43,6 +43,7 @@ body[data-design=board] .concepttreeimage{background:#070d14}
 .uiicon{width:20px;height:20px;flex:none;vertical-align:middle}.iconlabel{display:inline-flex;align-items:center;gap:7px}.iconbutton{display:inline-flex;align-items:center;justify-content:center;width:36px;height:34px;padding:6px!important}.notecount{font-size:11px;color:var(--gold)}.infobutton{display:inline-flex;align-items:center;justify-content:center;border:0;background:transparent;color:var(--muted);padding:4px;border-radius:50%;width:27px;height:27px;flex:none}.infobutton .uiicon{width:18px;height:18px}.infobutton:hover,.infobutton:focus-visible{color:var(--gold);background:#e6c68e14}.prepheading{display:flex;align-items:center;justify-content:space-between}.prepheading h2{margin:0 0 8px}.chrome-tooltip{position:fixed;z-index:10000;max-width:min(340px,calc(100vw - 16px));padding:12px 14px;border:1px solid #566d83;background:#1c2c3e;color:#e9eff7;border-radius:9px;box-shadow:0 8px 30px #0007;font-size:13px;line-height:1.55;pointer-events:none}.chrome-tooltip[hidden]{display:none}.toolsmenu{position:relative}.toolsmenu summary{list-style:none;cursor:pointer;border:1px solid var(--line);border-radius:9px;padding:6px 12px;background:var(--panel2);font-size:14px}.toolsmenu summary::-webkit-details-marker{display:none}.toolsmenu summary::after{content:none}.toolspop{position:absolute;right:0;top:calc(100% + 8px);z-index:1000;min-width:180px;padding:6px;background:#172737;border:1px solid #40556d;border-radius:10px;box-shadow:0 10px 24px #0007}.toolspop button{display:block;text-align:left;width:100%;border:0;background:transparent;border-radius:6px!important;padding:10px!important;white-space:nowrap}.toolspop button:hover{background:#294159!important}.sidefoot{display:flex;justify-content:flex-start}.concepthero h1 .infobutton{margin-left:10px;vertical-align:middle}
 
 #appSettings{order:100}.settingsactions{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}.settingsactions button{margin:0}.appsettings h3:not(:first-child){margin-top:24px}
+#importPob{order:99}
 
 #liveStatus{max-width:min(1050px,57vw);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#bce0fb;border-color:#53748c;background:#1a2c40;font-size:14px}
 .liveupcoming{box-shadow:inset 3px 0 #e6c68e;background:#e6c68e0b!important}
@@ -178,6 +179,7 @@ document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)r
 window.addEventListener('resize',()=>render(current));
 
 function uiIcon(name){
+ if(name==='builds')return '<svg class="uiicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="14" height="14" rx="2"/><path d="M17 3H5a2 2 0 0 0-2 2v12M11 12h6M11 16h4"/></svg>';
  const paths={settings:'<path d="m9 3 1-2h4l1 2 2 1 2-.2 2 3-1 2v3l1 2-2 3-2-.2-2 1-1 2h-4l-1-2-2-1-2 .2-2-3 1-2V9L3 7l2-3 2 .2Z"/><circle cx="12" cy="10.5" r="3"/>',text:'<path d="M5 3h14v18H5zM8 7h8M8 11h8M8 15h5"/>',info:'<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7v1"/>'};
  return `<svg class="uiicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name]||paths.info}</svg>`;
 }
@@ -390,7 +392,7 @@ async function checkAppUpdate(){
 }
 checkAppUpdate();setInterval(checkAppUpdate,1000);
 
-const importButton=document.createElement('button');importButton.id='importPob';importButton.textContent='Builds / Import PoB';document.querySelector('.topactions').prepend(importButton);
+const importButton=document.createElement('button');importButton.id='importPob';importButton.className='iconlabel';importButton.innerHTML=uiIcon('builds')+'<span>Manage builds</span>';document.querySelector('.topactions').append(importButton);
 let importPreview=null;
 async function importRequest(path,body){const response=await fetch(path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});const data=await response.json();if(!response.ok){const error=Error(data.error||'Import failed.');error.details=data;throw error;}return data;}
 function importMessage(message,error=false){const status=$('importStatus');if(status){status.textContent=message;status.classList.toggle('importerror',error);}}

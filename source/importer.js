@@ -1,4 +1,4 @@
-const importButton=document.createElement('button');importButton.id='importPob';importButton.textContent='Builds / Import PoB';document.querySelector('.topactions').prepend(importButton);
+const importButton=document.createElement('button');importButton.id='importPob';importButton.className='iconlabel';importButton.innerHTML=uiIcon('builds')+'<span>Manage builds</span>';document.querySelector('.topactions').append(importButton);
 let importPreview=null;
 async function importRequest(path,body){const response=await fetch(path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});const data=await response.json();if(!response.ok){const error=Error(data.error||'Import failed.');error.details=data;throw error;}return data;}
 function importMessage(message,error=false){const status=$('importStatus');if(status){status.textContent=message;status.classList.toggle('importerror',error);}}

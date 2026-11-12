@@ -46,7 +46,7 @@ Prefer to check the release notes first? [Browse releases](https://github.com/iw
 
 ## Create your first guide
 
-1. Open **Builds / Import PoB** and paste a **pobb.in link**, **PoB export code** or **PoB XML**.
+1. Open **Manage builds** beside the settings gear and paste a **pobb.in link**, **PoB export code** or **PoB XML**.
 2. Review the milestones, levels and matching skill, tree and equipment sets,
    then choose **Generate & open guide**.
 3. Open the **settings gear** and select your game's **Client.txt** if it wasn't found automatically.
