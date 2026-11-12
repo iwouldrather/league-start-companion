@@ -7,10 +7,12 @@ import subprocess
 import sys
 
 from app_version import VERSION
+from windows_identity import APP_ID, set_process_identity
 
 ROOT=Path(__file__).resolve().parent
 
 def run_setup(target,payload,test=False,preview=False):
+    set_process_identity(APP_ID+'.Setup')
     if os.environ.get('LC_SETUP_DIAGNOSTICS'):
         import faulthandler
         import logging

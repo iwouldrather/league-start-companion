@@ -11,6 +11,7 @@ import time
 import uuid
 import zipfile
 from app_version import VERSION
+from windows_identity import resource_icon, shortcut_identity, refresh_shell_icon
 
 PRODUCT='LeagueStartCompanion'
 
@@ -41,9 +42,27 @@ def sync_shortcuts(target,choices,test=False):
     for kind,path in shortcut_paths().items():
         if choices[kind]:
             path.parent.mkdir(parents=True,exist_ok=True)
-            script="$s=(New-Object -ComObject WScript.Shell).CreateShortcut($env:LC_SHORTCUT);$s.TargetPath=(Join-Path $env:LC_INSTALL_DIR 'LeagueStartCompanion.exe');$s.WorkingDirectory=$env:LC_INSTALL_DIR;$s.IconLocation=$s.TargetPath+',0';$s.Save()"
-            subprocess.run(['powershell.exe','-NoProfile','-Command',script],env=dict(os.environ,LC_INSTALL_DIR=str(target),LC_SHORTCUT=str(path)),creationflags=subprocess.CREATE_NO_WINDOW,check=True)
+            icon=resource_icon(Path(target)/'_internal')
+            script="$s=(New-Object -ComObject WScript.Shell).CreateShortcut($env:LC_SHORTCUT);$s.TargetPath=(Join-Path $env:LC_INSTALL_DIR 'LeagueStartCompanion.exe');$s.WorkingDirectory=$env:LC_INSTALL_DIR;$s.IconLocation=$env:LC_ICON+',0';$s.Save()"
+            subprocess.run(['powershell.exe','-NoProfile','-Command',script],env=dict(os.environ,LC_INSTALL_DIR=str(target),LC_SHORTCUT=str(path),LC_ICON=str(icon if icon.is_file() else target/'LeagueStartCompanion.exe')),creationflags=subprocess.CREATE_NO_WINDOW,check=True)
+            shortcut_identity(path);refresh_shell_icon(path)
         else:path.unlink(missing_ok=True)
+
+def pinned_shortcut_paths():
+    folder=Path(os.environ['APPDATA'])/'Microsoft/Internet Explorer/Quick Launch/User Pinned/TaskBar'
+    return sorted(set(folder.glob('League Start Companion*.lnk'))|set(folder.glob('LeagueStartCompanion*.lnk')))
+
+def refresh_pinned_shortcuts(target):
+    """Refresh only existing pins that launch this installation; never pin/unpin."""
+    icon=resource_icon(Path(target)/'_internal')
+    for path in pinned_shortcut_paths():
+        script="$s=(New-Object -ComObject WScript.Shell).CreateShortcut($env:LC_SHORTCUT);if([string]::Equals($s.TargetPath,(Join-Path $env:LC_INSTALL_DIR 'LeagueStartCompanion.exe'),[StringComparison]::OrdinalIgnoreCase)){$s.IconLocation=$env:LC_ICON+',0';$s.Save();'updated'}"
+        try:
+            result=subprocess.run(['powershell.exe','-NoProfile','-Command',script],env=dict(os.environ,LC_INSTALL_DIR=str(target),LC_SHORTCUT=str(path),LC_ICON=str(icon if icon.is_file() else target/'LeagueStartCompanion.exe')),creationflags=subprocess.CREATE_NO_WINDOW,check=True,capture_output=True,text=True)
+            if result.stdout.strip()=='updated':shortcut_identity(path);refresh_shell_icon(path)
+        except (OSError,subprocess.CalledProcessError):
+            # A locked old pin must not block installing the app itself.
+            continue
 
 def installation_manifest(target):
     marker=Path(target)/'.league-start-install.json'
@@ -129,10 +148,14 @@ def install(target,payload,test=False,desktop=None,start_menu=None,progress=None
         progress('Installing app files',45)
         target.mkdir(parents=True,exist_ok=True)
         shutil.copytree(staging,target,dirs_exist_ok=True)
-        (target/'.league-start-install.json').write_text(json.dumps({'product':PRODUCT,'files':names,'test':test,'shortcuts':choices}),encoding='utf8')
+        owned=set(names)
+        for name in previous.get('files',[]):
+            if checked_path(target,name).is_file():owned.add(name)
+        (target/'.league-start-install.json').write_text(json.dumps({'product':PRODUCT,'files':sorted(owned),'test':test,'shortcuts':choices}),encoding='utf8')
     progress('Creating your shortcuts',85)
     sync_shortcuts(target,choices,test)
     register(target,test)
+    if not test:refresh_pinned_shortcuts(target)
     progress('Ready for your next league',100)
 
 def uninstall(target,test=False):

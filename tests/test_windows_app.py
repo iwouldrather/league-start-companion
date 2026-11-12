@@ -4,6 +4,9 @@ import tempfile
 import unittest
 from unittest.mock import patch
 import zipfile
+import os
+import subprocess
+import shutil
 import desktop
 import install_windows as setup
 
@@ -63,10 +66,47 @@ class WindowsAppTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as folder:
             root=Path(folder);paths={'desktop':root/'desktop.lnk','startMenu':root/'start.lnk'}
             paths['startMenu'].write_text('old shortcut')
-            with patch.object(setup,'shortcut_paths',return_value=paths),patch.object(setup.subprocess,'run') as command:
+            with patch.object(setup,'shortcut_paths',return_value=paths),patch.object(setup.subprocess,'run') as command,patch.object(setup,'shortcut_identity') as identity,patch.object(setup,'refresh_shell_icon'):
                 setup.sync_shortcuts(root,{'desktop':True,'startMenu':False})
+                identity.assert_called_once_with(paths['desktop'])
             self.assertFalse(paths['startMenu'].exists())
             self.assertEqual(command.call_count,1)
             self.assertEqual(command.call_args.kwargs['env']['LC_SHORTCUT'],str(paths['desktop']))
+
+    def test_real_windows_shortcut_identity_and_icon_reference(self):
+        from windows_identity import APP_ID,shortcut_identity
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder);target=root/'app';icons=target/'_internal/assets';icons.mkdir(parents=True)
+            icon=icons/f'app-icon-{setup.VERSION}.ico'
+            shutil.copy2(Path(__file__).resolve().parents[1]/'assets/app-icon.ico',icon)
+            paths={'desktop':root/'Desktop.lnk','startMenu':root/'Programs.lnk'}
+            with patch.object(setup,'shortcut_paths',return_value=paths):
+                setup.sync_shortcuts(target,{'desktop':True,'startMenu':False})
+            self.assertEqual(shortcut_identity(paths['desktop'],write=False),APP_ID)
+            command="$s=(New-Object -ComObject WScript.Shell).CreateShortcut($env:LC_SHORTCUT);$s.IconLocation"
+            result=subprocess.run(['powershell.exe','-NoProfile','-Command',command],env=dict(os.environ,LC_SHORTCUT=str(paths['desktop'])),capture_output=True,text=True,check=True,creationflags=subprocess.CREATE_NO_WINDOW)
+            self.assertEqual(result.stdout.strip(),str(icon)+',0')
+            pin=root/'Pinned.lnk';shutil.copy2(paths['desktop'],pin)
+            foreign=root/'Foreign.lnk';shutil.copy2(pin,foreign)
+            command="$s=(New-Object -ComObject WScript.Shell).CreateShortcut($env:LC_SHORTCUT);$s.TargetPath='C:\\Other\\Foreign.exe';$s.Save()"
+            subprocess.run(['powershell.exe','-NoProfile','-Command',command],env=dict(os.environ,LC_SHORTCUT=str(foreign)),check=True,creationflags=subprocess.CREATE_NO_WINDOW)
+            with patch.object(setup,'pinned_shortcut_paths',return_value=[pin,foreign]),patch.object(setup,'shortcut_identity',wraps=shortcut_identity) as identity:
+                setup.refresh_pinned_shortcuts(target)
+                identity.assert_called_once_with(pin)
+            self.assertEqual(shortcut_identity(pin,write=False),APP_ID)
+
+    def test_upgrade_keeps_old_owned_resources_in_uninstall_manifest(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder);target=root/'app';payload=root/'app.zip'
+            with zipfile.ZipFile(payload,'w') as archive:
+                archive.writestr('LeagueStartCompanion.exe','app');archive.writestr('_internal/assets/old-icon.ico','old')
+            with patch.object(setup,'register'):
+                setup.install(target,payload,test=True)
+                with zipfile.ZipFile(payload,'w') as archive:archive.writestr('LeagueStartCompanion.exe','new app')
+                setup.install(target,payload,test=True)
+            self.assertIn('_internal/assets/old-icon.ico',setup.installation_manifest(target)['files'])
+            import winreg
+            with patch.object(winreg,'DeleteKey'):setup.uninstall(target,test=True)
+            self.assertFalse(target.exists())
 
 if __name__=='__main__':unittest.main()

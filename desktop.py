@@ -10,6 +10,7 @@ import sys
 import threading
 from app_version import VERSION, RELEASES_URL
 import app_updates
+from windows_identity import set_process_identity, resource_icon, process_identity
 from http.server import ThreadingHTTPServer
 
 ROOT=Path(__file__).resolve().parent
@@ -56,6 +57,7 @@ class LogSource:
         with self.lock:return self.current.snapshot()
 
 def main():
+    set_process_identity()
     parser=argparse.ArgumentParser();parser.add_argument('--data-dir',type=Path,default=default_data_dir());parser.add_argument('--smoke-test',type=Path)
     args=parser.parse_args();args.data_dir.mkdir(parents=True,exist_ok=True)
     if not args.smoke_test:
@@ -87,6 +89,7 @@ def main():
         import poe_tree
         connection=HTTPConnection('127.0.0.1',server.server_port);connection.request('GET','/');response=connection.getresponse();response.read();connection.close()
         result={'http':response.status,'catalog':len(pob_import.gem_catalog()),'treeNodes':len(pob_import.tree_data('3_29')['nodes']),'nativeSprite':bool(poe_tree.sprite_data('3_29')),'dataDir':str(args.data_dir)}
+        result['appId']=process_identity()
         args.smoke_test.write_text(json.dumps(result),encoding='utf8');server.shutdown();return
     import webview
     updater=app_updates.Updater(args.data_dir)
@@ -117,7 +120,7 @@ def main():
             return {'copied':import_saves(folders[0],args.data_dir) if folders else 0}
         def open_data_folder(self):os.startfile(args.data_dir)
     window=webview.create_window('League Start Companion',url,js_api=Api(),width=1600,height=950,min_size=(1100,720),text_select=True)
-    try:webview.start(gui='edgechromium',private_mode=False,storage_path=str(args.data_dir/'webview'),icon=str(ROOT/'assets/app-icon.ico'))
+    try:webview.start(gui='edgechromium',private_mode=False,storage_path=str(args.data_dir/'webview'),icon=str(resource_icon(ROOT)))
     finally:stop.set();server.shutdown();server.server_close()
 
 if __name__=='__main__':

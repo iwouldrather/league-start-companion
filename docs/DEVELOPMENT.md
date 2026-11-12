@@ -54,6 +54,11 @@ GitHub release tagged `v<VERSION>`. Upload the installer and its SHA256 checksum
 before publishing. Automatic updates accept newer stable releases only, and
 verify the installer against GitHub's asset digest and size before launch.
 
+Windows taskbar identity is defined in `windows_identity.py`. The app and shortcuts
+must share the same stable ID. Packaging adds a versioned ICO resource; shortcuts
+refer to it directly so old executable-icon cache entries are bypassed. Setup also
+refreshes existing matching taskbar shortcuts without changing pin positions.
+
 Keep user imports, saves, settings, credentials, caches and generated installers
 out of Git. Game assets are bundled into the Windows package, not committed as
 standalone source assets. The README screenshot is a rendered example using

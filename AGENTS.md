@@ -37,3 +37,9 @@ standalone (exclude installer_ui when freezing it). One-file uninstall workers
 must start with a reset PyInstaller environment and wait for the bootloader parent,
 not just the Python child, before removing the original executable. Preserve
 custom install locations and shortcut choices during automatic updates.
+
+Keep the Windows AppUserModelID in windows_identity.py stable and identical for
+the running app and its shortcuts. Use versioned icon resources to avoid stale
+shell icons. Refresh only existing taskbar links whose target matches this app;
+never pin, unpin or reorder the user's taskbar. Test shortcut changes in isolated
+folders with mocked shortcut locations.

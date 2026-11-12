@@ -8,6 +8,8 @@ import sys
 import zipfile
 
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT))
+from app_version import VERSION
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--output',type=Path,default=ROOT/'dist');parser.add_argument('--skip-guide-build',action='store_true');args=parser.parse_args()
@@ -24,6 +26,9 @@ def main():
     if not (pob/'TreeData/3_29/tree.lua').exists():raise SystemExit('Install PoB Community or set POB_DATA_DIR before building the Windows app.')
     data=[(ROOT/'slayer-leveling-guide.html','.'),(ROOT/'slayer-companion.py','.'),(ROOT/'THIRD_PARTY.md','.'),(ROOT/'assets/app-icon.ico','assets'),(pob/'TreeData/3_29','pob-data/TreeData/3_29'),(pob/'Data/Gems.lua','pob-data/Data'),(pob/'Data/Skills','pob-data/Data/Skills')]
     data.extend((p,'source') for p in (ROOT/'source').glob('*.json'))
+    versioned_icon=staging/f'app-icon-{VERSION}.ico'
+    shutil.copy2(ROOT/'assets/app-icon.ico',versioned_icon)
+    data.append((versioned_icon,'assets'))
     data.extend((p,'pob-data/TreeData') for p in (pob/'TreeData').glob('*.png'))
     license_path=pob/'LICENSE.md'
     if license_path.exists():data.append((license_path,'pob-data'))
