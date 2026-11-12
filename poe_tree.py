@@ -8,7 +8,7 @@ from pathlib import Path
 import re
 from urllib.parse import urlsplit
 
-VIEW_VERSION=9
+VIEW_VERSION=10
 
 
 def selected(spec):
@@ -148,8 +148,6 @@ def svg_view(tree,version,now,before,ascendancy='',diff=False,mini=False,class_n
             defs.append(f'<image id="{key}" href="{uri}" width="1" height="1" preserveAspectRatio="none"/>')
         return f'<use href="#{uses[uri]}" transform="translate({x-size/2:.1f} {y-size/2:.1f}) scale({size:.1f})"/>'
     if not mini:
-        for color,key in [('#f6c65d','gold'),('#f17840','red'),('#75d278','green'),('#6aaaff','blue')]:
-            defs.append(f'<radialGradient id="treeGlow{key}"><stop offset="0" stop-color="{color}" stop-opacity=".55"/><stop offset=".4" stop-color="{color}" stop-opacity=".2"/><stop offset="1" stop-color="{color}" stop-opacity="0"/></radialGradient>')
         # Native PoE cluster ornaments provide orientation without competing
         # with the allocated route. Large backgrounds are two mirrored halves.
         for gid in {str(nodes[n].get('group')) for n in visible}:
@@ -183,7 +181,8 @@ def svg_view(tree,version,now,before,ascendancy='',diff=False,mini=False,class_n
         notable=node.get('isNotable') or node.get('isKeystone');size=(36 if node.get('isAscendancyStart') else 26 if notable else 17)*scale
         kind='keystone' if node.get('isKeystone') else 'notable' if notable else 'normal'
         icon_kind='masteryActiveSelected' if active and node.get('isMastery') else 'masteryInactive' if node.get('isMastery') else kind+('Active' if active else 'Inactive')
-        icon=sprite(version,icon_kind,node.get('icon',''))
+        icon_key=node.get('activeIcon' if active else 'inactiveIcon',node.get('icon','')) if node.get('isMastery') else node.get('icon','')
+        icon=sprite(version,icon_kind,icon_key)
         frame_key=('KeystoneFrame' if node.get('isKeystone') else 'NotableFrame' if notable else 'PSSkillFrame')+('Allocated' if active else 'Unallocated')
         if kind=='normal':frame_key='PSSkillFrameActive' if active else 'PSSkillFrame'
         if node.get('isJewelSocket'):frame_key='JewelFrameAllocated' if active else 'JewelFrameUnallocated'
@@ -199,9 +198,9 @@ def svg_view(tree,version,now,before,ascendancy='',diff=False,mini=False,class_n
         ring=f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{size*.77:.1f}" fill="none" stroke="{color}" stroke-width="{2.8*scale:.1f}"/>' if (diff and state in ('new','removed')) else ''
         opacity='1' if active or state=='removed' else '.42'
         if active and not mini:
-            if notable or node.get('isMastery'):
-                key='red' if 'strength' in node.get('icon','').lower() else 'green' if 'dexterity' in node.get('icon','').lower() else 'blue' if 'intelligence' in node.get('icon','').lower() else 'gold'
-                glows.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{size*2.3:.1f}" fill="url(#treeGlow{key})"/>')
+            if node.get('isMastery'):
+                effect=sprite(version,'masteryActiveEffect',node.get('activeEffectImage',''))
+                if effect:glows.append(f'<g class="masteryeffect" opacity=".22">{art(effect,x,y,size*4.8)}</g>')
             if not ring:ring=f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{size*.72:.1f}" fill="none" stroke="{color}" stroke-width="{1.4*scale:.1f}"/>'
         icons.append(f'<g data-node="{nid}" role="button" tabindex="0" aria-label="{html.escape(node.get("name",nid),quote=True)}" opacity="{opacity}"><title>{title}</title>{glyph}{ring}</g>')
         if nid in starts:

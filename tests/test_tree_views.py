@@ -86,6 +86,21 @@ class TreeViewTests(unittest.TestCase):
                     self.assertEqual(delta['added'],1)
                     ET.fromstring(text)
 
+    def test_only_allocated_masteries_use_their_native_effect(self):
+        tree=dict(TREE,nodes=dict(TREE['nodes']))
+        tree['nodes']['1']=dict(tree['nodes']['1'],isMastery=True,activeIcon='mastery-active',inactiveIcon='mastery-inactive',activeEffectImage='mastery-effect')
+        tree['nodes']['2']=dict(tree['nodes']['2'],isNotable=True)
+        with patch.object(t,'sprite',return_value='data:image/png;base64,eA==') as sprites,patch.object(t,'local_art',return_value=None):
+            image,_,_=t.svg_view(tree,'3_29',{'1','2'},set())
+            self.assertTrue(any(c.args[1:] == ('masteryActiveSelected','mastery-active') for c in sprites.call_args_list))
+            self.assertTrue(any(c.args[1:] == ('masteryActiveEffect','mastery-effect') for c in sprites.call_args_list))
+            text=base64.b64decode(image.split(',')[1]).decode()
+            self.assertEqual(text.count('class="masteryeffect"'),1)
+            self.assertNotIn('radialGradient',text)
+            sprites.reset_mock()
+            t.svg_view(tree,'3_29',{'2'},set())
+            self.assertFalse(any(c.args[1]=='masteryActiveEffect' for c in sprites.call_args_list))
+
     def test_changes_keeps_distant_previously_allocated_nodes_visible(self):
         tree=dict(TREE,groups={'1':{'x':0,'y':0},'2':{'x':5000,'y':100}})
         with patch.object(t,'sprite',return_value=None),patch.object(t,'local_art',return_value=None):
