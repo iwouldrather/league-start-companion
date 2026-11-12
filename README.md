@@ -26,8 +26,9 @@ together in one view. Spend less time switching tabs and more time playing.
   reset controls. Save, rename and remove imported guides in your build library.
 - **Follow your character as you level.** Read level-ups and area changes from
   the local game log to advance through the guide automatically. A separate
-  character bar shows your current character, recorded level, class and area,
-  with controls to pause or resume following. App menus stay separate above it.
+  identity bar shows the selected build and its portrait on the left, and your
+  recorded character, class portrait, level and area on the right. Pause or resume
+  following from there. App menus stay separate above it.
 
 ## Install on Windows
 

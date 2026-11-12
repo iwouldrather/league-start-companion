@@ -234,6 +234,11 @@ def make_handler(log, directory, purchases=None, resources=None):
         def do_GET(self):
             # No arbitrary file access, log contents, chat, or game credentials served.
             route = self.path.split('?', 1)[0]
+            if route == '/api/class-portrait':
+                from poe_tree import class_portrait
+                name=parse_qs(urlsplit(self.path).query).get('class',[''])[0]
+                self.json_response({'portrait':class_portrait(name)})
+                return
             if route == '/api/gem-coverage':
                 self.json_response({'classes':list(GEM_CLASSES),'gems':sum(not m.get('itemGranted') for m in gem_catalog().values()),
                                     'checkedAt':gem_snapshot().get('checkedAt')})

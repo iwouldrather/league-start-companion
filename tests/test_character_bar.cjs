@@ -5,6 +5,7 @@ const path=require('node:path');
 class Element{
  constructor(id=''){this.id=id;this.textContent='';this.attributes={};this.listeners={};this.classes=new Set();this.classList={toggle:(name,on)=>on?this.classes.add(name):this.classes.delete(name),remove:name=>this.classes.delete(name)};}
  setAttribute(key,value){this.attributes[key]=value;}
+ removeAttribute(key){delete this.attributes[key];}
  append(child){child.parent=this;}
  after(child){this.afterNode=child;}
  addEventListener(name,handler){this.listeners[name]=handler;}
@@ -14,7 +15,8 @@ const topbar=new Element('topbar');
 const context=vm.createContext({
  document:{createElement:()=>new Element(),querySelector:selector=>{assert.equal(selector,'.topbar');return topbar;},querySelectorAll:()=>[],addEventListener:()=>{}},
  $:get,location:{protocol:'file:'},sessionStorage:{getItem:()=>null,setItem:()=>{}},queueMicrotask:()=>{},setInterval:()=>{},
- D:{imported:true,build:{className:'Marauder',ascendClassName:'Berserker'},sets:[{startLevel:1},{startLevel:33},{startLevel:50}],meta:{}},
+ D:{imported:true,name:'Example Berserker guide',uiAssets:{portrait:'data:image/webp;base64,build'},build:{className:'Marauder',ascendClassName:'Berserker'},sets:[{startLevel:1},{startLevel:33},{startLevel:50}],meta:{}},
+ uiIcon:()=>'',
  current:0,render:i=>{context.current=i;},isGemOwned:()=>false,esc:value=>String(value),buyNames:()=>[],record:()=>{}
 });
 vm.runInContext(fs.readFileSync(path.join(__dirname,'../source/live-guide.js'),'utf8'),context);
@@ -25,6 +27,10 @@ assert.equal(vm.runInContext('liveButton.textContent',context),'ExampleExile');
 assert.equal(vm.runInContext('liveButton.parent.id',context),'characterNameSlot');
 assert.equal(get('characterLevel').textContent,33);
 assert.equal(get('characterArea').textContent,'The Forest Encampment');
+assert.equal(get('selectedBuildName').textContent,'Example Berserker guide');
+assert.equal(get('selectedBuildClass').textContent,'Berserker');
+assert.equal(get('selectedBuildPortrait').src,'data:image/webp;base64,build');
+assert.equal(get('characterPortrait').hidden,true,'Offline/unknown character portrait must not borrow the selected build icon');
 assert.equal(get('characterConnection').hidden,true,'Healthy log status should not duplicate Following game');
 assert.match(vm.runInContext('resumeButton.title',context),/Reading local log/);
 assert.equal(get('characterWarning').hidden,false);

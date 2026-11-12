@@ -110,22 +110,23 @@ body[data-design=board] .concepttreeimage{background:#070d14}
 .treecheckpointnav button:hover:not(:disabled){background:#2b4055}
 @media(max-width:1449px),(max-height:849px){#stage .treecolumn{display:flex;flex-direction:column;gap:12px}#stage .treecolumn>.concepttree{height:580px;flex:none}#stage .treecolumn .ascendancypanel{height:190px}.treecheckpointnav{flex-wrap:wrap}.treecheckpointnav select{min-width:150px}}
 
-/* App-wide menus above a separate, persistent character context. */
+/* Separate selected-build and recorded-character identities from app-wide menus. */
 .brandmark.appmark{transform:none;border:0!important;background:transparent!important;color:var(--gold);width:31px;height:31px;box-shadow:none}.appmark svg{display:block;width:100%;height:100%}
-.characterbar{display:flex;align-items:center;gap:20px;min-height:84px;padding:10px 24px;background:#172b3c;border-bottom:1px solid #48647a;position:relative;z-index:16;flex:none}
-.characterlevel{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:54px;height:54px;border:1px solid #7eb3d3;border-radius:50%;color:#bce0fb;line-height:1.1;flex:none}.characterlevel small{font-size:9px;letter-spacing:1px;margin-bottom:3px}.characterlevel strong{font-size:25px;font-weight:500}
-.characteridentity{min-width:0}.characterlabel{display:block;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#a9d7f6;margin-bottom:2px}.characteridentityrow{display:flex;align-items:center;gap:12px;min-width:0}
-.characterbar #liveStatus{border:0;border-radius:4px;padding:0;background:transparent;color:#eff7ff;max-width:clamp(200px,35vw,700px);font-size:21px;font-weight:600;line-height:1.3;text-align:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.characterbar #liveStatus:hover{text-decoration:underline;text-underline-offset:4px}.characterbar #characterClass{font-size:13px;color:#b2c5d7;white-space:nowrap}
+.characterbar{display:flex;align-items:center;justify-content:space-between;gap:32px;min-height:84px;padding:10px 24px;background:linear-gradient(90deg,#262723,#172b3c 62%);border-bottom:1px solid #48647a;position:relative;z-index:16;flex:none}
+.selectedbuild,.currentcharacter{display:flex;align-items:center;gap:14px;min-width:0}.selectedbuild{flex:1 1 36%}.currentcharacter{justify-content:flex-end;flex:1 1 56%}
+.identityportrait{display:flex;align-items:center;justify-content:center;width:50px;height:50px;border:2px solid var(--gold);border-radius:50%;background:#101723;overflow:hidden;flex:none;box-shadow:0 0 0 3px #313027}.identityportrait.characterportrait{border-color:#92c8ed;box-shadow:0 0 0 3px #1b3548}.identityportrait img{width:100%;height:100%;object-fit:cover}.identityportrait img[hidden],.identityportrait span[hidden]{display:none!important}.identityportrait span{display:flex;align-items:center;justify-content:center;color:var(--muted)}.identityportrait .uiicon{width:23px;height:23px}
+.buildidentity,.characteridentity{min-width:0}.buildlabel,.characterlabel{display:block;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:2px;color:var(--gold)}.characterlabel{color:#a9d7f6}
+.characterbar #liveStatus,.characterbar #selectedBuildName{display:block;border:0;border-radius:4px;padding:0;background:transparent;color:#eff7ff;max-width:100%;font-size:20px;font-weight:600;line-height:1.3;text-align:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.characterbar #selectedBuildName{color:#f0e1bd}.characterbar #liveStatus:hover,.characterbar #selectedBuildName:hover{text-decoration:underline;text-underline-offset:4px}
+#selectedBuildClass{display:block;font-size:13px;color:#c4b89e;margin-top:2px}.characteridentityrow{display:flex;align-items:center;gap:9px;min-width:0;font-size:12px;color:#b2c5d7;margin-top:3px;white-space:nowrap}.characterlevel{border:1px solid #53718a;border-radius:4px;padding:0 5px;font-size:11px;color:#e0edf8}.characterlevel strong{font-weight:500}#characterArea{overflow:hidden;text-overflow:ellipsis;max-width:22vw}
 #characterWarning{display:block;font-size:12px;color:#f0c489;margin-top:3px}#characterWarning[hidden]{display:none}
-.characterarea{margin-left:auto;display:flex;flex-direction:column;gap:3px;min-width:0}.characterarea small{color:#a5b8c9;font-size:11px}.characterarea span{font-size:15px;color:#e2edf6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:34vw}
-.charactercontrols{display:flex;align-items:center;gap:14px;margin-left:14px;flex:none}#characterConnection{font-size:12px;color:#a9c7db;white-space:nowrap}.characterbar #resumeLive{display:inline-flex;align-items:center;justify-content:center;padding:8px 12px;font-size:13px;color:#bae1fa;border:1px solid #6b9ab8;background:#172b3c;white-space:nowrap}.characterbar #resumeLive[aria-pressed=true]::before{content:'';width:6px;height:6px;border-radius:50%;background:#92c8ed;margin-right:8px}.characterbar #resumeLive[aria-pressed=false]{color:var(--gold);border-color:#a79268}.characterbar.isdisconnected{background:#1b2633}.isdisconnected .characterlabel{color:#b5c1ce}
+.charactercontrols{display:flex;align-items:center;justify-content:flex-end;gap:8px;margin-left:10px;flex:none;flex-wrap:wrap;max-width:250px}.charactercontrols #characterConnection{font-size:12px;color:#efc88b}#characterConnection[hidden]{display:none!important}
+.characterbar #resumeLive{display:inline-flex;align-items:center;justify-content:center;padding:8px 12px;font-size:13px;color:#bae1fa;border:1px solid #6b9ab8;background:#172b3c;white-space:nowrap}.characterbar #resumeLive[aria-pressed=true]::before{content:'';width:6px;height:6px;border-radius:50%;background:#92c8ed;margin-right:8px}.characterbar #resumeLive[aria-pressed=false]{color:var(--gold);border-color:#a79268}.characterbar.isdisconnected{background:linear-gradient(90deg,#262723,#1b2633)}.isdisconnected .characterlabel{color:#b5c1ce}
 .concepthero #importedNotes,.dashhero #importedNotes,.stagehero #importedNotes{margin-left:auto;font-size:13px;flex:none}.prep .progressowner{color:var(--gold)!important;font-size:12px!important}
-@media(min-width:1450px) and (min-height:850px){body{display:flex;flex-direction:column}.topbar{flex:none}body .shell,body.libraryhome .shell{height:auto;min-height:0;flex:1;margin:0}.characterbar{height:84px}.charactercontrols{margin-left:20px}}
-@media(max-width:1500px){.characterbar{gap:14px;padding-left:18px;padding-right:18px}.characterbar #liveStatus{font-size:19px}.charactercontrols{gap:9px;margin-left:0}.characterarea span{font-size:14px}}
+@media(min-width:1450px) and (min-height:850px){body{display:flex;flex-direction:column}.topbar{flex:none}body .shell,body.libraryhome .shell{height:auto;min-height:0;flex:1;margin:0}.characterbar{height:84px}.characterbar.hasmismatch{height:104px}}
+@media(max-width:1500px){.characterbar{gap:20px;padding-left:18px;padding-right:18px}.characterbar #liveStatus,.characterbar #selectedBuildName{font-size:18px}.selectedbuild,.currentcharacter{gap:11px}.charactercontrols{margin-left:0}.identityportrait{width:46px;height:46px}#characterArea{max-width:18vw}}
 @media(max-width:1449px),(max-height:849px){.sidebar{top:76px;height:calc(100dvh - 76px)}.characterbar{z-index:14}}
-@media(max-width:760px){.topbar{height:auto;min-height:60px;flex-wrap:wrap;padding:10px 14px;gap:10px}.topactions{margin-left:auto}.brand strong{font-size:11px;letter-spacing:.7px}.characterbar{padding:12px 14px;gap:10px;flex-wrap:wrap}.characteridentity{flex:1}.characterbar #liveStatus{font-size:18px;max-width:calc(100vw - 106px)}.characteridentityrow{flex-wrap:wrap;gap:3px 8px}.characterarea{margin-left:64px;flex:1}.characterarea span{max-width:calc(100vw - 220px);font-size:12px}.charactercontrols{margin-left:0}.characterbar #resumeLive{font-size:12px;padding:7px 9px}.characterlevel{min-width:48px;height:48px}.sidebar{height:auto;top:60px}.concepthero #importedNotes{font-size:11px;white-space:nowrap}.concepthero{flex-wrap:wrap}}
-
-#characterConnection[hidden]{display:none!important}.charactercontrols #characterConnection{color:#efc88b}.charactercontrols{flex-wrap:wrap}
+@media(max-width:1100px){.characterbar{flex-wrap:wrap;gap:18px}.selectedbuild,.currentcharacter{flex:1 1 100%;justify-content:flex-start}.currentcharacter{border-top:1px solid #34465e;padding-top:14px}.charactercontrols{margin-left:auto}#characterArea{max-width:35vw}}
+@media(max-width:760px){.topbar{height:auto;min-height:60px;flex-wrap:wrap;padding:10px 14px;gap:10px}.topactions{margin-left:auto}.brand strong{font-size:11px;letter-spacing:.7px}.characterbar{padding:12px 14px;gap:13px}.characterbar #liveStatus,.characterbar #selectedBuildName{font-size:17px}.characteridentity{flex:1}.characteridentityrow{flex-wrap:wrap;gap:3px 8px;white-space:normal}.charactercontrols{margin-left:0;max-width:100%}.currentcharacter{flex-wrap:wrap}.characterbar #resumeLive{font-size:12px;padding:7px 9px}.sidebar{height:auto;top:60px}.concepthero #importedNotes{font-size:11px;white-space:nowrap}.concepthero{flex-wrap:wrap}#characterArea{max-width:50vw}}
 
 </style></head><body>
 <header class="topbar"><div class="brand"><div class="brandmark" aria-hidden="true"><span>L</span></div><div><strong>LEAGUE START</strong></div></div><div class="topactions"><details class="toolsmenu" id="toolsMenu"><summary class="iconbutton" aria-label="Tools menu" title="Tools"><svg class="uiicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></summary><div class="toolspop"><button id="finderOpen">Find a gem</button><button data-record="sources">Sources &amp; help</button></div></details></div></header>
@@ -197,7 +198,7 @@ window.addEventListener('resize',()=>render(current));
 
 function uiIcon(name){
  if(name==='builds')return '<svg class="uiicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="14" height="14" rx="2"/><path d="M17 3H5a2 2 0 0 0-2 2v12M11 12h6M11 16h4"/></svg>';
- const paths={settings:'<path d="m9 3 1-2h4l1 2 2 1 2-.2 2 3-1 2v3l1 2-2 3-2-.2-2 1-1 2h-4l-1-2-2-1-2 .2-2-3 1-2V9L3 7l2-3 2 .2Z"/><circle cx="12" cy="10.5" r="3"/>',text:'<path d="M5 3h14v18H5zM8 7h8M8 11h8M8 15h5"/>',info:'<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7v1"/>'};
+ const paths={user:'<circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/>',settings:'<path d="m9 3 1-2h4l1 2 2 1 2-.2 2 3-1 2v3l1 2-2 3-2-.2-2 1-1 2h-4l-1-2-2-1-2 .2-2-3 1-2V9L3 7l2-3 2 .2Z"/><circle cx="12" cy="10.5" r="3"/>',text:'<path d="M5 3h14v18H5zM8 7h8M8 11h8M8 15h5"/>',info:'<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7v1"/>'};
  return `<svg class="uiicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name]||paths.info}</svg>`;
 }
 function infoTip(text,label='More information'){
@@ -259,8 +260,21 @@ try{const prior=sessionStorage.getItem('slayer-last-target');if(prior!==null)liv
 const liveButton=document.createElement('button');liveButton.id='liveStatus';
 liveButton.textContent=location.protocol==='file:'?'Live companion · How to start':'Connecting to local log…';
 const characterBar=document.createElement('section');characterBar.className='characterbar';characterBar.setAttribute('aria-label','Current character');
-characterBar.innerHTML='<div class="characterlevel"><small>LEVEL</small><strong id="characterLevel">—</strong></div><div class="characteridentity"><span class="characterlabel">Current character</span><div class="characteridentityrow"><span id="characterNameSlot"></span><span id="characterClass"></span></div><span id="characterWarning" role="status" hidden></span></div><div class="characterarea"><small>Current area</small><span id="characterArea">Waiting for area</span></div><div class="charactercontrols"><span id="characterConnection" role="status">Connecting to log…</span><span id="characterFollowSlot"></span></div>';
+characterBar.innerHTML=`<div class="selectedbuild"><span class="identityportrait buildportrait"><img id="selectedBuildPortrait" alt="Selected build portrait" hidden><span id="buildPortraitFallback" aria-hidden="true">${uiIcon('builds')}</span></span><div class="buildidentity"><span class="buildlabel">Selected build</span><button id="selectedBuildName">Choose a build</button><span id="selectedBuildClass"></span></div></div><div class="currentcharacter"><span class="identityportrait characterportrait"><img id="characterPortrait" alt="Current character portrait" hidden><span id="characterPortraitFallback" aria-hidden="true">${uiIcon('user')}</span></span><div class="characteridentity"><span class="characterlabel">Current character</span><span id="characterNameSlot"></span><div class="characteridentityrow"><span id="characterClass"></span><span class="characterlevel">Lv <strong id="characterLevel">—</strong></span><span id="characterArea">Area not recorded</span></div><span id="characterWarning" role="status" hidden></span></div><div class="charactercontrols"><span id="characterConnection" role="status">Connecting to log…</span><span id="characterFollowSlot"></span></div></div>`;
 document.querySelector('.topbar').after(characterBar);$('characterNameSlot').append(liveButton);
+$('selectedBuildName').addEventListener('click',()=>openImporter());
+let portraitClass=null,portraitRequest=0;
+async function updateCharacterPortrait(name){
+ name=name||'';if(name===portraitClass)return;portraitClass=name;const request=++portraitRequest;
+ const image=$('characterPortrait'),fallback=$('characterPortraitFallback');image.hidden=true;image.removeAttribute('src');fallback.hidden=false;
+ if(!name||location.protocol==='file:')return;
+ try{
+  const response=await fetch('/api/class-portrait?class='+encodeURIComponent(name),{signal:AbortSignal.timeout(4000)});
+  if(!response.ok)throw Error('Portrait unavailable');const data=await response.json();
+  if(request!==portraitRequest)return;
+  if(data.portrait){image.alt=name+' · current character';image.src=data.portrait;image.hidden=false;fallback.hidden=true;}
+ }catch{if(request===portraitRequest)portraitClass=null;}
+}
 const resumeButton=document.createElement('button');resumeButton.id='resumeLive';$('characterFollowSlot').append(resumeButton);
 resumeButton.addEventListener('click',()=>{liveFollow=!liveFollow;liveResumeAtMilestone=liveFollow;if(liveFollow&&liveTarget!==null)render(liveTarget);liveDecorate();});
 function suggestedStage(level){if(!level||!D.sets.length)return null;let i=0;D.sets.forEach((s,j)=>{if(level>=(s.startLevel??100))i=j;});return i;}
@@ -275,6 +289,13 @@ function liveDecorate(){
  if(upcoming)b.title=`Usable in ${m.minLevel-liveState.level} level(s). Purchase still requires the listed quest.`;
  });
  const s=liveState||{};
+ $('selectedBuildName').textContent=D.sets.length?(D.name||'Imported guide'):'Choose a build';
+ $('selectedBuildName').title=D.name||'Manage builds';
+ $('selectedBuildClass').textContent=D.sets.length?(D.build?.ascendClassName||D.build?.className||'Class not specified'):'No guide selected';
+ const buildPortrait=D.sets.length&&D.uiAssets?.portrait;
+ $('selectedBuildPortrait').hidden=!buildPortrait;$('buildPortraitFallback').hidden=!!buildPortrait;
+ if(buildPortrait){$('selectedBuildPortrait').src=buildPortrait;$('selectedBuildPortrait').alt=($('selectedBuildClass').textContent)+' · selected build';}
+ updateCharacterPortrait(s.characterClass);
  liveButton.textContent=s.character||(!liveConnected?'Game log unavailable':'Waiting for character');
  liveButton.setAttribute('aria-label','Current character: '+(s.character||'not recorded')+'. Open recorded character details.');
  liveButton.title='Last recorded character. Open details and vendor reminders.';
@@ -285,6 +306,7 @@ function liveDecorate(){
  resumeButton.title=$('characterConnection').textContent+'. '+(resumeButton.disabled?'Choose Client.txt in settings, or wait for a recorded level-up.':liveFollow?'Automatically selects milestones from your recorded level. Click to pause.':liveResumeAtMilestone?'Browsing temporarily; following resumes at the next milestone. Click to resume now.':'Automatic milestone selection is paused. Click to resume.');
  characterBar.classList.toggle('isdisconnected',!liveConnected);
  const mismatch=guideClassMismatch();$('characterWarning').hidden=!mismatch;
+ characterBar.classList.toggle('hasmismatch',mismatch);
  $('characterWarning').textContent=mismatch?`${s.characterClass} character · ${D.build.ascendClassName||D.build.className} guide`:'';
 }
 const preLiveRender=render;render=function(i,focus=false){preLiveRender(i,focus);liveDecorate();};

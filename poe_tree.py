@@ -84,6 +84,24 @@ def local_art(name):
         return 'data:image/png;base64,'+base64.b64encode(path.read_bytes()).decode()
 
 
+@lru_cache(maxsize=128)
+def class_portrait(name):
+    """Resolve a logged class from known metadata, never from an input filename."""
+    from pob_import import tree_data
+    if not isinstance(name,str) or not name or len(name)>80:return None
+    try:classes=tree_data('3_29').get('classes',[])
+    except (OSError,ValueError):return None
+    for entry in classes:
+        base=entry.get('name','')
+        if name==base:return local_art('center'+base.lower()+'.png')
+        for ascendancy in entry.get('ascendancies',[]):
+            if name in (ascendancy.get('name'),ascendancy.get('id')):
+                return (local_art('Classes'+ascendancy['name']+'.png') or
+                        local_art('Classes'+ascendancy.get('id',ascendancy['name'])+'.png') or
+                        local_art('center'+base.lower()+'.png'))
+    return None
+
+
 def positions(tree):
     result={};angles={16:[0,30,45,60,90,120,135,150,180,210,225,240,270,300,315,330],40:sorted(set(range(0,360,10))|{45,135,225,315})}
     constants=tree['constants']

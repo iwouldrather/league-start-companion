@@ -9,6 +9,16 @@ from test_importer import XML, TREE
 
 
 class TreeViewTests(unittest.TestCase):
+    def test_logged_class_portraits_are_independent_and_allowlisted(self):
+        t.class_portrait.cache_clear()
+        metadata={'classes':[{'name':'Duelist','ascendancies':[{'name':'Slayer','id':'Slayer'}]}]}
+        with patch.object(p,'tree_data',return_value=metadata),patch.object(t,'local_art',side_effect=lambda name:'asset:'+name):
+            self.assertEqual(t.class_portrait('Slayer'),'asset:ClassesSlayer.png')
+            self.assertEqual(t.class_portrait('Duelist'),'asset:centerduelist.png')
+            self.assertIsNone(t.class_portrait('../../private'))
+            self.assertIsNone(t.class_portrait('Unknown'))
+        t.class_portrait.cache_clear()
+
     def test_point_counts_and_estimates_exclude_ascendancy_and_starts(self):
         tree={'nodes':{'1':{'classStartIndex':4},'2':{},'3':{'ascendancyName':'Slayer','isAscendancyStart':True},'4':{'ascendancyName':'Slayer'},'5':{'ascendancyName':'Ascendant','isMultipleChoiceOption':True}}}
         self.assertEqual(t.point_counts({'nodes':'1,2,3,4,5,999'},tree),(2,1,1))

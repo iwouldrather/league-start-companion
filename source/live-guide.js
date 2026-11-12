@@ -5,8 +5,21 @@ try{const prior=sessionStorage.getItem('slayer-last-target');if(prior!==null)liv
 const liveButton=document.createElement('button');liveButton.id='liveStatus';
 liveButton.textContent=location.protocol==='file:'?'Live companion · How to start':'Connecting to local log…';
 const characterBar=document.createElement('section');characterBar.className='characterbar';characterBar.setAttribute('aria-label','Current character');
-characterBar.innerHTML='<div class="characterlevel"><small>LEVEL</small><strong id="characterLevel">—</strong></div><div class="characteridentity"><span class="characterlabel">Current character</span><div class="characteridentityrow"><span id="characterNameSlot"></span><span id="characterClass"></span></div><span id="characterWarning" role="status" hidden></span></div><div class="characterarea"><small>Current area</small><span id="characterArea">Waiting for area</span></div><div class="charactercontrols"><span id="characterConnection" role="status">Connecting to log…</span><span id="characterFollowSlot"></span></div>';
+characterBar.innerHTML=`<div class="selectedbuild"><span class="identityportrait buildportrait"><img id="selectedBuildPortrait" alt="Selected build portrait" hidden><span id="buildPortraitFallback" aria-hidden="true">${uiIcon('builds')}</span></span><div class="buildidentity"><span class="buildlabel">Selected build</span><button id="selectedBuildName">Choose a build</button><span id="selectedBuildClass"></span></div></div><div class="currentcharacter"><span class="identityportrait characterportrait"><img id="characterPortrait" alt="Current character portrait" hidden><span id="characterPortraitFallback" aria-hidden="true">${uiIcon('user')}</span></span><div class="characteridentity"><span class="characterlabel">Current character</span><span id="characterNameSlot"></span><div class="characteridentityrow"><span id="characterClass"></span><span class="characterlevel">Lv <strong id="characterLevel">—</strong></span><span id="characterArea">Area not recorded</span></div><span id="characterWarning" role="status" hidden></span></div><div class="charactercontrols"><span id="characterConnection" role="status">Connecting to log…</span><span id="characterFollowSlot"></span></div></div>`;
 document.querySelector('.topbar').after(characterBar);$('characterNameSlot').append(liveButton);
+$('selectedBuildName').addEventListener('click',()=>openImporter());
+let portraitClass=null,portraitRequest=0;
+async function updateCharacterPortrait(name){
+ name=name||'';if(name===portraitClass)return;portraitClass=name;const request=++portraitRequest;
+ const image=$('characterPortrait'),fallback=$('characterPortraitFallback');image.hidden=true;image.removeAttribute('src');fallback.hidden=false;
+ if(!name||location.protocol==='file:')return;
+ try{
+  const response=await fetch('/api/class-portrait?class='+encodeURIComponent(name),{signal:AbortSignal.timeout(4000)});
+  if(!response.ok)throw Error('Portrait unavailable');const data=await response.json();
+  if(request!==portraitRequest)return;
+  if(data.portrait){image.alt=name+' · current character';image.src=data.portrait;image.hidden=false;fallback.hidden=true;}
+ }catch{if(request===portraitRequest)portraitClass=null;}
+}
 const resumeButton=document.createElement('button');resumeButton.id='resumeLive';$('characterFollowSlot').append(resumeButton);
 resumeButton.addEventListener('click',()=>{liveFollow=!liveFollow;liveResumeAtMilestone=liveFollow;if(liveFollow&&liveTarget!==null)render(liveTarget);liveDecorate();});
 function suggestedStage(level){if(!level||!D.sets.length)return null;let i=0;D.sets.forEach((s,j)=>{if(level>=(s.startLevel??100))i=j;});return i;}
@@ -21,6 +34,13 @@ function liveDecorate(){
  if(upcoming)b.title=`Usable in ${m.minLevel-liveState.level} level(s). Purchase still requires the listed quest.`;
  });
  const s=liveState||{};
+ $('selectedBuildName').textContent=D.sets.length?(D.name||'Imported guide'):'Choose a build';
+ $('selectedBuildName').title=D.name||'Manage builds';
+ $('selectedBuildClass').textContent=D.sets.length?(D.build?.ascendClassName||D.build?.className||'Class not specified'):'No guide selected';
+ const buildPortrait=D.sets.length&&D.uiAssets?.portrait;
+ $('selectedBuildPortrait').hidden=!buildPortrait;$('buildPortraitFallback').hidden=!!buildPortrait;
+ if(buildPortrait){$('selectedBuildPortrait').src=buildPortrait;$('selectedBuildPortrait').alt=($('selectedBuildClass').textContent)+' · selected build';}
+ updateCharacterPortrait(s.characterClass);
  liveButton.textContent=s.character||(!liveConnected?'Game log unavailable':'Waiting for character');
  liveButton.setAttribute('aria-label','Current character: '+(s.character||'not recorded')+'. Open recorded character details.');
  liveButton.title='Last recorded character. Open details and vendor reminders.';
@@ -31,6 +51,7 @@ function liveDecorate(){
  resumeButton.title=$('characterConnection').textContent+'. '+(resumeButton.disabled?'Choose Client.txt in settings, or wait for a recorded level-up.':liveFollow?'Automatically selects milestones from your recorded level. Click to pause.':liveResumeAtMilestone?'Browsing temporarily; following resumes at the next milestone. Click to resume now.':'Automatic milestone selection is paused. Click to resume.');
  characterBar.classList.toggle('isdisconnected',!liveConnected);
  const mismatch=guideClassMismatch();$('characterWarning').hidden=!mismatch;
+ characterBar.classList.toggle('hasmismatch',mismatch);
  $('characterWarning').textContent=mismatch?`${s.characterClass} character · ${D.build.ascendClassName||D.build.className} guide`:'';
 }
 const preLiveRender=render;render=function(i,focus=false){preLiveRender(i,focus);liveDecorate();};

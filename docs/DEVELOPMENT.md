@@ -27,6 +27,7 @@ node tests/test_frontend.cjs
 node tests/test_planner.cjs
 node tests/test_follow.cjs
 node tests/test_character_bar.cjs
+node tests/test_character_portraits.cjs
 node tests/test_tree_navigation.cjs
 node tests/test_tree_zoom.cjs
 node tests/test_acquisition_ui.cjs

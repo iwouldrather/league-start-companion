@@ -1,0 +1,23 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const vm=require('node:vm');
+const path=require('node:path');
+const source=fs.readFileSync(path.join(__dirname,'../source/live-guide.js'),'utf8');
+const elements={characterPortrait:{hidden:false,src:'old',removeAttribute(){delete this.src;}},characterPortraitFallback:{hidden:true}};
+const pending=[];
+const context=vm.createContext({$:id=>elements[id],location:{protocol:'http:'},AbortSignal,fetch:url=>new Promise(resolve=>pending.push({url,resolve}))});
+vm.runInContext(source.slice(source.indexOf('let portraitClass='),source.indexOf('const resumeButton=')),context);
+(async()=>{
+ const first=vm.runInContext("updateCharacterPortrait('Slayer')",context);
+ const second=vm.runInContext("updateCharacterPortrait('Berserker')",context);
+ assert.match(pending[0].url,/class=Slayer$/);
+ pending[1].resolve({ok:true,json:async()=>({portrait:'current-Berserker'})});await second;
+ assert.equal(elements.characterPortrait.src,'current-Berserker');
+ pending[0].resolve({ok:true,json:async()=>({portrait:'stale-Slayer'})});await first;
+ assert.equal(elements.characterPortrait.src,'current-Berserker','Late responses must not overwrite the current class portrait');
+ await vm.runInContext("updateCharacterPortrait('')",context);
+ assert.equal(elements.characterPortrait.hidden,true);
+ assert.equal(elements.characterPortraitFallback.hidden,false);
+ assert.equal(elements.characterPortrait.src,undefined,'Unknown classes must clear the previous portrait');
+ console.log('Character portraits: independent lookup, stale-response protection and neutral fallback passed.');
+})().catch(error=>{console.error(error);process.exitCode=1;});
