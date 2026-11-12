@@ -190,18 +190,23 @@ continues to support the existing launcher.
 
 ### Updates
 
-From version 0.4.0, **App settings → Check for updates** opens the private GitHub
-releases page in your browser, using your own GitHub sign-in. Compare the release
-version with the version shown in settings, download `LeagueStartCompanion-Setup.exe`,
-then choose **Install downloaded update…**. Confirm the selected installer; the app
-closes and setup waits for it to exit before updating the existing install location.
-Builds, progress and settings stay in the separate data folder. No GitHub token is
-stored or bundled. This is a manual browser download, not a background update check.
-Older installations need to run the 0.4.0 installer once to gain these controls.
+From version 0.5.0, the installed app checks public GitHub releases at startup and
+every four hours. Newer stable Windows installers download in the background and
+are checked against GitHub's SHA256 digest and asset size. A top-bar button appears
+when ready: **Restart to update**. The installer waits for the app to exit, updates
+the same location, and reopens it. It never closes the app without that click.
+Builds, progress and settings stay in the separate data folder. No GitHub sign-in
+or token is needed. App settings also offers **Check for updates** to retry offline
+or failed checks, and **Install downloaded update…** as a manual fallback.
+Older installations need to run the 0.5.0 installer once to gain automatic updates.
 
-Release maintainers: build the Windows installer, publish a private GitHub release
+Release maintainers: build the Windows installer, publish a public GitHub release
 tagged `v<VERSION>` matching `app_version.py`, and attach the setup executable and
-its SHA256 checksum. Never include user data or credentials in release assets.
+its SHA256 checksum. Publish only after uploads finish; the app requires GitHub's
+asset digest before accepting an update. Drafts and prereleases are ignored.
+Never include user data or credentials in release assets. Checks use Windows'
+verified TLS and only allow GitHub release hosts; downloaded files are rechecked
+before launch. Checksums do not replace Windows publisher signing; setup remains unsigned.
 
 ## Siosa prices and early Momentum
 

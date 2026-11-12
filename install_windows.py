@@ -86,6 +86,7 @@ def uninstall(target,test=False):
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--silent',action='store_true');parser.add_argument('--test',action='store_true');parser.add_argument('--uninstall',action='store_true');parser.add_argument('--worker',action='store_true');parser.add_argument('--target',type=Path,default=Path(os.environ['LOCALAPPDATA'])/'Programs/League Start Companion')
     parser.add_argument('--wait-for',type=int)
+    parser.add_argument('--update',action='store_true')
     args=parser.parse_args()
     if args.wait_for:
         try:wait_for_app(args.wait_for)
@@ -102,6 +103,14 @@ def main():
             subprocess.Popen([str(worker),'--uninstall','--worker','--silent','--target',str(args.target)]+(['--test'] if args.test else []));return
         uninstall(args.target,args.test);return
     payload=Path(getattr(sys,'_MEIPASS',Path(__file__).parent))/'app.zip'
+    if args.update:
+        try:
+            install(args.target,payload,args.test)
+            if not args.test:subprocess.Popen([str(args.target/'LeagueStartCompanion.exe')])
+        except Exception as error:
+            import ctypes
+            ctypes.windll.user32.MessageBoxW(None,str(error)+'\nRun the downloaded installer again to retry. Your saved builds and progress are retained.','Update could not finish',16)
+        return
     if args.silent:install(args.target,payload,args.test);return
     import ctypes
     message=ctypes.windll.user32.MessageBoxW

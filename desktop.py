@@ -89,12 +89,22 @@ def main():
         result={'http':response.status,'catalog':len(pob_import.gem_catalog()),'treeNodes':len(pob_import.tree_data('3_29')['nodes']),'nativeSprite':bool(poe_tree.sprite_data('3_29')),'dataDir':str(args.data_dir)}
         args.smoke_test.write_text(json.dumps(result),encoding='utf8');server.shutdown();return
     import webview
+    updater=app_updates.Updater(args.data_dir)
+    def update_watch():
+        while not stop.is_set():
+            updater.start()
+            if stop.wait(4*60*60):break
+    if getattr(sys,'frozen',False):threading.Thread(target=update_watch,daemon=True).start()
     window=None
     class Api:
         def settings(self):return {'logPath':str(log.current.path),'dataDir':str(args.data_dir),'version':VERSION,'releasesUrl':RELEASES_URL,'installed':bool(getattr(sys,'frozen',False))}
         def check_updates(self):
-            app_updates.open_releases()
-            return {'message':'The releases page is open in your browser. Sign in to GitHub if asked, and compare the latest release with version '+VERSION+'.'}
+            return updater.start()
+        def update_status(self):return updater.snapshot()
+        def restart_to_update(self):
+            updater.install()
+            window.destroy()
+            return {'message':'Restarting to install the update…'}
         def install_update(self):
             if not getattr(sys,'frozen',False):raise ValueError('Install updates from the installed Windows app.')
             files=window.create_file_dialog(webview.FileDialog.OPEN,file_types=('Companion installer (*.exe)',))
