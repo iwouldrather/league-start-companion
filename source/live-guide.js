@@ -22,7 +22,7 @@ async function updateCharacterPortrait(name){
 }
 const resumeButton=document.createElement('button');resumeButton.id='resumeLive';$('characterFollowSlot').append(resumeButton);
 resumeButton.addEventListener('click',()=>{liveFollow=!liveFollow;liveResumeAtMilestone=liveFollow;if(liveFollow&&liveTarget!==null)render(liveTarget);liveDecorate();});
-function suggestedStage(level){if(!level||!D.sets.length)return null;let i=0;D.sets.forEach((s,j)=>{if(level>=(s.startLevel??100))i=j;});return i;}
+function suggestedStage(level){if(!level||!D.sets.length)return null;let i=0;D.sets.forEach((s,j)=>{if(level>=(s.swapLevel??s.startLevel??100))i=j;});return i;}
 function guideClassMismatch(){return !!(D.imported&&liveState?.characterClass&&![D.build.className,D.build.ascendClassName].includes(liveState.characterClass));}
 function liveDecorate(){
  resumeButton.hidden=false;resumeButton.disabled=!liveConnected||!liveState?.level||!D.sets.length;

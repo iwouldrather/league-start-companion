@@ -214,11 +214,18 @@ def normalize_gem(gem, group_source=''):
     return gem,meta
 
 
+def level_bounds(title):
+    if re.search(r'\bact\s*\d|\b\d+\s*(?:points?|links?)\b',title,re.I):return None
+    match=re.search(r'(?:\bl(?:evel|vl|v)?\.?\s*|^\s*)(\d{1,3})(?:\s*(?:[-–—]|to)\s*(\d{1,3}))?',title,re.I)
+    if not match:return None
+    low=int(match[1]);high=int(match[2]) if match[2] else None
+    if not 1<=low<=100 or high is not None and not low<=high<=100:return None
+    return low,high
+
+
 def level_from_title(title):
-    if re.search(r'\bact\s*\d|\b\d+\s*(?:points?|links?)\b',title,re.I):
-        return None
-    match = re.search(r'(?:\bl(?:evel|vl)?\.?\s*|^\s*)(\d{1,3})(?:\s*[-–]\s*(\d{1,3}))?', title, re.I)
-    return int(match[1]) if match and 1 <= int(match[1]) <= 100 else None
+    bounds=level_bounds(title)
+    return bounds[0] if bounds else None
 
 
 def normalized(title):
@@ -279,7 +286,10 @@ def parse_build(root):
 def review_draft(draft):
     def match(title, choices):
         exact = next((x['id'] for x in choices if normalized(x['title']) == normalized(title)), None)
-        return exact if exact is not None else (choices[0]['id'] if len(choices) == 1 else '')
+        if exact is not None:return exact
+        bounds=level_bounds(title)
+        matches=[x['id'] for x in choices if bounds and level_bounds(x['title'])==bounds]
+        return matches[0] if len(matches)==1 else (choices[0]['id'] if len(choices)==1 else '')
     from poe_tree import estimate_level
     tree_summaries=[]
     for spec in draft['trees']:
@@ -308,6 +318,12 @@ def review_draft(draft):
                      'itemSetId': match(skill['title'], draft['items']),
                      'included': not (len(draft['skills']) > 1 and level == 100),
                      'gemCount': sum(len(g['gems']) for g in skill['groups'])})
+    for index,row in enumerate(rows):
+        bounds=level_bounds(row['label'])
+        previous=level_bounds(rows[index-1]['label']) if index else None
+        if previous and previous[1] and previous[1]>rows[index-1]['startLevel']:
+            row['startLevel']=previous[1];row['levelSource']='Previous bracket maximum'
+            row['levelExplanation']=f"Switch to this setup when your recorded level reaches {previous[1]}, the end of the previous bracket. Edit this level to choose a different switch point."
     return {'className': draft['build'].get('className', 'Unknown'), 'ascendancy': draft['build'].get('ascendClassName', ''),
             'warnings': draft['warnings'], 'skills': summaries(draft['skills']), 'trees': tree_summaries,
             'items': summaries(draft['items']), 'milestones': rows}
@@ -403,6 +419,19 @@ def weapon_metadata(base):
     return {}
 
 
+def refresh_progression(data):
+    sets=data.get('sets',[])
+    for i,step in enumerate(sets):
+        if 'swapLevel' in step:continue
+        level=step.get('startLevel',100)
+        bounds=level_bounds(step.get('title',''))
+        previous=level_bounds(sets[i-1].get('title','')) if i else None
+        if previous and previous[1] and previous[1]>sets[i-1].get('startLevel',0) and (not bounds or level==bounds[0]):
+            level=previous[1]
+        step['swapLevel']=level
+    return data
+
+
 def refresh_item_metadata(data):
     for setup in data.get('sets',[]):
         for item in setup.get('items',[]):
@@ -442,7 +471,7 @@ def make_guide(draft, rows, name):
     if not isinstance(rows, list) or not 1 <= len(rows) <= 20:
         raise ImportProblem('Include between 1 and 20 milestones.')
     if not isinstance(name, str) or not name.strip() or len(name)>120:
-        raise ImportProblem('Give the guide a name (up to 120 characters).')
+        raise ImportProblem('Enter a name for your build (up to 120 characters).',field='name')
     skills = {x['id']: x for x in draft['skills']}
     trees = {x['id']: x for x in draft['trees']}
     equipment = {x['id']: x for x in draft['items']}
@@ -494,7 +523,7 @@ def make_guide(draft, rows, name):
         caution += warnings
         caution += ['Tree drawing uses native base-tree nodes. Cluster expansions, Timeless transformations and damage calculations are not reconstructed.']
         nav = re.sub(r'^\s*(?:L(?:vl|evel)?\.?\s*)?\d+(?:\s*[-–]\s*\d+)?\s*', '', label, flags=re.I).strip(' ()-') or label
-        data['sets'].append({'title':label, 'key': 'import-'+str(index), 'short':str(previous), 'startLevel':previous,
+        data['sets'].append({'title':label, 'key': 'import-'+str(index), 'short':str(previous), 'startLevel':previous, 'swapLevel':previous,
                             'nav':nav, 'navSub':'', 'heading':label, 'description':'Imported PoB setup',
                             'groups':groups, 'items':records, 'treeImage':image, 'notables':notables, 'ascendancy':ascendancy,
                             'masteryDetails':masteries, 'treeVersion':spec['version'].replace('_','.') if spec else 'unknown',
@@ -513,6 +542,7 @@ def make_guide(draft, rows, name):
 def refresh_acquisition(data):
     """Upgrade saved imports in memory; preserve milestones, trees, gear and purchases."""
     refresh_item_metadata(data)
+    refresh_progression(data)
     if data.get('acquisitionVersion')==acquisition_version():
         return data
     data['meta'],data['acquisition'],data['acquisitionOptions'],data['acquisitionNotes']={},{},{},{}

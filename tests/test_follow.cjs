@@ -16,3 +16,9 @@ const empty=vm.createContext({D:{sets:[]}});vm.runInContext(suggested,empty);
 assert.equal(vm.runInContext('suggestedStage(46)',empty),null);
 empty.D.sets=[{startLevel:1},{startLevel:33},{startLevel:50}];
 assert.equal(vm.runInContext('suggestedStage(46)',empty),1);
+
+empty.D.sets=[{startLevel:1,swapLevel:1},{startLevel:13,swapLevel:12},{startLevel:29,swapLevel:28}];
+assert.equal(vm.runInContext('suggestedStage(11)',empty),0);
+assert.equal(vm.runInContext('suggestedStage(12)',empty),1);
+assert.equal(vm.runInContext('suggestedStage(27)',empty),1);
+assert.equal(vm.runInContext('suggestedStage(28)',empty),2);

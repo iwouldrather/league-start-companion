@@ -44,7 +44,7 @@ class ImporterTests(unittest.TestCase):
     def test_code_decode_and_matching(self):
         code=base64.urlsafe_b64encode(zlib.compress(XML.encode())).decode().rstrip('=')
         preview=p.review_draft(p.parse_build(p.decode_build(code)))
-        self.assertEqual([r['startLevel'] for r in preview['milestones']],[1,32])
+        self.assertEqual([r['startLevel'] for r in preview['milestones']],[1,12])
         self.assertEqual(preview['milestones'][1]['treeId'],'1')
         self.assertEqual(preview['milestones'][0]['itemSetId'],'0')
         self.assertIsNone(p.level_from_title('Act 2'))
