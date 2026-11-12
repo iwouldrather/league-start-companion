@@ -188,6 +188,25 @@ Build on Windows with `pip install -r requirements-desktop.txt`, then
 `python scripts/build-windows.py`. Output goes to `dist/`. Source development
 continues to support the existing launcher.
 
+### Setup and uninstall
+
+Version 0.6.0 adds an offline navy-and-gold setup screen with a folder picker,
+independent Desktop and Start menu shortcut choices, installation progress and a
+launch screen. The original compass icon is embedded in the app, installer,
+uninstaller and shortcuts. Regenerate its multi-size ICO with `scripts/build-icon.py`.
+
+Setup finds an existing custom install location and preserves shortcut preferences
+during automatic updates. To move an existing installation, uninstall it first,
+then reinstall in the new folder; the separate saved-data folder remains intact.
+New destinations must be dedicated empty folders, writable by the current account.
+
+Uninstall runs from a temporary worker and waits for the original one-file launcher
+to exit, preventing the locked `Uninstall.exe` failure. It checks executable locks
+before removing files and gives a readable error if the companion is still open.
+Only manifest-owned files and selected shortcuts are removed; unknown files and
+the separate saved-data folder are kept. An older broken installation can be
+repaired by installing 0.6.0 over the same location before retrying uninstall.
+
 ### Updates
 
 From version 0.5.0, the installed app checks public GitHub releases at startup and

@@ -127,7 +127,7 @@ def main():
             return {'copied':import_saves(folders[0],args.data_dir) if folders else 0}
         def open_data_folder(self):os.startfile(args.data_dir)
     window=webview.create_window('League Start Companion',url,js_api=Api(),width=1600,height=950,min_size=(1100,720),text_select=True)
-    try:webview.start(gui='edgechromium',private_mode=False,storage_path=str(args.data_dir/'webview'))
+    try:webview.start(gui='edgechromium',private_mode=False,storage_path=str(args.data_dir/'webview'),icon=str(ROOT/'assets/app-icon.ico'))
     finally:stop.set();server.shutdown();server.server_close()
 
 if __name__=='__main__':

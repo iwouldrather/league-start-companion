@@ -35,4 +35,38 @@ class WindowsAppTests(unittest.TestCase):
             self.assertEqual((target/'user-note.txt').read_text(),'keep me')
             self.assertFalse((target/'LeagueStartCompanion.exe').exists())
 
+    def test_shortcut_choices_survive_updates(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder);target=root/'custom location';payload=root/'app.zip'
+            with zipfile.ZipFile(payload,'w') as archive:archive.writestr('LeagueStartCompanion.exe','test app')
+            with patch.object(setup,'register'):
+                setup.install(target,payload,test=True,desktop=True,start_menu=False)
+                setup.install(target,payload,test=True)
+            self.assertEqual(setup.installation_manifest(target)['shortcuts'],{'desktop':True,'startMenu':False})
+
+    def test_rejects_nonempty_unrelated_folders_before_overwrite(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder);(root/'important.txt').write_text('keep')
+            with self.assertRaises(ValueError):setup.validate_target(root)
+            self.assertEqual((root/'important.txt').read_text(),'keep')
+
+    def test_locked_uninstall_leaves_manifest_and_files_intact(self):
+        with tempfile.TemporaryDirectory() as folder:
+            target=Path(folder);marker=target/'.league-start-install.json'
+            marker.write_text(json.dumps({'product':setup.PRODUCT,'test':True,'files':['LeagueStartCompanion.exe']}))
+            (target/'LeagueStartCompanion.exe').write_text('app')
+            with patch.object(setup,'require_unlocked',side_effect=PermissionError('close app')):
+                with self.assertRaises(PermissionError):setup.uninstall(target,test=True)
+            self.assertTrue(marker.exists());self.assertTrue((target/'LeagueStartCompanion.exe').exists())
+
+    def test_shortcuts_created_and_removed_independently(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder);paths={'desktop':root/'desktop.lnk','startMenu':root/'start.lnk'}
+            paths['startMenu'].write_text('old shortcut')
+            with patch.object(setup,'shortcut_paths',return_value=paths),patch.object(setup.subprocess,'run') as command:
+                setup.sync_shortcuts(root,{'desktop':True,'startMenu':False})
+            self.assertFalse(paths['startMenu'].exists())
+            self.assertEqual(command.call_count,1)
+            self.assertEqual(command.call_args.kwargs['env']['LC_SHORTCUT'],str(paths['desktop']))
+
 if __name__=='__main__':unittest.main()

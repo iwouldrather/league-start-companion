@@ -31,3 +31,9 @@ Keep build/ and dist/ ignored and never bundle user imports, progress or setting
 Keep resources separate from the installed user-data folder and retain saves on
 uninstall. Test installer actions only with an isolated --test target. Unknown
 gem prices must be labelled unverified rather than guessed.
+
+Installer UI is source/installer.html and installer_ui.py. Keep the uninstaller
+standalone (exclude installer_ui when freezing it). One-file uninstall workers
+must start with a reset PyInstaller environment and wait for the bootloader parent,
+not just the Python child, before removing the original executable. Preserve
+custom install locations and shortcut choices during automatic updates.
