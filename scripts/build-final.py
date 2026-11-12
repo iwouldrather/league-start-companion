@@ -10,10 +10,10 @@ body[data-design=board] .topbar{background:#101723}
 body[data-design=board] .tab[aria-selected=true]{color:#142235}
 body[data-design=board] .concepttreeimage{background:#070d14}
 '''
-js = Path('source/designs.js').read_text(encoding='utf8')
+js = Path('source/chrome.js').read_text(encoding='utf8')+'\n'+Path('source/designs.js').read_text(encoding='utf8')
 js = js.replace("let design='route';", "let design='board';")
 js = '\n'.join(line for line in js.splitlines() if not line.startswith('const designBar='))
-p = p.replace('</style>', css + '\n</style>', 1)
+p = p.replace('</style>', css + '\n'+Path('source/chrome.css').read_text(encoding='utf8')+'\n</style>', 1)
 p = p.replace('const initial=D.sets.findIndex', js + '\nconst initial=D.sets.findIndex', 1)
 p = p.replace('</style>', Path('source/live-guide.css').read_text(encoding='utf8') + '\n' + Path('source/planner.css').read_text(encoding='utf8') + '\n</style>', 1)
 p = p.replace('</script></body>', Path('source/live-guide.js').read_text(encoding='utf8') + '\n' + Path('source/ownership.js').read_text(encoding='utf8') + '\n' + Path('source/planner.js').read_text(encoding='utf8') + '\n' + Path('source/live-reload.js').read_text(encoding='utf8') + '\n' + Path('source/importer.js').read_text(encoding='utf8') + '\n</script></body>', 1)

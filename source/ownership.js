@@ -1,7 +1,6 @@
 let purchaseCharacter='',purchaseOwned={},purchaseReady=false,purchaseError='',purchaseOverride='',purchaseCanUndo=false,purchaseUndoLabel='';
 try{purchaseOverride=localStorage.getItem('slayer-purchase-character')||'';}catch{}
 const purchasePending=new Set();
-const gemsButton=document.createElement('button');gemsButton.id='myGems';gemsButton.textContent='My gems';document.querySelector('.topactions').prepend(gemsButton);
 function isGemOwned(n){return purchaseReady&&purchaseOwned[n]===true;}
 function decorateOwnership(){
  const desired=purchaseOverride||liveState?.character||'';
@@ -15,8 +14,6 @@ function decorateOwnership(){
  document.querySelectorAll('[data-progress-action=undo]').forEach(button=>{button.disabled=!purchaseReady||purchasePending.size>0||!purchaseCanUndo;button.title=purchaseCanUndo?'Undo: '+purchaseUndoLabel:'No changes to undo for this character';});
  document.querySelectorAll('[data-progress-reset]').forEach(button=>{button.disabled=!purchaseReady||purchasePending.size>0||!Object.keys(purchaseOwned).length;});
  if($('progressStatus'))$('progressStatus').textContent=purchaseError;
- gemsButton.textContent=`My gems · ${Object.keys(purchaseOwned).length} owned`;
- gemsButton.title=purchaseError||`Saved for ${purchaseCharacter||'choose a character'}`;
  if(document.getElementById('purchaseSaveStatus'))document.getElementById('purchaseSaveStatus').textContent=purchaseError||(purchaseReady?`Saved locally for ${purchaseCharacter}`:'Loading saved purchases…');
 }
 function offlinePurchases(character){return {owned:JSON.parse(localStorage.getItem('slayer-owned:'+character)||'{}'),history:JSON.parse(localStorage.getItem('slayer-owned-history:'+character)||'[]')};}
@@ -47,7 +44,6 @@ async function changeProgress(action,name,owned){
 }
 async function savePurchase(name,owned){return changeProgress('set',name,owned);}
 function showMyGems(){record('My gems · '+(purchaseCharacter||'Choose a character'),`<div class="purchaseprofile"><label>Save purchases for character <input id="purchaseCharacterInput" maxlength="120" value="${esc(purchaseCharacter)}" placeholder="Character name"></label><button id="purchaseProfileSave">Use this character</button><button id="purchaseProfileAuto">Use logged character</button></div><p id="purchaseSaveStatus" role="status"></p><div class="progressactions"><button data-progress-action="undo">↶ Undo last change</button><button id="purchaseResetStart" data-progress-reset>Reset all gem progress…</button></div><div id="purchaseResetConfirm" class="progressconfirm" hidden><p>Reset all gem checks for <strong>${esc(purchaseCharacter)}</strong> across every guide? Your recorded level and other characters stay as they are. You can undo this reset.</p><button data-progress-action="reset" data-progress-reset>Reset gem progress</button><button id="purchaseResetCancel">Keep progress</button></div><p>Check a gem once you have bought or obtained it. This applies across every milestone for this character. Uncheck it to put it back on your shopping list. One check means you own the gem type; it does not track copies, gem level or quality.</p><p>${location.protocol==='file:'?'Offline mode saves in this browser only. Start the companion to use the shared local save file.':'Purchases are stored in slayer-purchases.json beside your companion. Keep that file when updating the guide.'}</p>${purchaseTable(D.sets[current],D.names.filter(n=>D.meta[n]&&!D.sets.flatMap(s=>s.groups.flatMap(g=>g.gems)).filter(g=>g.itemGranted).some(g=>g.nameSpec===n)).sort((a,b)=>a.localeCompare(b)))}`);decorateOwnership();}
-gemsButton.addEventListener('click',showMyGems);
 document.addEventListener('change',e=>{const box=e.target.closest('[data-owned-gem]');if(box)savePurchase(box.dataset.ownedGem,box.checked);});
 document.addEventListener('click',e=>{if(e.target.closest('#purchaseProfileSave')){const value=document.getElementById('purchaseCharacterInput').value.trim();if(!value){alert('Enter a character name first.');return;}purchaseOverride=value;try{localStorage.setItem('slayer-purchase-character',value);}catch{}decorateOwnership();showMyGems();}if(e.target.closest('#purchaseProfileAuto')){purchaseOverride='';try{localStorage.removeItem('slayer-purchase-character');}catch{}decorateOwnership();showMyGems();}});
 const preOwnedRecord=record;record=function(title,html){preOwnedRecord(title,html);decorateOwnership();};
