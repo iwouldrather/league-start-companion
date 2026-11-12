@@ -12,3 +12,5 @@
 .treecheckpointnav{display:flex;align-items:center;gap:6px;padding:8px 11px;flex:none;border-bottom:1px solid #685c41;background:#17212d}.treecheckpointnav select{flex:1;min-width:0;background:var(--panel2);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:6px 8px;font-size:13px}.treecheckpointnav button{padding:5px 9px;font-size:12px;white-space:nowrap}.treecheckpointnav [data-tree-follow]{font-size:11px;color:var(--gold)}
 .treecheckpointnav button:hover:not(:disabled){background:#2b4055}
 @media(max-width:1449px),(max-height:849px){#stage .treecolumn{display:flex;flex-direction:column;gap:12px}#stage .treecolumn>.concepttree{height:580px;flex:none}#stage .treecolumn .ascendancypanel{height:190px}.treecheckpointnav{flex-wrap:wrap}.treecheckpointnav select{min-width:150px}}
+
+.nativecanvas{background:#040506}.nativelegend .keptkey{color:#f6e6a0}

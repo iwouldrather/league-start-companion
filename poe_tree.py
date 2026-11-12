@@ -8,7 +8,7 @@ from pathlib import Path
 import re
 from urllib.parse import urlsplit
 
-VIEW_VERSION=8
+VIEW_VERSION=9
 
 
 def selected(spec):
@@ -140,17 +140,36 @@ def svg_view(tree,version,now,before,ascendancy='',diff=False,mini=False,class_n
     width=max(max(p[0] for p in points)-left+pad,500);height=max(max(p[1] for p in points)-top+pad,500)
     scale=max(width/(900 if mini else 1200),height/(360 if mini else 1200))
     visible={n for n in eligible if left<=coords[n][0]<=left+width and top<=coords[n][1]<=top+height}
-    defs=[];uses={};details={};paths=[];icons=[];labels=[];seen=set()
+    defs=[];uses={};details={};paths=[];icons=[];labels=[];seen=set();ornaments=[];glows=[]
     def art(uri,x,y,size):
         if not uri:return ''
         if uri not in uses:
             key=('ascAsset' if mini else 'treeAsset')+str(len(uses));uses[uri]=key
             defs.append(f'<image id="{key}" href="{uri}" width="1" height="1" preserveAspectRatio="none"/>')
         return f'<use href="#{uses[uri]}" transform="translate({x-size/2:.1f} {y-size/2:.1f}) scale({size:.1f})"/>'
+    if not mini:
+        for color,key in [('#f6c65d','gold'),('#f17840','red'),('#75d278','green'),('#6aaaff','blue')]:
+            defs.append(f'<radialGradient id="treeGlow{key}"><stop offset="0" stop-color="{color}" stop-opacity=".55"/><stop offset=".4" stop-color="{color}" stop-opacity=".2"/><stop offset="1" stop-color="{color}" stop-opacity="0"/></radialGradient>')
+        # Native PoE cluster ornaments provide orientation without competing
+        # with the allocated route. Large backgrounds are two mirrored halves.
+        for gid in {str(nodes[n].get('group')) for n in visible}:
+            group=tree['groups'].get(gid,{})
+            if 'x' not in group:continue
+            orbit=max((nodes[n].get('orbit',0) for n in visible if str(nodes[n].get('group'))==gid),default=0)
+            if not orbit:continue
+            key='PSGroupBackground1' if orbit==1 else 'PSGroupBackground2' if orbit==2 else 'PSGroupBackground3'
+            uri=sprite(version,'groupBackground',key)
+            if not uri:continue
+            size=tree['constants']['orbitRadii'][min(orbit,3)]*2+80
+            x,y=group['x'],group['y']
+            if orbit>=3:
+                half=f'<g transform="scale(1 .5)">{art(uri,0,-size/2,size)}</g>'
+                ornaments.append(f'<g transform="translate({x:.1f} {y:.1f})" opacity=".2">{half}<g transform="rotate(180)">{half}</g></g>')
+            else:ornaments.append(f'<g opacity=".2">{art(uri,x,y,size)}</g>')
     for nid in sorted(visible,key=lambda n:int(n)):
         node=nodes[nid];x,y,_,_=coords[nid];active=nid in now;prior=nid in before
         state='new' if nid in fresh else 'removed' if nid in removed else 'kept' if active else 'unallocated'
-        color='#86d5ff' if diff and state=='new' else '#ef8c80' if diff and state=='removed' else '#d7b679' if active else '#6a6254'
+        color='#86d5ff' if diff and state=='new' else '#ef8c80' if diff and state=='removed' else '#f6e6a0' if active else '#6a6254'
         stats=node.get('stats',[]);details[nid]={'name':node.get('name',nid),'stats':stats,'state':state,'ascendancy':bool(node.get('ascendancyName'))}
         for other in set(map(str,node.get('out',[])+node.get('in',[]))):
             edge=tuple(sorted((nid,other)))
@@ -158,9 +177,9 @@ def svg_view(tree,version,now,before,ascendancy='',diff=False,mini=False,class_n
             seen.add(edge)
             kept=active and other in now;gone=prior and other in before and not kept
             edge_new=kept and (nid in fresh or other in fresh)
-            stroke='#86d5ff' if diff and edge_new else '#ef8c80' if diff and gone else '#b99b66' if kept else '#38382f'
+            stroke='#86d5ff' if diff and edge_new else '#ef8c80' if diff and gone else '#f6e6a0' if kept else '#33332a'
             dash=f' stroke-dasharray="{6*scale:.1f} {5*scale:.1f}"' if diff and gone else ''
-            paths.append(f'<path d="{path_between(nid,other,nodes,coords)}" fill="none" stroke="{stroke}" stroke-width="{(2.4 if kept or gone else 1)*scale:.1f}"{dash}/>')
+            paths.append(f'<path d="{path_between(nid,other,nodes,coords)}" fill="none" stroke="{stroke}" stroke-width="{(3.6 if kept or gone else .75)*scale:.1f}"{dash}/>')
         notable=node.get('isNotable') or node.get('isKeystone');size=(36 if node.get('isAscendancyStart') else 26 if notable else 17)*scale
         kind='keystone' if node.get('isKeystone') else 'notable' if notable else 'normal'
         icon_kind='masteryActiveSelected' if active and node.get('isMastery') else 'masteryInactive' if node.get('isMastery') else kind+('Active' if active else 'Inactive')
@@ -178,7 +197,12 @@ def svg_view(tree,version,now,before,ascendancy='',diff=False,mini=False,class_n
         glyph=art(icon,x,y,size) if icon else f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{size*.35:.1f}" fill="#423d2c"/>'
         glyph+=art(frame,x,y,size*1.38)
         ring=f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{size*.77:.1f}" fill="none" stroke="{color}" stroke-width="{2.8*scale:.1f}"/>' if (diff and state in ('new','removed')) else ''
-        opacity='1' if active or state=='removed' else '.65'
+        opacity='1' if active or state=='removed' else '.42'
+        if active and not mini:
+            if notable or node.get('isMastery'):
+                key='red' if 'strength' in node.get('icon','').lower() else 'green' if 'dexterity' in node.get('icon','').lower() else 'blue' if 'intelligence' in node.get('icon','').lower() else 'gold'
+                glows.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{size*2.3:.1f}" fill="url(#treeGlow{key})"/>')
+            if not ring:ring=f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{size*.72:.1f}" fill="none" stroke="{color}" stroke-width="{1.4*scale:.1f}"/>'
         icons.append(f'<g data-node="{nid}" role="button" tabindex="0" aria-label="{html.escape(node.get("name",nid),quote=True)}" opacity="{opacity}"><title>{title}</title>{glyph}{ring}</g>')
         if nid in starts:
             # Draw above the allocation so the origin stays recognisable in both modes.
@@ -189,11 +213,10 @@ def svg_view(tree,version,now,before,ascendancy='',diff=False,mini=False,class_n
             marker+=art(portrait,x,y,radius*1.8) if portrait else f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{radius*.6:.1f}" fill="#e5bd79"/>'
             label=html.escape(base+' start')
             labels.append(f'<g data-tree-start="true" data-node="{nid}" role="button" tabindex="0" aria-label="{label}"><title>{label} · begin allocating here</title>{marker}</g>')
-        if notable and active and not mini:
-            labels.append(f'<text x="{x+20*scale:.1f}" y="{y-15*scale:.1f}" fill="{color}" font-size="{13*scale:.1f}" font-family="Georgia,serif" paint-order="stroke" stroke="#0c1015" stroke-width="{3*scale:.1f}">{html.escape(node.get("name",nid))}</text>')
+
     background=local_art('Classes'+ascendancy+'.png') if mini and ascendancy else None
     bg=f'<image href="{background}" x="{left:.1f}" y="{top:.1f}" width="{width:.1f}" height="{height:.1f}" opacity=".17" preserveAspectRatio="xMidYMid slice"/>' if background else ''
-    svg=f'<svg xmlns="http://www.w3.org/2000/svg" width="{900 if mini else 1200}" height="{360 if mini else 1200}" viewBox="{left:.1f} {top:.1f} {width:.1f} {height:.1f}"><defs>{"".join(defs)}</defs><rect x="{left:.1f}" y="{top:.1f}" width="{width:.1f}" height="{height:.1f}" fill="#10151a"/>{bg}{"".join(paths+icons+labels)}</svg>'
+    svg=f'<svg xmlns="http://www.w3.org/2000/svg" width="{900 if mini else 1200}" height="{360 if mini else 1200}" viewBox="{left:.1f} {top:.1f} {width:.1f} {height:.1f}"><defs>{"".join(defs)}</defs><rect x="{left:.1f}" y="{top:.1f}" width="{width:.1f}" height="{height:.1f}" fill="{'#10151a' if mini else '#040506'}"/>{bg}{"".join(ornaments+paths+glows+icons+labels)}</svg>'
     return 'data:image/svg+xml;base64,'+base64.b64encode(svg.encode()).decode(),details,{'added':len(fresh),'removed':len(removed),'kept':len((now&before)&eligible)}
 
 
