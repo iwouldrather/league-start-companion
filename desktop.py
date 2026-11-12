@@ -105,16 +105,6 @@ def main():
             updater.install()
             window.destroy()
             return {'message':'Restarting to install the update…'}
-        def install_update(self):
-            if not getattr(sys,'frozen',False):raise ValueError('Install updates from the installed Windows app.')
-            files=window.create_file_dialog(webview.FileDialog.OPEN,file_types=('Companion installer (*.exe)',))
-            if not files:return {'cancelled':True}
-            installer=app_updates.stage_installer(files[0],args.data_dir)
-            import ctypes
-            if ctypes.windll.user32.MessageBoxW(None,'Close the companion and run this installer?\n\n'+str(files[0])+'\n\nOnly continue if you downloaded it from our GitHub releases. Your builds and progress will be kept.','Install companion update',0x24)!=6:return {'cancelled':True}
-            app_updates.launch_installer(installer)
-            window.destroy()
-            return {'message':'Closing the app to install the update…'}
         def choose_game_log(self):
             files=window.create_file_dialog(webview.FileDialog.OPEN,file_types=('PoE game log (*.txt)',))
             if files:

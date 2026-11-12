@@ -49,7 +49,7 @@ Prefer to check the release notes first? [Browse releases](https://github.com/iw
 1. Open **Builds / Import PoB** and paste a **pobb.in link**, **PoB export code** or **PoB XML**.
 2. Review the milestones, levels and matching skill, tree and equipment sets,
    then choose **Generate & open guide**.
-3. Open **App settings** and select your game's **Client.txt** if it wasn't found automatically.
+3. Open the **settings gear** and select your game's **Client.txt** if it wasn't found automatically.
 4. Play alongside the guide and check off gems as you collect them.
 
 PoBs with multiple leveling setups make the most useful leveling guides. An
@@ -59,7 +59,7 @@ leveling steps. Estimated milestone levels can be reviewed before importing.
 ## Updates and your saves
 
 Updates download automatically in the background. When one is ready, choose
-**Restart to update**. You can also check manually in **App settings**.
+**Restart to update**. You can also check manually in the **settings gear**.
 
 Builds and gem progress stay on your computer and are retained through updates
 and uninstall. **App settings → Open save folder** takes you to them.

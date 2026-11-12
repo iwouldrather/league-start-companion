@@ -5,7 +5,6 @@ import re
 import threading
 import os
 from pathlib import Path
-import shutil
 import subprocess
 import sys
 
@@ -87,20 +86,6 @@ class Updater:
             verify_installer(self.path,self.update)
             launch_installer(self.path,automatic=True)
 
-
-def stage_installer(source, data_dir):
-    source = Path(source).resolve()
-    if source.suffix.lower() != '.exe' or not source.name.lower().startswith('leaguestartcompanion-setup'):
-        raise ValueError('Choose LeagueStartCompanion-Setup.exe from the GitHub release.')
-    with source.open('rb') as stream:
-        if stream.read(2) != b'MZ':
-            raise ValueError('This file is not a Windows installer. Download the release installer again.')
-    folder = Path(data_dir) / 'updates'
-    folder.mkdir(parents=True, exist_ok=True)
-    destination = folder / 'LeagueStartCompanion-Setup.exe'
-    if source != destination.resolve():
-        shutil.copy2(source, destination)
-    return destination
 
 
 def launch_installer(path,automatic=False):
