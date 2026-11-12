@@ -387,6 +387,29 @@ def tree_view(spec):
     return 'data:image/svg+xml;base64,'+base64.b64encode(svg.encode()).decode(), notables, ascendancy, masteries, warnings
 
 
+@lru_cache(maxsize=1)
+def weapon_bases():
+    path=ROOT/'source/weapon-bases.json'
+    return json.loads(path.read_text(encoding='utf8')) if path.exists() else {}
+
+
+def weapon_metadata(base):
+    bases=weapon_bases()
+    if base in bases:return dict(bases[base])
+    # Magic items include prefixes/suffixes in the name. Match a complete base,
+    # longest first, so short base names cannot override more specific ones.
+    for name in sorted(bases,key=len,reverse=True):
+        if re.search(r'(?<!\w)'+re.escape(name)+r'(?!\w)',base):return dict(bases[name])
+    return {}
+
+
+def refresh_item_metadata(data):
+    for setup in data.get('sets',[]):
+        for item in setup.get('items',[]):
+            item.update(weapon_metadata(item.get('base') or item.get('name','')))
+    return data
+
+
 def item_record(slot, raw):
     lines = raw.splitlines()
     rarity = (lines[0].split(':',1)[-1].strip().upper() if lines else 'NORMAL')
@@ -412,7 +435,7 @@ def item_record(slot, raw):
         clean.append(re.sub(r'\{[^}]*\}', '', line))
     requirement = re.search(r'^LevelReq: (\d+)', raw, re.M)
     return {'slot': slot, 'item': raw, 'rarity': rarity, 'name': name, 'base': base, 'clean': '\n'.join(clean),
-            'requirement': int(requirement[1]) if requirement else None, 'highlights': clean[-4:]}
+            'requirement': int(requirement[1]) if requirement else None, 'highlights': clean[-4:], **weapon_metadata(base)}
 
 
 def make_guide(draft, rows, name):
@@ -489,6 +512,7 @@ def make_guide(draft, rows, name):
 
 def refresh_acquisition(data):
     """Upgrade saved imports in memory; preserve milestones, trees, gear and purchases."""
+    refresh_item_metadata(data)
     if data.get('acquisitionVersion')==acquisition_version():
         return data
     data['meta'],data['acquisition'],data['acquisitionOptions'],data['acquisitionNotes']={},{},{},{}

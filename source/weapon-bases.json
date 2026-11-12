@@ -1,0 +1,1462 @@
+{
+  "Abyssal Axe": {
+    "hands": 2,
+    "weaponType": "Two Handed Axe"
+  },
+  "Abyssal Sceptre": {
+    "hands": 1,
+    "weaponType": "Sceptre"
+  },
+  "Accumulator Wand": {
+    "hands": 1,
+    "weaponType": "Wand"
+  },
+  "Alternating Sceptre": {
+    "hands": 1,
+    "weaponType": "Sceptre"
+  },
+  "Ambusher": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Anarchic Spiritblade": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Ancestral Club": {
+    "hands": 1,
+    "weaponType": "One Handed Mace"
+  },
+  "Ancient Sword": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Antique Rapier": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Apex Cleaver": {
+    "hands": 2,
+    "weaponType": "Two Handed Axe"
+  },
+  "Apex Rapier": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Arming Axe": {
+    "hands": 1,
+    "weaponType": "One Handed Axe"
+  },
+  "Assassin Bow": {
+    "hands": 2,
+    "weaponType": "Bow"
+  },
+  "Assembler Wand": {
+    "hands": 1,
+    "weaponType": "Wand"
+  },
+  "Auric Mace": {
+    "hands": 1,
+    "weaponType": "One Handed Mace"
+  },
+  "Awl": {
+    "hands": 1,
+    "weaponType": "Claw"
+  },
+  "Banishing Blade": {
+    "hands": 2,
+    "weaponType": "Two Handed Sword"
+  },
+  "Barbed Club": {
+    "hands": 1,
+    "weaponType": "One Handed Mace"
+  },
+  "Baselard": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Basket Rapier": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Bastard Sword": {
+    "hands": 2,
+    "weaponType": "Two Handed Sword"
+  },
+  "Battered Foil": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Battery Staff": {
+    "hands": 2,
+    "weaponType": "Staff"
+  },
+  "Battle Hammer": {
+    "hands": 1,
+    "weaponType": "One Handed Mace"
+  },
+  "Battle Sword": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Behemoth Mace": {
+    "hands": 1,
+    "weaponType": "One Handed Mace"
+  },
+  "Bladed Mace": {
+    "hands": 1,
+    "weaponType": "One Handed Mace"
+  },
+  "Blasting Blade": {
+    "hands": 2,
+    "weaponType": "Two Handed Sword"
+  },
+  "Blasting Wand": {
+    "hands": 1,
+    "weaponType": "Wand"
+  },
+  "Blinder": {
+    "hands": 1,
+    "weaponType": "Claw"
+  },
+  "Blood Sceptre": {
+    "hands": 1,
+    "weaponType": "Sceptre"
+  },
+  "Blunt Force Condenser": {
+    "hands": 2,
+    "weaponType": "Two Handed Mace"
+  },
+  "Boarding Axe": {
+    "hands": 1,
+    "weaponType": "One Handed Axe"
+  },
+  "Bone Bow": {
+    "hands": 2,
+    "weaponType": "Bow"
+  },
+  "Boom Mace": {
+    "hands": 1,
+    "weaponType": "One Handed Mace"
+  },
+  "Boot Blade": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Boot Knife": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Brass Maul": {
+    "hands": 2,
+    "weaponType": "Two Handed Mace"
+  },
+  "Broad Axe": {
+    "hands": 1,
+    "weaponType": "One Handed Axe"
+  },
+  "Broad Sword": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Bronze Sceptre": {
+    "hands": 1,
+    "weaponType": "Sceptre"
+  },
+  "Burnished Foil": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Butcher Axe": {
+    "hands": 1,
+    "weaponType": "One Handed Axe"
+  },
+  "Butcher Knife": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Butcher Sword": {
+    "hands": 2,
+    "weaponType": "Two Handed Sword"
+  },
+  "Calling Wand": {
+    "hands": 1,
+    "weaponType": "Wand"
+  },
+  "Capacity Rod": {
+    "hands": 2,
+    "weaponType": "Staff"
+  },
+  "Capricious Spiritblade": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Carnal Sceptre": {
+    "hands": 1,
+    "weaponType": "Sceptre"
+  },
+  "Carved Wand": {
+    "hands": 1,
+    "weaponType": "Wand"
+  },
+  "Carving Knife": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Cat's Paw": {
+    "hands": 1,
+    "weaponType": "Claw"
+  },
+  "Ceremonial Axe": {
+    "hands": 1,
+    "weaponType": "One Handed Axe"
+  },
+  "Ceremonial Mace": {
+    "hands": 1,
+    "weaponType": "One Handed Mace"
+  },
+  "Charan's Sword": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Chest Splitter": {
+    "hands": 1,
+    "weaponType": "One Handed Axe"
+  },
+  "Citadel Bow": {
+    "hands": 2,
+    "weaponType": "Bow"
+  },
+  "Cleaver": {
+    "hands": 1,
+    "weaponType": "One Handed Axe"
+  },
+  "Coiled Staff": {
+    "hands": 2,
+    "weaponType": "Staff"
+  },
+  "Coiled Wand": {
+    "hands": 1,
+    "weaponType": "Wand"
+  },
+  "Colossus Mallet": {
+    "hands": 2,
+    "weaponType": "Two Handed Mace"
+  },
+  "Composite Bow": {
+    "hands": 2,
+    "weaponType": "Bow"
+  },
+  "Compound Bow": {
+    "hands": 2,
+    "weaponType": "Bow"
+  },
+  "Congregator Wand": {
+    "hands": 1,
+    "weaponType": "Wand"
+  },
+  "Convening Wand": {
+    "hands": 1,
+    "weaponType": "Wand"
+  },
+  "Convoking Wand": {
+    "hands": 1,
+    "weaponType": "Wand"
+  },
+  "Copper Kris": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Copper Sword": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Coronal Maul": {
+    "hands": 2,
+    "weaponType": "Two Handed Mace"
+  },
+  "Corroded Blade": {
+    "hands": 2,
+    "weaponType": "Two Handed Sword"
+  },
+  "Corsair Sword": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Courtesan Sword": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Crack Mace": {
+    "hands": 1,
+    "weaponType": "One Handed Mace"
+  },
+  "Crescent Staff": {
+    "hands": 2,
+    "weaponType": "Staff"
+  },
+  "Crude Bow": {
+    "hands": 2,
+    "weaponType": "Bow"
+  },
+  "Crushing Force Magnifier": {
+    "hands": 2,
+    "weaponType": "Two Handed Mace"
+  },
+  "Crystal Sceptre": {
+    "hands": 1,
+    "weaponType": "Sceptre"
+  },
+  "Crystal Wand": {
+    "hands": 1,
+    "weaponType": "Wand"
+  },
+  "Curved Blade": {
+    "hands": 2,
+    "weaponType": "Two Handed Sword"
+  },
+  "Cutlass": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Dagger Axe": {
+    "hands": 2,
+    "weaponType": "Two Handed Axe"
+  },
+  "Darkwood Sceptre": {
+    "hands": 1,
+    "weaponType": "Sceptre"
+  },
+  "Death Bow": {
+    "hands": 2,
+    "weaponType": "Bow"
+  },
+  "Decimation Bow": {
+    "hands": 2,
+    "weaponType": "Bow"
+  },
+  "Decorative Axe": {
+    "hands": 1,
+    "weaponType": "One Handed Axe"
+  },
+  "Decurve Bow": {
+    "hands": 2,
+    "weaponType": "Bow"
+  },
+  "Demon Dagger": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Demon's Horn": {
+    "hands": 1,
+    "weaponType": "Wand"
+  },
+  "Despot Axe": {
+    "hands": 2,
+    "weaponType": "Two Handed Axe"
+  },
+  "Disapprobation Axe": {
+    "hands": 1,
+    "weaponType": "One Handed Axe"
+  },
+  "Double Axe": {
+    "hands": 2,
+    "weaponType": "Two Handed Axe"
+  },
+  "Double Claw": {
+    "hands": 1,
+    "weaponType": "Claw"
+  },
+  "Dragon Mace": {
+    "hands": 1,
+    "weaponType": "One Handed Mace"
+  },
+  "Dragonbone Rapier": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Dragoon Sword": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Dread Maul": {
+    "hands": 2,
+    "weaponType": "Two Handed Mace"
+  },
+  "Dream Mace": {
+    "hands": 1,
+    "weaponType": "One Handed Mace"
+  },
+  "Driftwood Club": {
+    "hands": 1,
+    "weaponType": "One Handed Mace"
+  },
+  "Driftwood Maul": {
+    "hands": 2,
+    "weaponType": "Two Handed Mace"
+  },
+  "Driftwood Sceptre": {
+    "hands": 1,
+    "weaponType": "Sceptre"
+  },
+  "Driftwood Wand": {
+    "hands": 1,
+    "weaponType": "Wand"
+  },
+  "Dusk Blade": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Eagle Claw": {
+    "hands": 1,
+    "weaponType": "Claw"
+  },
+  "Eclipse Staff": {
+    "hands": 2,
+    "weaponType": "Staff"
+  },
+  "Elder Sword": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Elegant Foil": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Elegant Sword": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Energy Blade One Handed": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Energy Blade Two Handed": {
+    "hands": 2,
+    "weaponType": "Two Handed Sword"
+  },
+  "Engraved Greatsword": {
+    "hands": 2,
+    "weaponType": "Two Handed Sword"
+  },
+  "Engraved Hatchet": {
+    "hands": 1,
+    "weaponType": "One Handed Axe"
+  },
+  "Engraved Wand": {
+    "hands": 1,
+    "weaponType": "Wand"
+  },
+  "Estoc": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Etched Greatsword": {
+    "hands": 2,
+    "weaponType": "Two Handed Sword"
+  },
+  "Etched Hatchet": {
+    "hands": 1,
+    "weaponType": "One Handed Axe"
+  },
+  "Eternal Sword": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Ethereal Blade": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Ethereal Bow": {
+    "hands": 2,
+    "weaponType": "Bow"
+  },
+  "Eventuality Rod": {
+    "hands": 2,
+    "weaponType": "Staff"
+  },
+  "Exquisite Blade": {
+    "hands": 2,
+    "weaponType": "Two Handed Sword"
+  },
+  "Eye Gouger": {
+    "hands": 1,
+    "weaponType": "Claw"
+  },
+  "Ezomyte Axe": {
+    "hands": 2,
+    "weaponType": "Two Handed Axe"
+  },
+  "Ezomyte Blade": {
+    "hands": 2,
+    "weaponType": "Two Handed Sword"
+  },
+  "Ezomyte Dagger": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Ezomyte Staff": {
+    "hands": 2,
+    "weaponType": "Staff"
+  },
+  "Fancy Foil": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Faun's Horn": {
+    "hands": 1,
+    "weaponType": "Wand"
+  },
+  "Fickle Spiritblade": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Fiend Dagger": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Fishing Rod": {
+    "hands": 2,
+    "weaponType": "Fishing Rod"
+  },
+  "Flanged Mace": {
+    "hands": 1,
+    "weaponType": "One Handed Mace"
+  },
+  "Flare Mace": {
+    "hands": 1,
+    "weaponType": "One Handed Mace"
+  },
+  "Flashfire Blade": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Flaying Knife": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Fleshripper": {
+    "hands": 2,
+    "weaponType": "Two Handed Axe"
+  },
+  "Flickerflame Blade": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Footman Sword": {
+    "hands": 2,
+    "weaponType": "Two Handed Sword"
+  },
+  "Foul Staff": {
+    "hands": 2,
+    "weaponType": "Staff"
+  },
+  "Foundry Bow": {
+    "hands": 2,
+    "weaponType": "Bow"
+  },
+  "Fright Claw": {
+    "hands": 1,
+    "weaponType": "Claw"
+  },
+  "Fright Maul": {
+    "hands": 2,
+    "weaponType": "Two Handed Mace"
+  },
+  "Gavel": {
+    "hands": 1,
+    "weaponType": "One Handed Mace"
+  },
+  "Gemini Claw": {
+    "hands": 1,
+    "weaponType": "Claw"
+  },
+  "Gemstone Sword": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Ghostflame Blade": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Gilded Axe": {
+    "hands": 2,
+    "weaponType": "Two Handed Axe"
+  },
+  "Gladius": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Glass Shank": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Gnarled Branch": {
+    "hands": 2,
+    "weaponType": "Staff"
+  },
+  "Goat's Horn": {
+    "hands": 1,
+    "weaponType": "Wand"
+  },
+  "Golden Kris": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Gouger": {
+    "hands": 1,
+    "weaponType": "Claw"
+  },
+  "Graceful Sword": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Grappler": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Great Mallet": {
+    "hands": 2,
+    "weaponType": "Two Handed Mace"
+  },
+  "Great White Claw": {
+    "hands": 1,
+    "weaponType": "Claw"
+  },
+  "Grinning Fetish": {
+    "hands": 1,
+    "weaponType": "Sceptre"
+  },
+  "Grove Bow": {
+    "hands": 2,
+    "weaponType": "Bow"
+  },
+  "Gut Ripper": {
+    "hands": 1,
+    "weaponType": "Claw"
+  },
+  "Gutting Knife": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Harbinger Bow": {
+    "hands": 2,
+    "weaponType": "Bow"
+  },
+  "Harpy Rapier": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Headman's Sword": {
+    "hands": 2,
+    "weaponType": "Two Handed Sword"
+  },
+  "Headsman Axe": {
+    "hands": 2,
+    "weaponType": "Two Handed Axe"
+  },
+  "Heathen Wand": {
+    "hands": 1,
+    "weaponType": "Wand"
+  },
+  "Hedron Bow": {
+    "hands": 2,
+    "weaponType": "Bow"
+  },
+  "Hellion's Paw": {
+    "hands": 1,
+    "weaponType": "Claw"
+  },
+  "Highborn Bow": {
+    "hands": 2,
+    "weaponType": "Bow"
+  },
+  "Highborn Staff": {
+    "hands": 2,
+    "weaponType": "Staff"
+  },
+  "Highland Blade": {
+    "hands": 2,
+    "weaponType": "Two Handed Sword"
+  },
+  "Hollowpoint Dagger": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Honed Cleaver": {
+    "hands": 2,
+    "weaponType": "Two Handed Axe"
+  },
+  "Hook Sword": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Horned Sceptre": {
+    "hands": 1,
+    "weaponType": "Sceptre"
+  },
+  "Imbued Wand": {
+    "hands": 1,
+    "weaponType": "Wand"
+  },
+  "Imp Dagger": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Impact Force Propagator": {
+    "hands": 2,
+    "weaponType": "Two Handed Mace"
+  },
+  "Imperial Bow": {
+    "hands": 2,
+    "weaponType": "Bow"
+  },
+  "Imperial Claw": {
+    "hands": 1,
+    "weaponType": "Claw"
+  },
+  "Imperial Maul": {
+    "hands": 2,
+    "weaponType": "Two Handed Mace"
+  },
+  "Imperial Skean": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Imperial Staff": {
+    "hands": 2,
+    "weaponType": "Staff"
+  },
+  "Infernal Axe": {
+    "hands": 1,
+    "weaponType": "One Handed Axe"
+  },
+  "Infernal Blade": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Infernal Sword": {
+    "hands": 2,
+    "weaponType": "Two Handed Sword"
+  },
+  "Iron Sceptre": {
+    "hands": 1,
+    "weaponType": "Sceptre"
+  },
+  "Iron Staff": {
+    "hands": 2,
+    "weaponType": "Staff"
+  },
+  "Ivory Bow": {
+    "hands": 2,
+    "weaponType": "Bow"
+  },
+  "Jade Chopper": {
+    "hands": 2,
+    "weaponType": "Two Handed Axe"
+  },
+  "Jade Hatchet": {
+    "hands": 1,
+    "weaponType": "One Handed Axe"
+  },
+  "Jagged Foil": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Jagged Maul": {
+    "hands": 2,
+    "weaponType": "Two Handed Mace"
+  },
+  "Jasper Axe": {
+    "hands": 1,
+    "weaponType": "One Handed Axe"
+  },
+  "Jasper Chopper": {
+    "hands": 2,
+    "weaponType": "Two Handed Axe"
+  },
+  "Jewelled Foil": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Judgement Staff": {
+    "hands": 2,
+    "weaponType": "Staff"
+  },
+  "Karui Axe": {
+    "hands": 1,
+    "weaponType": "One Handed Axe"
+  },
+  "Karui Chopper": {
+    "hands": 2,
+    "weaponType": "Two Handed Axe"
+  },
+  "Karui Maul": {
+    "hands": 2,
+    "weaponType": "Two Handed Mace"
+  },
+  "Karui Sceptre": {
+    "hands": 1,
+    "weaponType": "Sceptre"
+  },
+  "Keyblade": {
+    "hands": 2,
+    "weaponType": "Two Handed Sword"
+  },
+  "Kinetic Wand": {
+    "hands": 1,
+    "weaponType": "Wand"
+  },
+  "Labrys": {
+    "hands": 2,
+    "weaponType": "Two Handed Axe"
+  },
+  "Lathi": {
+    "hands": 2,
+    "weaponType": "Staff"
+  },
+  "Lead Sceptre": {
+    "hands": 1,
+    "weaponType": "Sceptre"
+  },
+  "Legion Hammer": {
+    "hands": 1,
+    "weaponType": "One Handed Mace"
+  },
+  "Legion Sword": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Lion Sword": {
+    "hands": 2,
+    "weaponType": "Two Handed Sword"
+  },
+  "Lithe Blade": {
+    "hands": 2,
+    "weaponType": "Two Handed Sword"
+  },
+  "Long Bow": {
+    "hands": 2,
+    "weaponType": "Bow"
+  },
+  "Long Staff": {
+    "hands": 2,
+    "weaponType": "Staff"
+  },
+  "Longsword": {
+    "hands": 2,
+    "weaponType": "Two Handed Sword"
+  },
+  "Maelstrom Staff": {
+    "hands": 2,
+    "weaponType": "Staff"
+  },
+  "Malign Fangs": {
+    "hands": 1,
+    "weaponType": "Claw"
+  },
+  "Mallet": {
+    "hands": 2,
+    "weaponType": "Two Handed Mace"
+  },
+  "Maltreatment Axe": {
+    "hands": 1,
+    "weaponType": "One Handed Axe"
+  },
+  "Maraketh Bow": {
+    "hands": 2,
+    "weaponType": "Bow"
+  },
+  "Meatgrinder": {
+    "hands": 2,
+    "weaponType": "Two Handed Mace"
+  },
+  "Midnight Blade": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Military Staff": {
+    "hands": 2,
+    "weaponType": "Staff"
+  },
+  "Moon Staff": {
+    "hands": 2,
+    "weaponType": "Staff"
+  },
+  "Morning Star": {
+    "hands": 2,
+    "weaponType": "Two Handed Mace"
+  },
+  "Nailed Fist": {
+    "hands": 1,
+    "weaponType": "Claw"
+  },
+  "Nightmare Mace": {
+    "hands": 1,
+    "weaponType": "One Handed Mace"
+  },
+  "Noble Axe": {
+    "hands": 2,
+    "weaponType": "Two Handed Axe"
+  },
+  "Noble Claw": {
+    "hands": 1,
+    "weaponType": "Claw"
+  },
+  "Ochre Sceptre": {
+    "hands": 1,
+    "weaponType": "Sceptre"
+  },
+  "Omen Wand": {
+    "hands": 1,
+    "weaponType": "Wand"
+  },
+  "Opal Sceptre": {
+    "hands": 1,
+    "weaponType": "Sceptre"
+  },
+  "Opal Wand": {
+    "hands": 1,
+    "weaponType": "Wand"
+  },
+  "Ornate Mace": {
+    "hands": 1,
+    "weaponType": "One Handed Mace"
+  },
+  "Ornate Sword": {
+    "hands": 2,
+    "weaponType": "Two Handed Sword"
+  },
+  "Oscillating Sceptre": {
+    "hands": 1,
+    "weaponType": "Sceptre"
+  },
+  "Pagan Wand": {
+    "hands": 1,
+    "weaponType": "Wand"
+  },
+  "Pecoraro": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Pernach": {
+    "hands": 1,
+    "weaponType": "One Handed Mace"
+  },
+  "Petrified Club": {
+    "hands": 1,
+    "weaponType": "One Handed Mace"
+  },
+  "Phantom Mace": {
+    "hands": 1,
+    "weaponType": "One Handed Mace"
+  },
+  "Piledriver": {
+    "hands": 2,
+    "weaponType": "Two Handed Mace"
+  },
+  "Plated Maul": {
+    "hands": 2,
+    "weaponType": "Two Handed Mace"
+  },
+  "Platinum Kris": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Platinum Sceptre": {
+    "hands": 1,
+    "weaponType": "Sceptre"
+  },
+  "Pneumatic Dagger": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Poignard": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Poleaxe": {
+    "hands": 2,
+    "weaponType": "Two Handed Axe"
+  },
+  "Potentiality Rod": {
+    "hands": 2,
+    "weaponType": "Staff"
+  },
+  "Prehistoric Claw": {
+    "hands": 1,
+    "weaponType": "Claw"
+  },
+  "Pressurised Dagger": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Prime Cleaver": {
+    "hands": 2,
+    "weaponType": "Two Handed Axe"
+  },
+  "Primeval Rapier": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Primitive Staff": {
+    "hands": 2,
+    "weaponType": "Staff"
+  },
+  "Primordial Staff": {
+    "hands": 2,
+    "weaponType": "Staff"
+  },
+  "Profane Wand": {
+    "hands": 1,
+    "weaponType": "Wand"
+  },
+  "Prong Dagger": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Prophecy Wand": {
+    "hands": 1,
+    "weaponType": "Wand"
+  },
+  "Psychotic Axe": {
+    "hands": 1,
+    "weaponType": "One Handed Axe"
+  },
+  "Quarterstaff": {
+    "hands": 2,
+    "weaponType": "Staff"
+  },
+  "Quartz Sceptre": {
+    "hands": 1,
+    "weaponType": "Sceptre"
+  },
+  "Quartz Wand": {
+    "hands": 1,
+    "weaponType": "Wand"
+  },
+  "Random One Hand Sword": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Random Two Hand Sword": {
+    "hands": 2,
+    "weaponType": "Two Handed Sword"
+  },
+  "Ranger Bow": {
+    "hands": 2,
+    "weaponType": "Bow"
+  },
+  "Reaver Axe": {
+    "hands": 1,
+    "weaponType": "One Handed Axe"
+  },
+  "Reaver Sword": {
+    "hands": 2,
+    "weaponType": "Two Handed Sword"
+  },
+  "Rebuking Blade": {
+    "hands": 2,
+    "weaponType": "Two Handed Sword"
+  },
+  "Reciprocation Staff": {
+    "hands": 2,
+    "weaponType": "Staff"
+  },
+  "Recurve Bow": {
+    "hands": 2,
+    "weaponType": "Bow"
+  },
+  "Reflex Bow": {
+    "hands": 2,
+    "weaponType": "Bow"
+  },
+  "Ritual Sceptre": {
+    "hands": 1,
+    "weaponType": "Sceptre"
+  },
+  "Rock Breaker": {
+    "hands": 1,
+    "weaponType": "One Handed Mace"
+  },
+  "Royal Axe": {
+    "hands": 1,
+    "weaponType": "One Handed Axe"
+  },
+  "Royal Bow": {
+    "hands": 2,
+    "weaponType": "Bow"
+  },
+  "Royal Sceptre": {
+    "hands": 1,
+    "weaponType": "Sceptre"
+  },
+  "Royal Skean": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Royal Staff": {
+    "hands": 2,
+    "weaponType": "Staff"
+  },
+  "Runic Hatchet": {
+    "hands": 1,
+    "weaponType": "One Handed Axe"
+  },
+  "Rusted Hatchet": {
+    "hands": 1,
+    "weaponType": "One Handed Axe"
+  },
+  "Rusted Spike": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Rusted Sword": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Sabre": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Sage Wand": {
+    "hands": 1,
+    "weaponType": "Wand"
+  },
+  "Sai": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Sambar Sceptre": {
+    "hands": 1,
+    "weaponType": "Sceptre"
+  },
+  "Sekhem": {
+    "hands": 1,
+    "weaponType": "Sceptre"
+  },
+  "Serpentine Staff": {
+    "hands": 2,
+    "weaponType": "Staff"
+  },
+  "Serrated Foil": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Shadow Axe": {
+    "hands": 2,
+    "weaponType": "Two Handed Axe"
+  },
+  "Shadow Fangs": {
+    "hands": 1,
+    "weaponType": "Claw"
+  },
+  "Shadow Sceptre": {
+    "hands": 1,
+    "weaponType": "Sceptre"
+  },
+  "Sharktooth Claw": {
+    "hands": 1,
+    "weaponType": "Claw"
+  },
+  "Short Bow": {
+    "hands": 2,
+    "weaponType": "Bow"
+  },
+  "Siege Axe": {
+    "hands": 1,
+    "weaponType": "One Handed Axe"
+  },
+  "Skean": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Skinning Knife": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Slaughter Knife": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Sledgehammer": {
+    "hands": 2,
+    "weaponType": "Two Handed Mace"
+  },
+  "Smallsword": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Sniper Bow": {
+    "hands": 2,
+    "weaponType": "Bow"
+  },
+  "Solar Maul": {
+    "hands": 2,
+    "weaponType": "Two Handed Mace"
+  },
+  "Solarine Bow": {
+    "hands": 2,
+    "weaponType": "Bow"
+  },
+  "Somatic Wand": {
+    "hands": 1,
+    "weaponType": "Wand"
+  },
+  "Sparkling Claw": {
+    "hands": 1,
+    "weaponType": "Claw"
+  },
+  "Spectral Axe": {
+    "hands": 1,
+    "weaponType": "One Handed Axe"
+  },
+  "Spectral Sword": {
+    "hands": 2,
+    "weaponType": "Two Handed Sword"
+  },
+  "Spiked Club": {
+    "hands": 1,
+    "weaponType": "One Handed Mace"
+  },
+  "Spine Bow": {
+    "hands": 2,
+    "weaponType": "Bow"
+  },
+  "Spiny Maul": {
+    "hands": 2,
+    "weaponType": "Two Handed Mace"
+  },
+  "Spiraled Foil": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Spiraled Wand": {
+    "hands": 1,
+    "weaponType": "Wand"
+  },
+  "Stabilising Sceptre": {
+    "hands": 1,
+    "weaponType": "Sceptre"
+  },
+  "Stag Sceptre": {
+    "hands": 1,
+    "weaponType": "Sceptre"
+  },
+  "Steelhead": {
+    "hands": 2,
+    "weaponType": "Two Handed Mace"
+  },
+  "Steelwood Bow": {
+    "hands": 2,
+    "weaponType": "Bow"
+  },
+  "Stiletto": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Stone Axe": {
+    "hands": 2,
+    "weaponType": "Two Handed Axe"
+  },
+  "Stone Hammer": {
+    "hands": 1,
+    "weaponType": "One Handed Mace"
+  },
+  "Sundering Axe": {
+    "hands": 2,
+    "weaponType": "Two Handed Axe"
+  },
+  "Talon Axe": {
+    "hands": 2,
+    "weaponType": "Two Handed Axe"
+  },
+  "Tempered Foil": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Tenderizer": {
+    "hands": 1,
+    "weaponType": "One Handed Mace"
+  },
+  "Terror Claw": {
+    "hands": 1,
+    "weaponType": "Claw"
+  },
+  "Terror Maul": {
+    "hands": 2,
+    "weaponType": "Two Handed Mace"
+  },
+  "Thicket Bow": {
+    "hands": 2,
+    "weaponType": "Bow"
+  },
+  "Thorn Rapier": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Thresher Claw": {
+    "hands": 1,
+    "weaponType": "Claw"
+  },
+  "Throat Stabber": {
+    "hands": 1,
+    "weaponType": "Claw"
+  },
+  "Tiger Hook": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Tiger Sword": {
+    "hands": 2,
+    "weaponType": "Two Handed Sword"
+  },
+  "Tiger's Paw": {
+    "hands": 1,
+    "weaponType": "Claw"
+  },
+  "Timber Axe": {
+    "hands": 2,
+    "weaponType": "Two Handed Axe"
+  },
+  "Timeworn Claw": {
+    "hands": 1,
+    "weaponType": "Claw"
+  },
+  "Tomahawk": {
+    "hands": 1,
+    "weaponType": "One Handed Axe"
+  },
+  "Tornado Wand": {
+    "hands": 1,
+    "weaponType": "Wand"
+  },
+  "Totemic Maul": {
+    "hands": 2,
+    "weaponType": "Two Handed Mace"
+  },
+  "Transformer Staff": {
+    "hands": 2,
+    "weaponType": "Staff"
+  },
+  "Tribal Club": {
+    "hands": 1,
+    "weaponType": "One Handed Mace"
+  },
+  "Tribal Maul": {
+    "hands": 2,
+    "weaponType": "Two Handed Mace"
+  },
+  "Trisula": {
+    "hands": 1,
+    "weaponType": "Dagger"
+  },
+  "Twilight Blade": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Twin Claw": {
+    "hands": 1,
+    "weaponType": "Claw"
+  },
+  "Two-Handed Sword": {
+    "hands": 2,
+    "weaponType": "Two Handed Sword"
+  },
+  "Tyrant's Sekhem": {
+    "hands": 1,
+    "weaponType": "Sceptre"
+  },
+  "Vaal Axe": {
+    "hands": 2,
+    "weaponType": "Two Handed Axe"
+  },
+  "Vaal Blade": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Vaal Claw": {
+    "hands": 1,
+    "weaponType": "Claw"
+  },
+  "Vaal Greatsword": {
+    "hands": 2,
+    "weaponType": "Two Handed Sword"
+  },
+  "Vaal Hatchet": {
+    "hands": 1,
+    "weaponType": "One Handed Axe"
+  },
+  "Vaal Rapier": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Vaal Sceptre": {
+    "hands": 1,
+    "weaponType": "Sceptre"
+  },
+  "Variscite Blade": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Vile Staff": {
+    "hands": 2,
+    "weaponType": "Staff"
+  },
+  "Void Axe": {
+    "hands": 2,
+    "weaponType": "Two Handed Axe"
+  },
+  "Void Fangs": {
+    "hands": 1,
+    "weaponType": "Claw"
+  },
+  "Void Sceptre": {
+    "hands": 1,
+    "weaponType": "Sceptre"
+  },
+  "War Axe": {
+    "hands": 1,
+    "weaponType": "One Handed Axe"
+  },
+  "War Hammer": {
+    "hands": 1,
+    "weaponType": "One Handed Mace"
+  },
+  "War Sword": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Whalebone Rapier": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  },
+  "Woodful Staff": {
+    "hands": 2,
+    "weaponType": "Staff"
+  },
+  "Woodsplitter": {
+    "hands": 2,
+    "weaponType": "Two Handed Axe"
+  },
+  "Wraith Axe": {
+    "hands": 1,
+    "weaponType": "One Handed Axe"
+  },
+  "Wraith Sword": {
+    "hands": 2,
+    "weaponType": "Two Handed Sword"
+  },
+  "Wrist Chopper": {
+    "hands": 1,
+    "weaponType": "One Handed Axe"
+  },
+  "Wyrm Mace": {
+    "hands": 1,
+    "weaponType": "One Handed Mace"
+  },
+  "Wyrmbone Rapier": {
+    "hands": 1,
+    "weaponType": "One Handed Sword"
+  }
+}
