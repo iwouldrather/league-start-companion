@@ -51,8 +51,8 @@ document.addEventListener('click',async e=>{
 });
 if(D.imported){
  document.body.classList.add('importedguide');
- const brand=document.querySelector('.brand strong');brand.textContent=D.build.ascendClassName||D.build.className||'PoB';
- const notice=document.createElement('button');notice.id='importedNotes';notice.innerHTML=uiIcon('text')+'<span>Imported Notes</span>'+(D.warnings.length?' <span class=notecount>'+D.warnings.length+'</span>':'');notice.className='iconlabel';document.querySelector('.topactions').prepend(notice);
+ const brand=document.querySelector('.brand strong');brand.textContent='LEAGUE START COMPANION';
+ const notice=document.createElement('button');notice.id='importedNotes';notice.innerHTML=uiIcon('text')+'<span>Imported Notes</span>'+(D.warnings.length?' <span class=notecount>'+D.warnings.length+'</span>':'');notice.className='iconlabel';const placeNotes=()=>document.querySelector('.concepthero,.dashhero,.stagehero')?.append(notice);const beforeNotes=render;render=function(...args){beforeNotes(...args);placeNotes();};placeNotes();
  notice.addEventListener('click',()=>record(D.name+' · Imported Notes',`<p>${esc(D.name)} · ${esc(D.build.className)} / ${esc(D.build.ascendClassName||'No ascendancy')}</p>${D.warnings.map(w=>`<p class="importwarnings">${esc(w)}</p>`).join('')}<p>Blue = new nodes, gold = already allocated, red = removed. Native assets come from the matching installed PoB tree; ascendancy is shown separately. This view does not calculate damage or reconstruct cluster-jewel expansions or Timeless transformations.</p><h3>Original build notes</h3><pre class="importnotes">${esc(D.notes||'No notes supplied.')}</pre>`));
 }
 

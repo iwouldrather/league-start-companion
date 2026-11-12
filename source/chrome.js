@@ -6,6 +6,8 @@ function uiIcon(name){
 function infoTip(text,label='More information'){
  return `<button type="button" class="infobutton" data-info="${esc(text)}" aria-label="${esc(label)}">${uiIcon('info')}</button>`;
 }
+document.querySelector('.brand strong').textContent='LEAGUE START COMPANION';
+const appMark=document.querySelector('.brandmark');appMark.classList.add('appmark');appMark.innerHTML='<svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 2 30 16 16 30 2 16Z" stroke="currentColor" stroke-width="2"/><path d="m16 7 4 9-4 9-4-9Z" fill="#92c8ed"/><circle cx="16" cy="16" r="3" fill="#101723" stroke="currentColor"/></svg>';
 const chromeTooltip=document.createElement('div');chromeTooltip.id='chromeTooltip';chromeTooltip.className='chrome-tooltip';chromeTooltip.setAttribute('role','tooltip');chromeTooltip.hidden=true;document.body.append(chromeTooltip);
 let tooltipOwner=null;
 function hideChromeTooltip(){tooltipOwner?.removeAttribute('aria-describedby');tooltipOwner=null;chromeTooltip.hidden=true;}

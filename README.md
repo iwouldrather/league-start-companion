@@ -25,8 +25,9 @@ together in one view. Spend less time switching tabs and more time playing.
 - **Keep your progress.** Gem purchases are saved per character, with undo and
   reset controls. Save, rename and remove imported guides in your build library.
 - **Follow your character as you level.** Read level-ups and area changes from
-  the local game log to advance through the guide automatically. You can also
-  browse milestones yourself.
+  the local game log to advance through the guide automatically. A separate
+  character bar shows your current character, recorded level, class and area,
+  with controls to pause or resume following. App menus stay separate above it.
 
 ## Install on Windows
 

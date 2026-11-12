@@ -1,7 +1,7 @@
 function renderLibraryHome(){
  document.body.classList.add('libraryhome');document.body.dataset.design='board';
  document.title='Your builds · League Start Companion';
- document.querySelector('.brand strong').textContent='LEAGUE START';
+ document.querySelector('.brand strong').textContent='LEAGUE START COMPANION';
  $('stage').setAttribute('role','main');$('stage').removeAttribute('aria-labelledby');
  $('stage').innerHTML=`<header class="libraryhero"><p class="eyebrow">League Start Companion</p><h1>Your builds</h1><p>Import a PoB to get your gem shopping list, passive tree changes, ascendancy and equipment in one place.</p><button data-open-library>Import PoB / manage builds →</button></header><div id="homeBuilds" aria-live="polite"><p>Loading your saved builds…</p></div><p class="libraryprivacy">Builds and character progress stay on this computer.</p>`;
  if(location.protocol==='file:'){$('homeBuilds').innerHTML='<section class="libraryempty"><h2>Start your local companion</h2><p>Double-click Start Slayer Companion.bat to open your saved builds and import PoBs.</p></section>';return;}

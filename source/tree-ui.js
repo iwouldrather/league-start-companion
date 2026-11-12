@@ -75,5 +75,4 @@ document.addEventListener('keydown',e=>{if(['Enter',' '].includes(e.key)&&e.targ
 if(D.uiAssets){
  document.body.classList.add('poetheme');
  if(D.uiAssets.texture)document.documentElement.style.setProperty('--poe-texture',`url("${D.uiAssets.texture}")`);
- if(D.uiAssets.portrait){const mark=document.querySelector('.brandmark');mark.classList.add('classportrait');mark.innerHTML=`<img src="${D.uiAssets.portrait}" alt="${esc(D.build?.ascendClassName||D.build?.className||'Character')}">`;}
 }

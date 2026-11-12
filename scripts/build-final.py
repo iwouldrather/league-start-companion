@@ -17,7 +17,7 @@ p = p.replace('</style>', css + '\n'+Path('source/chrome.css').read_text(encodin
 p = p.replace('const initial=D.sets.findIndex', js + '\nconst initial=D.sets.findIndex', 1)
 p = p.replace('</style>', Path('source/live-guide.css').read_text(encoding='utf8') + '\n' + Path('source/planner.css').read_text(encoding='utf8') + '\n</style>', 1)
 p = p.replace('</script></body>', Path('source/live-guide.js').read_text(encoding='utf8') + '\n' + Path('source/ownership.js').read_text(encoding='utf8') + '\n' + Path('source/planner.js').read_text(encoding='utf8') + '\n' + Path('source/live-reload.js').read_text(encoding='utf8') + '\n' + Path('source/importer.js').read_text(encoding='utf8') + '\n</script></body>', 1)
-p = p.replace('</style>',Path('source/importer.css').read_text(encoding='utf8')+'\n'+Path('source/tree-ui.css').read_text(encoding='utf8')+'\n</style>',1)
+p = p.replace('</style>',Path('source/importer.css').read_text(encoding='utf8')+'\n'+Path('source/tree-ui.css').read_text(encoding='utf8')+'\n'+Path('source/character-bar.css').read_text(encoding='utf8')+'\n</style>',1)
 p = p.replace('</script></body>',Path('source/tree-ui.js').read_text(encoding='utf8')+'\n'+Path('source/library-home.js').read_text(encoding='utf8')+'\n'+Path('source/desktop.js').read_text(encoding='utf8')+'\n</script></body>',1)
 output.write_text(p.rstrip()+'\n', encoding='utf8')
 print('Saved final Swap board with the Tree first navy and blue palette.')
