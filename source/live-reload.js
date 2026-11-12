@@ -1,6 +1,5 @@
 // Only companion-hosted pages poll for app changes; standalone HTML stays offline.
 let appVersion=null,updatePending=false,reloadBusy=false;
-if(location.protocol!=='file:'){const badge=document.querySelector('.offline');if(badge)badge.textContent='Live updates on';}
 try{const saved=JSON.parse(sessionStorage.getItem('slayer-reload-view')||'null');if(saved){liveFollow=saved.follow!==false;liveResumeAtMilestone=saved.resume!==false;sessionStorage.removeItem('slayer-reload-view');}}catch{}
 async function checkAppUpdate(){
  if(location.protocol==='file:'||reloadBusy)return;
@@ -10,7 +9,6 @@ async function checkAppUpdate(){
   if(data.version!==appVersion)updatePending=true;
   if(!updatePending)return;
   const busy=purchasePending.size>0||document.querySelector('dialog[open]')||document.activeElement?.matches('input,textarea,select');
-  const badge=document.querySelector('.offline');if(badge)badge.textContent=busy?'Update ready · close details':'Updating guide…';
   if(busy)return;
   try{sessionStorage.setItem('slayer-reload-view',JSON.stringify({follow:liveFollow,resume:liveResumeAtMilestone}));}catch{}
   reloadBusy=true;location.reload();

@@ -13,8 +13,7 @@ function suggestedStage(level){if(!level||!D.sets.length)return null;let i=0;D.s
 function guideClassMismatch(){return !!(D.imported&&liveState?.characterClass&&![D.build.className,D.build.ascendClassName].includes(liveState.characterClass));}
 function liveDecorate(){
  resumeButton.hidden=false;resumeButton.disabled=!liveConnected||!liveState?.level||!D.sets.length;
- resumeButton.textContent=liveFollow?'Following game':'Resume following';resumeButton.setAttribute('aria-pressed',String(liveFollow));
- resumeButton.title=liveFollow?'Pause automatic milestone selection':'Follow your recorded level';
+ resumeButton.textContent=!liveConnected||!liveState?.level?'Follow game':liveFollow?'Following game':'Resume following';resumeButton.setAttribute('aria-pressed',String(liveFollow&&liveConnected&&!!liveState?.level));
  if(typeof decorateOwnership==='function')decorateOwnership();
  document.querySelectorAll('[data-record-gem]').forEach(b=>{const name=b.dataset.recordGem,m=D.meta[name];if(!m)return;
  const upcoming=!isGemOwned(name)&&liveConnected&&liveState?.level&&m.minLevel>liveState.level&&m.minLevel<=liveState.level+4;
@@ -28,6 +27,8 @@ function liveDecorate(){
  $('characterLevel').textContent=s.level||'—';$('characterClass').textContent=s.characterClass||'Class not recorded';
  $('characterArea').textContent=s.area||'Area not recorded';
  $('characterConnection').textContent=liveConnected?(s.character?'Reading local log':'Waiting for a level-up'):location.protocol==='file:'?'Offline guide':s.status==='missing'?'Game log not found':'Log disconnected';
+ $('characterConnection').hidden=liveConnected&&!!s.character&&!!s.level;
+ resumeButton.title=$('characterConnection').textContent+'. '+(resumeButton.disabled?'Choose Client.txt in settings, or wait for a recorded level-up.':liveFollow?'Automatically selects milestones from your recorded level. Click to pause.':liveResumeAtMilestone?'Browsing temporarily; following resumes at the next milestone. Click to resume now.':'Automatic milestone selection is paused. Click to resume.');
  characterBar.classList.toggle('isdisconnected',!liveConnected);
  const mismatch=guideClassMismatch();$('characterWarning').hidden=!mismatch;
  $('characterWarning').textContent=mismatch?`${s.characterClass} character · ${D.build.ascendClassName||D.build.className} guide`:'';

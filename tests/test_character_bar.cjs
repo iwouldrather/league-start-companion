@@ -25,6 +25,8 @@ assert.equal(vm.runInContext('liveButton.textContent',context),'ExampleExile');
 assert.equal(vm.runInContext('liveButton.parent.id',context),'characterNameSlot');
 assert.equal(get('characterLevel').textContent,33);
 assert.equal(get('characterArea').textContent,'The Forest Encampment');
+assert.equal(get('characterConnection').hidden,true,'Healthy log status should not duplicate Following game');
+assert.match(vm.runInContext('resumeButton.title',context),/Reading local log/);
 assert.equal(get('characterWarning').hidden,false);
 assert.equal(get('characterWarning').textContent,'Slayer character · Berserker guide');
 assert.equal(context.current,1);
@@ -38,6 +40,8 @@ assert.equal(context.current,2,'Resume should jump to the current recorded miles
 context.location.protocol='http:';
 vm.runInContext("applyLiveState({status:'missing'})",context);
 assert.equal(get('characterConnection').textContent,'Game log not found');
+assert.equal(get('characterConnection').hidden,false,'Missing logs must stay visible');
+assert.equal(vm.runInContext('resumeButton.textContent',context),'Follow game');
 assert.equal(vm.runInContext('resumeButton.disabled',context),true);
 context.D.sets=[];
 vm.runInContext(state(46),context);

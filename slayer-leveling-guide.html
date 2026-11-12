@@ -121,12 +121,14 @@ body[data-design=board] .concepttreeimage{background:#070d14}
 .charactercontrols{display:flex;align-items:center;gap:14px;margin-left:14px;flex:none}#characterConnection{font-size:12px;color:#a9c7db;white-space:nowrap}.characterbar #resumeLive{display:inline-flex;align-items:center;justify-content:center;padding:8px 12px;font-size:13px;color:#bae1fa;border:1px solid #6b9ab8;background:#172b3c;white-space:nowrap}.characterbar #resumeLive[aria-pressed=true]::before{content:'';width:6px;height:6px;border-radius:50%;background:#92c8ed;margin-right:8px}.characterbar #resumeLive[aria-pressed=false]{color:var(--gold);border-color:#a79268}.characterbar.isdisconnected{background:#1b2633}.isdisconnected .characterlabel{color:#b5c1ce}
 .concepthero #importedNotes,.dashhero #importedNotes,.stagehero #importedNotes{margin-left:auto;font-size:13px;flex:none}.prep .progressowner{color:var(--gold)!important;font-size:12px!important}
 @media(min-width:1450px) and (min-height:850px){body{display:flex;flex-direction:column}.topbar{flex:none}body .shell,body.libraryhome .shell{height:auto;min-height:0;flex:1;margin:0}.characterbar{height:84px}.charactercontrols{margin-left:20px}}
-@media(max-width:1500px){.characterbar{gap:14px;padding-left:18px;padding-right:18px}.characterbar #liveStatus{font-size:19px}.charactercontrols{gap:9px;margin-left:0}#characterConnection{display:none}.characterarea span{font-size:14px}}
+@media(max-width:1500px){.characterbar{gap:14px;padding-left:18px;padding-right:18px}.characterbar #liveStatus{font-size:19px}.charactercontrols{gap:9px;margin-left:0}.characterarea span{font-size:14px}}
 @media(max-width:1449px),(max-height:849px){.sidebar{top:76px;height:calc(100dvh - 76px)}.characterbar{z-index:14}}
 @media(max-width:760px){.topbar{height:auto;min-height:60px;flex-wrap:wrap;padding:10px 14px;gap:10px}.topactions{margin-left:auto}.brand strong{font-size:11px;letter-spacing:.7px}.characterbar{padding:12px 14px;gap:10px;flex-wrap:wrap}.characteridentity{flex:1}.characterbar #liveStatus{font-size:18px;max-width:calc(100vw - 106px)}.characteridentityrow{flex-wrap:wrap;gap:3px 8px}.characterarea{margin-left:64px;flex:1}.characterarea span{max-width:calc(100vw - 220px);font-size:12px}.charactercontrols{margin-left:0}.characterbar #resumeLive{font-size:12px;padding:7px 9px}.characterlevel{min-width:48px;height:48px}.sidebar{height:auto;top:60px}.concepthero #importedNotes{font-size:11px;white-space:nowrap}.concepthero{flex-wrap:wrap}}
 
+#characterConnection[hidden]{display:none!important}.charactercontrols #characterConnection{color:#efc88b}.charactercontrols{flex-wrap:wrap}
+
 </style></head><body>
-<header class="topbar"><div class="brand"><div class="brandmark" aria-hidden="true"><span>L</span></div><div><strong>LEAGUE START</strong></div></div><div class="topactions"><span class="offline">Offline ready</span><details class="toolsmenu" id="toolsMenu"><summary class="iconbutton" aria-label="Tools menu" title="Tools"><svg class="uiicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></summary><div class="toolspop"><button id="finderOpen">Find a gem</button><button data-record="sources">Sources &amp; help</button></div></details></div></header>
+<header class="topbar"><div class="brand"><div class="brandmark" aria-hidden="true"><span>L</span></div><div><strong>LEAGUE START</strong></div></div><div class="topactions"><details class="toolsmenu" id="toolsMenu"><summary class="iconbutton" aria-label="Tools menu" title="Tools"><svg class="uiicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></summary><div class="toolspop"><button id="finderOpen">Find a gem</button><button data-record="sources">Sources &amp; help</button></div></details></div></header>
 <div class="shell"><nav class="sidebar" id="navigation" role="tablist" aria-label="PoB leveling milestones" aria-orientation="vertical"></nav><main id="stage" role="tabpanel" tabindex="-1"></main></div>
 <dialog class="dialog zoomdialog" id="treeDialog" aria-labelledby="treeDialogTitle"><div class="dialoghead"><h2 id="treeDialogTitle">Passive tree</h2><div class="zoomcontrols"><button id="zoomOut" aria-label="Zoom out">−</button><span id="zoomLabel" class="small">100%</span><button id="zoomIn" aria-label="Zoom in">+</button><button id="zoomFit">Fit</button><button data-close="treeDialog">Close</button></div></div><div class="zoomstage" id="zoomStage"><img id="zoomImage" alt="Selected PoB milestone passive tree"></div></dialog>
 <dialog class="dialog" id="finderDialog" aria-labelledby="finderTitle"><div class="dialoghead"><h2 id="finderTitle">Gem acquisition</h2><button data-close="finderDialog">Close</button></div><div class="dialogbody"><label class="sr-only" for="finderSearch">Search gem name</label><input id="finderSearch" class="findersearch" placeholder="Search any skill or support…" type="search"><p class="muted small">“Use from” is the character requirement for a level-1 gem. Shop access requires the listed quest. Item effects are shown separately.</p><div id="finderResults"></div></div></dialog>
@@ -265,8 +267,7 @@ function suggestedStage(level){if(!level||!D.sets.length)return null;let i=0;D.s
 function guideClassMismatch(){return !!(D.imported&&liveState?.characterClass&&![D.build.className,D.build.ascendClassName].includes(liveState.characterClass));}
 function liveDecorate(){
  resumeButton.hidden=false;resumeButton.disabled=!liveConnected||!liveState?.level||!D.sets.length;
- resumeButton.textContent=liveFollow?'Following game':'Resume following';resumeButton.setAttribute('aria-pressed',String(liveFollow));
- resumeButton.title=liveFollow?'Pause automatic milestone selection':'Follow your recorded level';
+ resumeButton.textContent=!liveConnected||!liveState?.level?'Follow game':liveFollow?'Following game':'Resume following';resumeButton.setAttribute('aria-pressed',String(liveFollow&&liveConnected&&!!liveState?.level));
  if(typeof decorateOwnership==='function')decorateOwnership();
  document.querySelectorAll('[data-record-gem]').forEach(b=>{const name=b.dataset.recordGem,m=D.meta[name];if(!m)return;
  const upcoming=!isGemOwned(name)&&liveConnected&&liveState?.level&&m.minLevel>liveState.level&&m.minLevel<=liveState.level+4;
@@ -280,6 +281,8 @@ function liveDecorate(){
  $('characterLevel').textContent=s.level||'—';$('characterClass').textContent=s.characterClass||'Class not recorded';
  $('characterArea').textContent=s.area||'Area not recorded';
  $('characterConnection').textContent=liveConnected?(s.character?'Reading local log':'Waiting for a level-up'):location.protocol==='file:'?'Offline guide':s.status==='missing'?'Game log not found':'Log disconnected';
+ $('characterConnection').hidden=liveConnected&&!!s.character&&!!s.level;
+ resumeButton.title=$('characterConnection').textContent+'. '+(resumeButton.disabled?'Choose Client.txt in settings, or wait for a recorded level-up.':liveFollow?'Automatically selects milestones from your recorded level. Click to pause.':liveResumeAtMilestone?'Browsing temporarily; following resumes at the next milestone. Click to resume now.':'Automatic milestone selection is paused. Click to resume.');
  characterBar.classList.toggle('isdisconnected',!liveConnected);
  const mismatch=guideClassMismatch();$('characterWarning').hidden=!mismatch;
  $('characterWarning').textContent=mismatch?`${s.characterClass} character · ${D.build.ascendClassName||D.build.className} guide`:'';
@@ -400,7 +403,6 @@ document.addEventListener('click',e=>{if(e.target.closest('#plannerOwned'))showM
 renderPlanner();
 // Only companion-hosted pages poll for app changes; standalone HTML stays offline.
 let appVersion=null,updatePending=false,reloadBusy=false;
-if(location.protocol!=='file:'){const badge=document.querySelector('.offline');if(badge)badge.textContent='Live updates on';}
 try{const saved=JSON.parse(sessionStorage.getItem('slayer-reload-view')||'null');if(saved){liveFollow=saved.follow!==false;liveResumeAtMilestone=saved.resume!==false;sessionStorage.removeItem('slayer-reload-view');}}catch{}
 async function checkAppUpdate(){
  if(location.protocol==='file:'||reloadBusy)return;
@@ -410,7 +412,6 @@ async function checkAppUpdate(){
   if(data.version!==appVersion)updatePending=true;
   if(!updatePending)return;
   const busy=purchasePending.size>0||document.querySelector('dialog[open]')||document.activeElement?.matches('input,textarea,select');
-  const badge=document.querySelector('.offline');if(badge)badge.textContent=busy?'Update ready · close details':'Updating guide…';
   if(busy)return;
   try{sessionStorage.setItem('slayer-reload-view',JSON.stringify({follow:liveFollow,resume:liveResumeAtMilestone}));}catch{}
   reloadBusy=true;location.reload();
