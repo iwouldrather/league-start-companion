@@ -76,6 +76,28 @@ def matrix_routes(page,catalog):
     return result
 
 
+def reconcile_routes(name,routes,matrix):
+    """Combine per-gem evidence with every class column, not only vendor-less gems."""
+    result=[]
+    for original in routes:
+        route=dict(original)
+        if route['kind']=='vendor' and route['vendor'] not in ('Siosa','Lilly Roth') and route['quest'] in QUEST_VENDOR:
+            route['act'],route['vendor']=QUEST_VENDOR[route['quest']]
+        result.append(route)
+    for original in matrix:
+        route=dict(original)
+        # Some Library entries explicitly name Siosa rather than Clarissa.
+        vendors={r['vendor'] for r in result if r['kind']=='vendor' and r['quest']==route['quest']}
+        if route['quest']=='A Fixture of Fate' and vendors=={'Siosa'}:route['vendor']='Siosa'
+        result.append(route)
+    combined={}
+    for route in corrected_routes(name,result):
+        key=(route['act'],route['quest'],route['vendor'],route['kind'])
+        if key not in combined:combined[key]=dict(route,classes=[])
+        combined[key]['classes']=sorted(set(combined[key]['classes'])|set(route['classes']))
+    return list(combined.values())
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--cache',type=Path,default=ROOT/'.cache/gem-quests')
@@ -128,13 +150,10 @@ def main():
             if i%25==0 or i==len(futures):
                 print(f'Checked {i}/{len(futures)} gem pages; {sum(r["status"]=="fetch-failed" for r in records.values())} fetch failures',flush=True)
     for name,record in records.items():
-        eligible=bool(record['routes']) or name in ('Arctic Armour','Phase Run')
-        if eligible and record['status']!='fetch-failed' and not any(r['kind']=='vendor' for r in record['routes']) and name in matrix:
-            record['routes'].extend(matrix[name])
-            record['status']='verified'
-            record['matrixSource']='https://poedb.tw/us/Quest'
-    for name,record in records.items():
-        record['routes']=corrected_routes(name,record['routes'])
+        if record['status']=='fetch-failed':continue
+        record['routes']=reconcile_routes(name,record['routes'],matrix.get(name,[]))
+        if record['routes']:record['status']='verified'
+        if name in matrix:record['matrixSource']='https://poedb.tw/us/Quest'
     snapshot={'source':'https://poedb.tw/us/Quest','checkedAt':checked,'classes':CLASSES,'gems':dict(sorted(records.items()))}
     (ROOT/'source/gem-acquisition.json').write_text(json.dumps(snapshot,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
     (ROOT/'source/gem-registry.json').write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n',encoding='utf8')

@@ -8,7 +8,7 @@ from pathlib import Path
 import re
 from urllib.parse import urlsplit
 
-VIEW_VERSION=7
+VIEW_VERSION=8
 
 
 def selected(spec):
@@ -188,7 +188,6 @@ def svg_view(tree,version,now,before,ascendancy='',diff=False,mini=False,class_n
             marker=f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{radius+6*scale:.1f}" fill="#101723" stroke="#f4d38f" stroke-width="{3*scale:.1f}"/>'
             marker+=art(portrait,x,y,radius*1.8) if portrait else f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{radius*.6:.1f}" fill="#e5bd79"/>'
             label=html.escape(base+' start')
-            marker+=f'<rect x="{x-150*scale:.1f}" y="{y+60*scale:.1f}" width="{300*scale:.1f}" height="{54*scale:.1f}" rx="{5*scale:.1f}" fill="#101723" stroke="#e5bd79" stroke-width="{scale:.1f}"/><text x="{x:.1f}" y="{y+98*scale:.1f}" text-anchor="middle" fill="#ffe3a2" font-size="{36*scale:.1f}" font-weight="700" font-family="Segoe UI,Arial,sans-serif">{label}</text>'
             labels.append(f'<g data-tree-start="true" data-node="{nid}" role="button" tabindex="0" aria-label="{label}"><title>{label} · begin allocating here</title>{marker}</g>')
         if notable and active and not mini:
             labels.append(f'<text x="{x+20*scale:.1f}" y="{y-15*scale:.1f}" fill="{color}" font-size="{13*scale:.1f}" font-family="Georgia,serif" paint-order="stroke" stroke="#0c1015" stroke-width="{3*scale:.1f}">{html.escape(node.get("name",nid))}</text>')

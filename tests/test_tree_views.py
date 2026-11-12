@@ -79,6 +79,10 @@ class TreeViewTests(unittest.TestCase):
                     text=base64.b64decode(image.split(',')[1]).decode()
                     self.assertIn(name+' start',text)
                     self.assertEqual(text.count('begin allocating here'),1)
+                    root=ET.fromstring(text)
+                    marker=root.find(".//{http://www.w3.org/2000/svg}g[@data-tree-start='true']")
+                    self.assertIsNotNone(marker)
+                    self.assertEqual(marker.findall('{http://www.w3.org/2000/svg}text'),[])
                     self.assertEqual(delta['added'],1)
                     ET.fromstring(text)
 

@@ -1,0 +1,2911 @@
+{
+  "checkedAt": "2026-11-12T20:48:16.211277+00:00",
+  "catalogGems": 823,
+  "classes": [
+    "Marauder",
+    "Witch",
+    "Scion",
+    "Ranger",
+    "Duelist",
+    "Shadow",
+    "Templar"
+  ],
+  "classGemChecks": 5761,
+  "individualPages": 466,
+  "fetchFailures": [],
+  "failures": [],
+  "routeTypes": {
+    "vendor": 3192,
+    "starter": 14,
+    "item": 14,
+    "transfigured": 1407,
+    "drop": 350,
+    "vaal": 378,
+    "special": 49,
+    "trarthus": 84,
+    "awakened": 266,
+    "legacy": 7
+  },
+  "specialAcquisitionReview": [
+    "Block Chance Reduction",
+    "Dark Bargain",
+    "Detonate Mines",
+    "Elemental Penetration",
+    "Item Quantity",
+    "Portal",
+    "Quickstep"
+  ],
+  "scope": "Ordinary gem vendors checked against fresh per-gem pages and every class column in the quest vendor matrix, with official patch corrections. Special variants checked for campaign-vendor exclusion; exact league/drop sources are not independently verified by this audit.",
+  "sources": [
+    "https://poedb.tw/us/Quest",
+    "https://www.pathofexile.com/forum/view-thread/3985332"
+  ],
+  "changedClassGemRoutes": 179,
+  "changedGems": 94,
+  "changes": [
+    {
+      "gem": "Steelskin",
+      "class": "Marauder",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        1,
+        "Nessa",
+        "Breaking Some Eggs",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Poacher's Mark",
+      "class": "Ranger",
+      "before": [
+        3,
+        "Clarissa",
+        "Lost in Love",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Poacher's Mark",
+      "class": "Duelist",
+      "before": [
+        3,
+        "Clarissa",
+        "Lost in Love",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Blood Rage",
+      "class": "Ranger",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Blood Rage",
+      "class": "Duelist",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Blood Rage",
+      "class": "Shadow",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Desecrate",
+      "class": "Witch",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Pulverise",
+      "class": "Templar",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "A Fixture of Fate",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Assassin's Mark",
+      "class": "Shadow",
+      "before": [
+        3,
+        "Clarissa",
+        "Lost in Love",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Flesh and Stone",
+      "class": "Duelist",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Herald of Purity",
+      "class": "Templar",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Volatility",
+      "class": "Marauder",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Sharp and Cruel",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Frenzy",
+      "class": "Scion",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Frenzy",
+      "class": "Ranger",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Frenzy",
+      "class": "Duelist",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Cold Snap",
+      "class": "Witch",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Cold Snap",
+      "class": "Shadow",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Inspiration",
+      "class": "Witch",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Inspiration",
+      "class": "Scion",
+      "before": [
+        3,
+        "Clarissa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Inspiration",
+      "class": "Ranger",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Inspiration",
+      "class": "Shadow",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Inspiration",
+      "class": "Templar",
+      "before": [
+        3,
+        "Clarissa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Increased Critical Strikes",
+      "class": "Templar",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        1,
+        "Nessa",
+        "The Caged Brute",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Increased Critical Damage",
+      "class": "Templar",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Pierce",
+      "class": "Ranger",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        1,
+        "Nessa",
+        "Mercy Mission",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Faster Casting",
+      "class": "Marauder",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Sharp and Cruel",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Faster Casting",
+      "class": "Ranger",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Sharp and Cruel",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Faster Casting",
+      "class": "Duelist",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Sharp and Cruel",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Warlord's Mark",
+      "class": "Marauder",
+      "before": [
+        3,
+        "Clarissa",
+        "Lost in Love",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Warlord's Mark",
+      "class": "Duelist",
+      "before": [
+        3,
+        "Clarissa",
+        "Lost in Love",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Sniper's Mark",
+      "class": "Ranger",
+      "before": [
+        3,
+        "Clarissa",
+        "Lost in Love",
+        "vendor"
+      ],
+      "after": [
+        1,
+        "Nessa",
+        "Breaking Some Eggs",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Sniper's Mark",
+      "class": "Duelist",
+      "before": [
+        3,
+        "Clarissa",
+        "Lost in Love",
+        "vendor"
+      ],
+      "after": [
+        1,
+        "Nessa",
+        "Breaking Some Eggs",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Firestorm",
+      "class": "Witch",
+      "before": [
+        3,
+        "Nessa",
+        "Sever the Right Hand",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "Sever the Right Hand",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Firestorm",
+      "class": "Scion",
+      "before": [
+        3,
+        "Nessa",
+        "Sever the Right Hand",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "Sever the Right Hand",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Firestorm",
+      "class": "Shadow",
+      "before": [
+        3,
+        "Nessa",
+        "Sever the Right Hand",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "Sever the Right Hand",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Firestorm",
+      "class": "Templar",
+      "before": [
+        3,
+        "Nessa",
+        "Sever the Right Hand",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "Sever the Right Hand",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Molten Shell",
+      "class": "Marauder",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Molten Shell",
+      "class": "Scion",
+      "before": [
+        1,
+        "Nessa",
+        "Intruders in Black",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Molten Shell",
+      "class": "Duelist",
+      "before": [
+        1,
+        "Nessa",
+        "Intruders in Black",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Molten Shell",
+      "class": "Templar",
+      "before": [
+        1,
+        "Nessa",
+        "Intruders in Black",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Damage on Full Life",
+      "class": "Ranger",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Spell Totem",
+      "class": "Ranger",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "A Fixture of Fate",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Spectral Shield Throw",
+      "class": "Duelist",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "Sever the Right Hand",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Vicious Projectiles",
+      "class": "Marauder",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Sharp and Cruel",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Herald of Ash",
+      "class": "Marauder",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Herald of Ash",
+      "class": "Witch",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Herald of Ash",
+      "class": "Scion",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Herald of Ash",
+      "class": "Ranger",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Herald of Ash",
+      "class": "Duelist",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Herald of Ash",
+      "class": "Shadow",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Herald of Ash",
+      "class": "Templar",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Herald of Ice",
+      "class": "Marauder",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Herald of Ice",
+      "class": "Witch",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Herald of Ice",
+      "class": "Scion",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Herald of Ice",
+      "class": "Ranger",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Herald of Ice",
+      "class": "Duelist",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Herald of Ice",
+      "class": "Shadow",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Herald of Ice",
+      "class": "Templar",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Herald of Thunder",
+      "class": "Marauder",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Herald of Thunder",
+      "class": "Witch",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Herald of Thunder",
+      "class": "Scion",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Herald of Thunder",
+      "class": "Ranger",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Herald of Thunder",
+      "class": "Duelist",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Herald of Thunder",
+      "class": "Shadow",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Herald of Thunder",
+      "class": "Templar",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Herald of Agony",
+      "class": "Ranger",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Herald of Agony",
+      "class": "Shadow",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Eviscerate",
+      "class": "Marauder",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Eviscerate",
+      "class": "Duelist",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Physical to Lightning",
+      "class": "Witch",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Physical to Lightning",
+      "class": "Scion",
+      "before": [
+        2,
+        "Yeena",
+        "Sharp and Cruel",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Physical to Lightning",
+      "class": "Ranger",
+      "before": [
+        2,
+        "Yeena",
+        "Sharp and Cruel",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Physical to Lightning",
+      "class": "Templar",
+      "before": [
+        2,
+        "Yeena",
+        "Sharp and Cruel",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Crushing Fist",
+      "class": "Marauder",
+      "before": [
+        3,
+        "Clarissa",
+        "Lost in Love",
+        "vendor"
+      ],
+      "after": [
+        1,
+        "Nessa",
+        "Breaking Some Eggs",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Crushing Fist",
+      "class": "Duelist",
+      "before": [
+        3,
+        "Clarissa",
+        "Lost in Love",
+        "vendor"
+      ],
+      "after": [
+        1,
+        "Nessa",
+        "Breaking Some Eggs",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Divine Retribution",
+      "class": "Templar",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Vengeful Cry",
+      "class": "Marauder",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "Lost in Love",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Vortex",
+      "class": "Witch",
+      "before": [
+        3,
+        "Clarissa",
+        "Sever the Right Hand",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "Victario's Secrets",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Chance to Poison",
+      "class": "Witch",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        1,
+        "Nessa",
+        "Mercy Mission",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Chance to Poison",
+      "class": "Scion",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        1,
+        "Nessa",
+        "Mercy Mission",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Chance to Poison",
+      "class": "Duelist",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        1,
+        "Nessa",
+        "Mercy Mission",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Brand Recall",
+      "class": "Templar",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Wave of Conviction",
+      "class": "Templar",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Summon Skitterbots",
+      "class": "Shadow",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Ensnaring Arrow",
+      "class": "Ranger",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Arcane Cloak",
+      "class": "Witch",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Arcane Cloak",
+      "class": "Shadow",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Arcane Cloak",
+      "class": "Templar",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Blade Blast",
+      "class": "Shadow",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Seismic Cry",
+      "class": "Marauder",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Seismic Cry",
+      "class": "Duelist",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Ancestral Cry",
+      "class": "Marauder",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Ancestral Cry",
+      "class": "Duelist",
+      "before": [
+        2,
+        "Yeena",
+        "The Root of the Problem",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Hydrosphere",
+      "class": "Witch",
+      "before": [
+        6,
+        "Lilly Roth",
+        "Fallen from Grace",
+        "vendor"
+      ],
+      "after": [
+        4,
+        "Petarus and Vanja",
+        "Breaking the Seal",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Hydrosphere",
+      "class": "Templar",
+      "before": [
+        6,
+        "Lilly Roth",
+        "Fallen from Grace",
+        "vendor"
+      ],
+      "after": [
+        4,
+        "Petarus and Vanja",
+        "Breaking the Seal",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Trinity",
+      "class": "Witch",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Sharp and Cruel",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Trinity",
+      "class": "Ranger",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Sharp and Cruel",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Trinity",
+      "class": "Shadow",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Sharp and Cruel",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Exsanguinate",
+      "class": "Scion",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        1,
+        "Nessa",
+        "The Siren's Cadence",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Corrupting Fever",
+      "class": "Marauder",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Corrupting Fever",
+      "class": "Scion",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Corrupting Fever",
+      "class": "Duelist",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Bloodthirst",
+      "class": "Marauder",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "A Fixture of Fate",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Bloodthirst",
+      "class": "Scion",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "A Fixture of Fate",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Bloodthirst",
+      "class": "Duelist",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "A Fixture of Fate",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Reap",
+      "class": "Scion",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "Sever the Right Hand",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Petrified Blood",
+      "class": "Marauder",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "Lost in Love",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Petrified Blood",
+      "class": "Scion",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "Lost in Love",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Petrified Blood",
+      "class": "Duelist",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "Lost in Love",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Cruelty",
+      "class": "Marauder",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Sharp and Cruel",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Cruelty",
+      "class": "Witch",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Sharp and Cruel",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Cruelty",
+      "class": "Scion",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Sharp and Cruel",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Cruelty",
+      "class": "Duelist",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Sharp and Cruel",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Defiance Banner",
+      "class": "Duelist",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Voltaxic Burst",
+      "class": "Shadow",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        1,
+        "Nessa",
+        "The Siren's Cadence",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Rage Vortex",
+      "class": "Marauder",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "Sever the Right Hand",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Spectral Helix",
+      "class": "Scion",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        1,
+        "Nessa",
+        "The Siren's Cadence",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Battlemage's Cry",
+      "class": "Templar",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "Lost in Love",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Absolution",
+      "class": "Templar",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        1,
+        "Nessa",
+        "The Siren's Cadence",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Ambush",
+      "class": "Shadow",
+      "before": [
+        6,
+        "Lilly Roth",
+        "Fallen from Grace",
+        "vendor"
+      ],
+      "after": [
+        4,
+        "Petarus and Vanja",
+        "Breaking the Seal",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Manabond",
+      "class": "Witch",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        1,
+        "Nessa",
+        "The Siren's Cadence",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Manabond",
+      "class": "Templar",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        1,
+        "Nessa",
+        "The Siren's Cadence",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Storm Rain",
+      "class": "Ranger",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "Sever the Right Hand",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Focused Ballista",
+      "class": "Ranger",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "A Fixture of Fate",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Summon Reaper",
+      "class": "Witch",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "Sever the Right Hand",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Behead",
+      "class": "Marauder",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        4,
+        "Petarus and Vanja",
+        "The Eternal Nightmare",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Behead",
+      "class": "Witch",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        6,
+        "Lilly Roth",
+        "Fallen from Grace",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Behead",
+      "class": "Scion",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        4,
+        "Petarus and Vanja",
+        "The Eternal Nightmare",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Behead",
+      "class": "Ranger",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        6,
+        "Lilly Roth",
+        "Fallen from Grace",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Behead",
+      "class": "Duelist",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        4,
+        "Petarus and Vanja",
+        "The Eternal Nightmare",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Behead",
+      "class": "Shadow",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        6,
+        "Lilly Roth",
+        "Fallen from Grace",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Behead",
+      "class": "Templar",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        4,
+        "Petarus and Vanja",
+        "The Eternal Nightmare",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Boneshatter",
+      "class": "Marauder",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "Victario's Secrets",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Explosive Concoction",
+      "class": "Ranger",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "Sever the Right Hand",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Eye of Winter",
+      "class": "Witch",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "Sever the Right Hand",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Poisonous Concoction",
+      "class": "Ranger",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        1,
+        "Nessa",
+        "The Siren's Cadence",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Temporal Rift",
+      "class": "Shadow",
+      "before": [
+        6,
+        "Lilly Roth",
+        "Fallen from Grace",
+        "vendor"
+      ],
+      "after": [
+        4,
+        "Petarus and Vanja",
+        "Breaking the Seal",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Tornado",
+      "class": "Ranger",
+      "before": [
+        6,
+        "Lilly Roth",
+        "Fallen from Grace",
+        "vendor"
+      ],
+      "after": [
+        4,
+        "Petarus and Vanja",
+        "Breaking the Seal",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Tornado",
+      "class": "Shadow",
+      "before": [
+        6,
+        "Lilly Roth",
+        "Fallen from Grace",
+        "vendor"
+      ],
+      "after": [
+        4,
+        "Petarus and Vanja",
+        "Breaking the Seal",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Soul Link",
+      "class": "Scion",
+      "before": [
+        6,
+        "Lilly Roth",
+        "Fallen from Grace",
+        "vendor"
+      ],
+      "after": [
+        4,
+        "Petarus and Vanja",
+        "Breaking the Seal",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Flame Link",
+      "class": "Scion",
+      "before": [
+        6,
+        "Lilly Roth",
+        "Fallen from Grace",
+        "vendor"
+      ],
+      "after": [
+        4,
+        "Petarus and Vanja",
+        "Breaking the Seal",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Intuitive Link",
+      "class": "Scion",
+      "before": [
+        6,
+        "Lilly Roth",
+        "Fallen from Grace",
+        "vendor"
+      ],
+      "after": [
+        4,
+        "Petarus and Vanja",
+        "Breaking the Seal",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Divine Blessing",
+      "class": "Marauder",
+      "before": [
+        0,
+        "No campaign vendor listed",
+        "Special acquisition / trade; see source",
+        "special"
+      ],
+      "after": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Divine Blessing",
+      "class": "Witch",
+      "before": [
+        0,
+        "No campaign vendor listed",
+        "Special acquisition / trade; see source",
+        "special"
+      ],
+      "after": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Divine Blessing",
+      "class": "Scion",
+      "before": [
+        0,
+        "No campaign vendor listed",
+        "Special acquisition / trade; see source",
+        "special"
+      ],
+      "after": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Divine Blessing",
+      "class": "Ranger",
+      "before": [
+        0,
+        "No campaign vendor listed",
+        "Special acquisition / trade; see source",
+        "special"
+      ],
+      "after": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Divine Blessing",
+      "class": "Duelist",
+      "before": [
+        0,
+        "No campaign vendor listed",
+        "Special acquisition / trade; see source",
+        "special"
+      ],
+      "after": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Divine Blessing",
+      "class": "Shadow",
+      "before": [
+        0,
+        "No campaign vendor listed",
+        "Special acquisition / trade; see source",
+        "special"
+      ],
+      "after": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Divine Blessing",
+      "class": "Templar",
+      "before": [
+        0,
+        "No campaign vendor listed",
+        "Special acquisition / trade; see source",
+        "special"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "A Fixture of Fate",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Kinetic Rain",
+      "class": "Witch",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "Sever the Right Hand",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Kinetic Rain",
+      "class": "Scion",
+      "before": [
+        3,
+        "Nessa",
+        "Sever the Right Hand",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "Sever the Right Hand",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Kinetic Rain",
+      "class": "Shadow",
+      "before": [
+        3,
+        "Nessa",
+        "Sever the Right Hand",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "Sever the Right Hand",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Kinetic Rain",
+      "class": "Templar",
+      "before": [
+        3,
+        "Nessa",
+        "Sever the Right Hand",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "Sever the Right Hand",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Thunderstorm",
+      "class": "Scion",
+      "before": [
+        3,
+        "Nessa",
+        "Sever the Right Hand",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "Sever the Right Hand",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Thunderstorm",
+      "class": "Ranger",
+      "before": [
+        3,
+        "Nessa",
+        "Sever the Right Hand",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "Sever the Right Hand",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Thunderstorm",
+      "class": "Duelist",
+      "before": [
+        3,
+        "Nessa",
+        "Sever the Right Hand",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "Sever the Right Hand",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Thunderstorm",
+      "class": "Shadow",
+      "before": [
+        3,
+        "Nessa",
+        "Sever the Right Hand",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "Sever the Right Hand",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Shield of Light",
+      "class": "Templar",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Intruders in Black",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Divine Blast",
+      "class": "Templar",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "Sever the Right Hand",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Trauma",
+      "class": "Marauder",
+      "before": [
+        6,
+        "Lilly Roth",
+        "Fallen from Grace",
+        "vendor"
+      ],
+      "after": [
+        4,
+        "Petarus and Vanja",
+        "The Eternal Nightmare",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Trauma",
+      "class": "Duelist",
+      "before": [
+        6,
+        "Lilly Roth",
+        "Fallen from Grace",
+        "vendor"
+      ],
+      "after": [
+        4,
+        "Petarus and Vanja",
+        "The Eternal Nightmare",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Spellblade",
+      "class": "Templar",
+      "before": [
+        6,
+        "Lilly Roth",
+        "Fallen from Grace",
+        "vendor"
+      ],
+      "after": [
+        4,
+        "Petarus and Vanja",
+        "The Eternal Nightmare",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Devour",
+      "class": "Witch",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        1,
+        "Nessa",
+        "The Caged Brute",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Fresh Meat",
+      "class": "Witch",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Sharp and Cruel",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Flamewood",
+      "class": "Marauder",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        1,
+        "Nessa",
+        "The Caged Brute",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Corrupting Cry",
+      "class": "Marauder",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "A Fixture of Fate",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Corrupting Cry",
+      "class": "Duelist",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "A Fixture of Fate",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Guardian's Blessing",
+      "class": "Templar",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "A Fixture of Fate",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Sacrifice",
+      "class": "Witch",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "A Fixture of Fate",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Frigid Bond",
+      "class": "Scion",
+      "before": [
+        6,
+        "Lilly Roth",
+        "Fallen from Grace",
+        "vendor"
+      ],
+      "after": [
+        4,
+        "Petarus and Vanja",
+        "The Eternal Nightmare",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Frigid Bond",
+      "class": "Templar",
+      "before": [
+        6,
+        "Lilly Roth",
+        "Fallen from Grace",
+        "vendor"
+      ],
+      "after": [
+        4,
+        "Petarus and Vanja",
+        "The Eternal Nightmare",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Controlled Blaze",
+      "class": "Marauder",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "A Fixture of Fate",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Sacred Wisps",
+      "class": "Witch",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Sharp and Cruel",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Overexertion",
+      "class": "Marauder",
+      "before": [
+        6,
+        "Lilly Roth",
+        "Fallen from Grace",
+        "vendor"
+      ],
+      "after": [
+        4,
+        "Petarus and Vanja",
+        "The Eternal Nightmare",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Expert Retaliation",
+      "class": "Duelist",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "A Fixture of Fate",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Rupture",
+      "class": "Ranger",
+      "before": [
+        6,
+        "Lilly Roth",
+        "Fallen from Grace",
+        "vendor"
+      ],
+      "after": [
+        4,
+        "Petarus and Vanja",
+        "The Eternal Nightmare",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Excommunicate",
+      "class": "Templar",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "A Fixture of Fate",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Exemplar",
+      "class": "Templar",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        2,
+        "Yeena",
+        "Sharp and Cruel",
+        "vendor"
+      ]
+    },
+    {
+      "gem": "Blessed Call",
+      "class": "Templar",
+      "before": [
+        3,
+        "Siosa",
+        "A Fixture of Fate",
+        "vendor"
+      ],
+      "after": [
+        3,
+        "Clarissa",
+        "A Fixture of Fate",
+        "vendor"
+      ]
+    }
+  ]
+}

@@ -52,9 +52,25 @@ class GemCoverageTests(unittest.TestCase):
             primary,options,_=acquisition.resolve('Faster Attacks',meta,cls)
             self.assertEqual(primary[:4],[1,'Nessa','The Caged Brute','vendor'])
             self.assertFalse(any(r['vendor']=='Yeena' for r in options))
+        for cls in acquisition.CLASSES:
+            primary,_,_=acquisition.resolve('Faster Casting',pob.gem_catalog()['Faster Casting'],cls)
+            self.assertEqual(primary[:4],[2,'Yeena','Sharp and Cruel','vendor'])
         routes=acquisition.snapshot()['gems']['Faster Attacks']['routes']
         fixed=acquisition.corrected_routes('Faster Attacks',routes)
         self.assertEqual(acquisition.corrected_routes('Faster Attacks',fixed),fixed)
+
+    def test_vendor_refresh_adds_missing_class_routes_and_normalizes_locations(self):
+        import runpy
+        reconcile=runpy.run_path(str(pob.ROOT/'scripts/update-gem-data.py'))['reconcile_routes']
+        routes=[{'act':3,'quest':'Sever the Right Hand','vendor':'Nessa','kind':'vendor','classes':['Witch']}]
+        matrix=[{'act':3,'quest':'Sever the Right Hand','vendor':'Clarissa','kind':'vendor','classes':['Scion']}]
+        merged=reconcile('Firestorm',routes,matrix)
+        self.assertEqual(len(merged),1)
+        self.assertEqual(merged[0]['vendor'],'Clarissa')
+        self.assertEqual(set(merged[0]['classes']),{'Witch','Scion'})
+        routes=[{'act':3,'quest':'A Fixture of Fate','vendor':'Siosa','kind':'vendor','classes':['Witch']}]
+        matrix=[dict(routes[0],vendor='Clarissa',classes=['Scion'])]
+        self.assertEqual(reconcile('Cursed Ground',routes,matrix)[0]['vendor'],'Siosa')
 
     def test_special_gems_and_effects_are_not_campaign_purchases(self):
         catalog=pob.gem_catalog()
